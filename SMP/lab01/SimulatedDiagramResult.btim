@@ -1,0 +1,110 @@
+Timing Diagram Editor v8.3b - Output File
+
+ENDPROPERTIESOFFSET
+85                 
+!
+SCOPETREE
+!
+PROJECT
+BaseTimeUnit	1
+DisplayTimeUnit	2
+TextGridX	1.000000
+TextGridY	6
+EdgeGridX	1.000000
+ImportStartTime	0.000000
+ImportEndTime	281474976710655.000000
+TimePerPixel	512.000000
+Visible	DELAYS	SETUPS	HOLDS	SAMPLES	TEXT	HIDDENATTACHMENTS	CRITICALPATHS	GRIDLINES	
+ColWidths	112,168,224,329,376
+ScrollPos	0.000000,0.000000,0.000000
+DefDelayRule	1
+NoEventOverlap	NO
+SigLabelFontHeight	10
+LabelHeight	12
+LoadLibsToMem	1
+UseFullPathNames	0
+LibPath	
+EntireTime	NO
+TimesOnScreen	NO
+PrintTimeSpecified	YES
+FromTime	0.000000
+ToTime	400000.000000
+PrinterName	No Printer Selected
+AllSignals	YES
+CurrSelSigs	NO
+PrintTo	2
+PrintFileName	C:\newt\ben\Examples\verilog\windowSamples\checker.wmf
+PreviewInterchange	YES
+PreviewTIFF5	NO
+UseMargins	YES
+PrintTimeLine	YES
+PrintBorderBox	YES
+PrintSigNames	YES
+PrintSigNamesOnEachPage	YES
+AddPreviewToEPS	NO
+PreviewRes	150
+MarginLR	1.250000
+MifImageWidth	6.00
+MarginTB	0.000000
+Header	%d %t;%f;%p
+Footer	
+ScaleHorz	100.000000
+ScaleVert	100.000000
+ScaleHPage	1
+PrintImage	DIAGRAM
+DefaultTimingModel	minmax
+DefaultClock	Unclocked
+DefaultEdgeLevel	neg
+DefaultSet	Not Used
+DefaultClear	Not Used
+DefaultClockEnable	Not Used
+DefaultClockToOutLH	0
+DefaultClockToOutHL	0
+DefaultSetup	0
+DefaultHold	0
+DefaultRegStartupState	unknown
+DefaultPodSize	8
+DefaultActiveLowSetClear	True
+DefaultAsyncSetClear	True
+DefaultActiveLowClockEnable	True
+!
+
+STYLE
+DefaultFont	USER	{-13,0,0,0,400,0,0,0,1,0,0,0,0,Arial,0}
+DrawWndFont	DEFAULT
+DrawWndColor	14215400
+GridWndFont	DEFAULT
+GridWndColor	DEFAULT
+LabelWndFont	DEFAULT
+LabelWndColor	DEFAULT
+ParamDispPref	0
+ParamWndCellDisplay	0
+CustDispString	%n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c
+CustomDisplayStringRTF	{\rtf1\ansi\deff0\deftab720{\fonttbl{\f0\fswiss MS Sans Serif;}}{\colortbl\red0\green0\blue0;}\deflang1033\pard\plain\f0\fs20 %n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c \par}
+MarkerDispPref	7
+MarkerCustDispString	%n v=%mv,%Mv d=%md %t
+MarkerCustomDisplayStringRTF	{\rtf1\ansi\deff0\deftab720{\fonttbl{\f0\fswiss MS Sans Serif;}}{\colortbl\red0\green0\blue0;}\deflang1033\pard\plain\f0\fs20 %n v=%mv,%Mv d=%md %t \par}
+SignalColor	2
+LabelOffset	2
+BusDisplay	0
+WaveFormWidth	1.000000
+WaveFormColor	0
+InputWaveFormColor	16711680
+SlantedEdges	1
+SlantAngle	75
+RightJustifySigNames	1
+AutosplitEnabled	1
+AutosplitChar	_
+DynamSizedSignals	1
+!
+
+TBDIAGRAMPROPERTIES
+FilesBeforeDiagramModel
+FilesInsideDiagramModelDeclarationSection
+DefaultCycleClock	Unclocked
+DefaultCycleEdge	neg
+!
+
+MACROS
+!
+

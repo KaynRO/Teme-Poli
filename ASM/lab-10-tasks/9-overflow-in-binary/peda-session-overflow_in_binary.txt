@@ -1,0 +1,5 @@
+break *0x08048526
+  commands
+    x/1x $ebp-0xc
+  end
+

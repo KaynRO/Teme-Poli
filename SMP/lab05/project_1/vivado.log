@@ -1,0 +1,297 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Jan 13 14:47:55 2021
+# Process ID: 9004
+# Current directory: C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8244 C:\Users\Kayn\Documents\Facultate\SMP\lab05\project_1\project_1.xpr
+# Log file: C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/vivado.log
+# Journal file: C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.srcs/sources_1/bd/PICtoSRAM/PICtoSRAM.bd}
+Adding cell -- xilinx.com:module_ref:PIC16F873:1.0 - PIC16F873_0
+INFO: [BD 41-1728] Could not find a module with name: PICtoSRAM_PIC16F873_0_0 
+Adding cell -- xilinx.com:module_ref:T74LS04:1.0 - T74LS04_0
+INFO: [BD 41-1728] Could not find a module with name: PICtoSRAM_T74LS04_0_0 
+Adding cell -- xilinx.com:module_ref:T74LS373:1.0 - T74LS373_0
+INFO: [BD 41-1728] Could not find a module with name: PICtoSRAM_T74LS373_0_0 
+Adding cell -- xilinx.com:module_ref:m62256:1.0 - m62256_0
+INFO: [BD 41-1728] Could not find a module with name: PICtoSRAM_m62256_0_0 
+Adding cell -- xilinx.com:module_ref:splitter1:1.0 - splitter1_0
+INFO: [BD 41-1728] Could not find a module with name: PICtoSRAM_splitter1_0_0 
+Adding cell -- xilinx.com:module_ref:splitter2:1.0 - splitter2_0
+INFO: [BD 41-1728] Could not find a module with name: PICtoSRAM_splitter2_0_0 
+Adding cell -- xilinx.com:module_ref:splitter3:1.0 - splitter3_0
+INFO: [BD 41-1728] Could not find a module with name: PICtoSRAM_splitter3_0_0 
+Adding cell -- xilinx.com:module_ref:m62256:1.0 - m62256_1
+INFO: [BD 41-1728] Could not find a module with name: PICtoSRAM_m62256_1_0 
+Adding cell -- xilinx.com:module_ref:select:1.0 - select_0
+INFO: [BD 41-1728] Could not find a module with name: PICtoSRAM_select_0_0 
+Successfully read diagram <PICtoSRAM> from BD file <C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.srcs/sources_1/bd/PICtoSRAM/PICtoSRAM.bd>
+INFO: [BD 41-433] 
+Design successfully migrated to use XCI files...
+open_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 791.168 ; gain = 27.793
+make_wrapper -files [get_files C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.srcs/sources_1/bd/PICtoSRAM/PICtoSRAM.bd] -top
+Wrote  : <C:\Users\Kayn\Documents\Facultate\SMP\lab05\project_1\project_1.srcs\sources_1\bd\PICtoSRAM\PICtoSRAM.bd> 
+VHDL Output written to : C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.srcs/sources_1/bd/PICtoSRAM/synth/PICtoSRAM.v
+VHDL Output written to : C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.srcs/sources_1/bd/PICtoSRAM/sim/PICtoSRAM.v
+VHDL Output written to : C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.srcs/sources_1/bd/PICtoSRAM/hdl/PICtoSRAM_wrapper.v
+add_files -norecurse C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.srcs/sources_1/bd/PICtoSRAM/hdl/PICtoSRAM_wrapper.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+generate_target Simulation [get_files C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.srcs/sources_1/bd/PICtoSRAM/PICtoSRAM.bd]
+INFO: [BD 41-1662] The design 'PICtoSRAM.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.srcs/sources_1/bd/PICtoSRAM/synth/PICtoSRAM.v
+VHDL Output written to : C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.srcs/sources_1/bd/PICtoSRAM/sim/PICtoSRAM.v
+VHDL Output written to : C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.srcs/sources_1/bd/PICtoSRAM/hdl/PICtoSRAM_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PIC16F873_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block T74LS04_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block T74LS373_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block m62256_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block splitter1_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block splitter2_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block splitter3_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block m62256_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block select_0 .
+Exporting to file C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.srcs/sources_1/bd/PICtoSRAM/hw_handoff/PICtoSRAM.hwh
+Generated Block Design Tcl file C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.srcs/sources_1/bd/PICtoSRAM/hw_handoff/PICtoSRAM_bd.tcl
+Generated Hardware Definition File C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.srcs/sources_1/bd/PICtoSRAM/synth/PICtoSRAM.hwdef
+export_ip_user_files -of_objects [get_files C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.srcs/sources_1/bd/PICtoSRAM/PICtoSRAM.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.srcs/sources_1/bd/PICtoSRAM/PICtoSRAM.bd] -directory C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files -ipstatic_source_dir C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/lab4.V" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m62256
+INFO: [VRFC 10-311] analyzing module T74LS373
+INFO: [VRFC 10-311] analyzing module T74LS04
+INFO: [VRFC 10-311] analyzing module PIC16F873
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/splitter1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module splitter1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/splitter2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module splitter2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/splitter3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module splitter3
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/select.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module select
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/bd/PICtoSRAM/sim/PICtoSRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_PIC16F873_0_0/sim/PICtoSRAM_PIC16F873_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM_PIC16F873_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_T74LS04_0_0/sim/PICtoSRAM_T74LS04_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM_T74LS04_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_T74LS373_0_0/sim/PICtoSRAM_T74LS373_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM_T74LS373_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_m62256_0_0/sim/PICtoSRAM_m62256_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM_m62256_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_splitter1_0_0/sim/PICtoSRAM_splitter1_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM_splitter1_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_splitter2_0_0/sim/PICtoSRAM_splitter2_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM_splitter2_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_splitter3_0_0/sim/PICtoSRAM_splitter3_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM_splitter3_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_m62256_1_0/sim/PICtoSRAM_m62256_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM_m62256_1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_select_0_0/sim/PICtoSRAM_select_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM_select_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.srcs/sources_1/bd/PICtoSRAM/hdl/PICtoSRAM_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 057480d46dd949bcb732105b0c000619 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/lab4.V" Line 38. Module PIC16F873 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/lab4.V" Line 30. Module T74LS04 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/lab4.V" Line 16. Module T74LS373 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/lab4.V" Line 1. Module m62256 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/lab4.V" Line 1. Module m62256 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PIC16F873
+Compiling module xil_defaultlib.PICtoSRAM_PIC16F873_0_0
+Compiling module xil_defaultlib.T74LS04
+Compiling module xil_defaultlib.PICtoSRAM_T74LS04_0_0
+Compiling module xil_defaultlib.T74LS373
+Compiling module xil_defaultlib.PICtoSRAM_T74LS373_0_0
+Compiling module xil_defaultlib.m62256
+Compiling module xil_defaultlib.PICtoSRAM_m62256_0_0
+Compiling module xil_defaultlib.PICtoSRAM_m62256_1_0
+Compiling module xil_defaultlib.select
+Compiling module xil_defaultlib.PICtoSRAM_select_0_0
+Compiling module xil_defaultlib.splitter1
+Compiling module xil_defaultlib.PICtoSRAM_splitter1_0_0
+Compiling module xil_defaultlib.splitter2
+Compiling module xil_defaultlib.PICtoSRAM_splitter2_0_0
+Compiling module xil_defaultlib.splitter3
+Compiling module xil_defaultlib.PICtoSRAM_splitter3_0_0
+Compiling module xil_defaultlib.PICtoSRAM
+Compiling module xil_defaultlib.PICtoSRAM_wrapper
+Compiling module xil_defaultlib.test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_behav -key {Behavioral:sim_1:Functional:test} -tclbatch {test.tcl} -protoinst "protoinst_files/PICtoSRAM.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/PICtoSRAM.protoinst
+Time resolution is 1 ps
+source test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+---
+
+***
+
+---
+
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 980.840 ; gain = 51.375
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/test/top/PICtoSRAM_i/m62256_0}} 
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/test/top/PICtoSRAM_i/m62256_1}} 
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/lab4.V" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m62256
+INFO: [VRFC 10-311] analyzing module T74LS373
+INFO: [VRFC 10-311] analyzing module T74LS04
+INFO: [VRFC 10-311] analyzing module PIC16F873
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/splitter1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module splitter1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/splitter2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module splitter2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/splitter3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module splitter3
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/select.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module select
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/bd/PICtoSRAM/sim/PICtoSRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_PIC16F873_0_0/sim/PICtoSRAM_PIC16F873_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM_PIC16F873_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_T74LS04_0_0/sim/PICtoSRAM_T74LS04_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM_T74LS04_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_T74LS373_0_0/sim/PICtoSRAM_T74LS373_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM_T74LS373_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_m62256_0_0/sim/PICtoSRAM_m62256_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM_m62256_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_splitter1_0_0/sim/PICtoSRAM_splitter1_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM_splitter1_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_splitter2_0_0/sim/PICtoSRAM_splitter2_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM_splitter2_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_splitter3_0_0/sim/PICtoSRAM_splitter3_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM_splitter3_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_m62256_1_0/sim/PICtoSRAM_m62256_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM_m62256_1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_select_0_0/sim/PICtoSRAM_select_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM_select_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.srcs/sources_1/bd/PICtoSRAM/hdl/PICtoSRAM_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PICtoSRAM_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Kayn/Documents/Facultate/SMP/lab05/project_1/project_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 057480d46dd949bcb732105b0c000619 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/lab4.V" Line 38. Module PIC16F873 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/lab4.V" Line 30. Module T74LS04 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/lab4.V" Line 16. Module T74LS373 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/lab4.V" Line 1. Module m62256 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/lab4.V" Line 1. Module m62256 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PIC16F873
+Compiling module xil_defaultlib.PICtoSRAM_PIC16F873_0_0
+Compiling module xil_defaultlib.T74LS04
+Compiling module xil_defaultlib.PICtoSRAM_T74LS04_0_0
+Compiling module xil_defaultlib.T74LS373
+Compiling module xil_defaultlib.PICtoSRAM_T74LS373_0_0
+Compiling module xil_defaultlib.m62256
+Compiling module xil_defaultlib.PICtoSRAM_m62256_0_0
+Compiling module xil_defaultlib.PICtoSRAM_m62256_1_0
+Compiling module xil_defaultlib.select
+Compiling module xil_defaultlib.PICtoSRAM_select_0_0
+Compiling module xil_defaultlib.splitter1
+Compiling module xil_defaultlib.PICtoSRAM_splitter1_0_0
+Compiling module xil_defaultlib.splitter2
+Compiling module xil_defaultlib.PICtoSRAM_splitter2_0_0
+Compiling module xil_defaultlib.splitter3
+Compiling module xil_defaultlib.PICtoSRAM_splitter3_0_0
+Compiling module xil_defaultlib.PICtoSRAM
+Compiling module xil_defaultlib.PICtoSRAM_wrapper
+Compiling module xil_defaultlib.test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2018.3
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/PICtoSRAM.protoinst
+Time resolution is 1 ps
+---
+
+***
+
+---
+
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 980.840 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 13 14:55:42 2021...

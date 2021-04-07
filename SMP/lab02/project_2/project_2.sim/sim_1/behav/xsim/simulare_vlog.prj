@@ -1,0 +1,30 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../DECODER.V" \
+"../../../../project_2.srcs/sources_1/new/gateand.v" \
+"../../../../project_2.srcs/sources_1/new/gateor.v" \
+"../../../../project_2.srcs/sources_1/new/gatenegare.v" \
+"../../../../project_2.srcs/sources_1/new/impartitor_d.v" \
+"../../../../project_2.srcs/sources_1/new/impartitor_a.v" \
+"../../../../../MC68000.V" \
+"../../../../../Sram.v" \
+"../../../../project_2.ip_user_files/bd/design_1/ip/design_1_decoder_0_0/sim/design_1_decoder_0_0.v" \
+"../../../../project_2.ip_user_files/bd/design_1/ip/design_1_gateand_0_0/sim/design_1_gateand_0_0.v" \
+"../../../../project_2.ip_user_files/bd/design_1/ip/design_1_gateor_0_0/sim/design_1_gateor_0_0.v" \
+"../../../../project_2.ip_user_files/bd/design_1/ip/design_1_gatenegare_0_0/sim/design_1_gatenegare_0_0.v" \
+"../../../../project_2.ip_user_files/bd/design_1/ip/design_1_gateand_0_1/sim/design_1_gateand_0_1.v" \
+"../../../../project_2.ip_user_files/bd/design_1/ip/design_1_gateand_0_2/sim/design_1_gateand_0_2.v" \
+"../../../../project_2.ip_user_files/bd/design_1/ip/design_1_impartitor_d_0_0/sim/design_1_impartitor_d_0_0.v" \
+"../../../../project_2.ip_user_files/bd/design_1/ip/design_1_impartitor_a_0_0/sim/design_1_impartitor_a_0_0.v" \
+"../../../../project_2.ip_user_files/bd/design_1/ip/design_1_mc68000_0_0/sim/design_1_mc68000_0_0.v" \
+"../../../../project_2.ip_user_files/bd/design_1/ip/design_1_ram8kx8_0_0/sim/design_1_ram8kx8_0_0.v" \
+"../../../../project_2.ip_user_files/bd/design_1/ip/design_1_ram8kx8_1_0/sim/design_1_ram8kx8_1_0.v" \
+"../../../../project_2.ip_user_files/bd/design_1/sim/design_1.v" \
+"../../../../project_2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v" \
+"../../../../project_2.srcs/sim_1/new/simulare.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

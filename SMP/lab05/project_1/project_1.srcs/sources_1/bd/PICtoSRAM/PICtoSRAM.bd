@@ -1,0 +1,364 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x6EF74AAA6EF74AAA",
+      "device": "xc7a100ticsg324-1L",
+      "name": "PICtoSRAM",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3",
+      "validated": "true"
+    },
+    "design_tree": {
+      "PIC16F873_0": "",
+      "T74LS04_0": "",
+      "T74LS373_0": "",
+      "m62256_0": "",
+      "splitter1_0": "",
+      "splitter2_0": "",
+      "splitter3_0": "",
+      "m62256_1": "",
+      "select_0": ""
+    },
+    "ports": {
+      "oe_0": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "PIC16F873_0": {
+        "vlnv": "xilinx.com:module_ref:PIC16F873:1.0",
+        "xci_name": "PICtoSRAM_PIC16F873_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PIC16F873",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "porta": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          },
+          "portb": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "portbw": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "portc": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "T74LS04_0": {
+        "vlnv": "xilinx.com:module_ref:T74LS04:1.0",
+        "xci_name": "PICtoSRAM_T74LS04_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "T74LS04",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "outt": {
+            "direction": "O"
+          },
+          "inn": {
+            "direction": "I"
+          }
+        }
+      },
+      "T74LS373_0": {
+        "vlnv": "xilinx.com:module_ref:T74LS373:1.0",
+        "xci_name": "PICtoSRAM_T74LS373_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "T74LS373",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "outh": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "dat": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "oe": {
+            "direction": "I"
+          },
+          "le": {
+            "direction": "I"
+          }
+        }
+      },
+      "m62256_0": {
+        "vlnv": "xilinx.com:module_ref:m62256:1.0",
+        "xci_name": "PICtoSRAM_m62256_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "m62256",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "dat": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "datw": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "adr": {
+            "direction": "I",
+            "left": "14",
+            "right": "0"
+          },
+          "ce": {
+            "direction": "I"
+          },
+          "oe": {
+            "direction": "I"
+          },
+          "we": {
+            "direction": "I"
+          }
+        }
+      },
+      "splitter1_0": {
+        "vlnv": "xilinx.com:module_ref:splitter1:1.0",
+        "xci_name": "PICtoSRAM_splitter1_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "splitter1",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "d_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "out_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "d_out": {
+            "direction": "O"
+          },
+          "d_out2": {
+            "direction": "O",
+            "left": "14",
+            "right": "0"
+          }
+        }
+      },
+      "splitter2_0": {
+        "vlnv": "xilinx.com:module_ref:splitter2:1.0",
+        "xci_name": "PICtoSRAM_splitter2_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "splitter2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "d_in": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
+          "d_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "splitter3_0": {
+        "vlnv": "xilinx.com:module_ref:splitter3:1.0",
+        "xci_name": "PICtoSRAM_splitter3_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "splitter3",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "d_in": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
+          "d_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "m62256_1": {
+        "vlnv": "xilinx.com:module_ref:m62256:1.0",
+        "xci_name": "PICtoSRAM_m62256_1_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "m62256",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "dat": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "datw": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "adr": {
+            "direction": "I",
+            "left": "14",
+            "right": "0"
+          },
+          "ce": {
+            "direction": "I"
+          },
+          "oe": {
+            "direction": "I"
+          },
+          "we": {
+            "direction": "I"
+          }
+        }
+      },
+      "select_0": {
+        "vlnv": "xilinx.com:module_ref:select:1.0",
+        "xci_name": "PICtoSRAM_select_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "select",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "d_in1": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "d_in2": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "not_in": {
+            "direction": "I"
+          },
+          "oe": {
+            "direction": "I"
+          },
+          "d_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "m62256_0_dat": {
+        "ports": [
+          "m62256_0/dat",
+          "select_0/d_in1"
+        ]
+      },
+      "m62256_1_dat": {
+        "ports": [
+          "m62256_1/dat",
+          "select_0/d_in2"
+        ]
+      },
+      "select_0_d_out": {
+        "ports": [
+          "select_0/d_out",
+          "PIC16F873_0/portbw"
+        ]
+      },
+      "PIC16F873_0_portb": {
+        "ports": [
+          "PIC16F873_0/portb",
+          "m62256_0/datw",
+          "m62256_1/datw",
+          "T74LS373_0/dat"
+        ]
+      },
+      "PIC16F873_0_portc": {
+        "ports": [
+          "PIC16F873_0/portc",
+          "splitter1_0/d_in"
+        ]
+      },
+      "T74LS373_0_outh": {
+        "ports": [
+          "T74LS373_0/outh",
+          "splitter1_0/out_in"
+        ]
+      },
+      "splitter1_0_d_out2": {
+        "ports": [
+          "splitter1_0/d_out2",
+          "m62256_1/adr",
+          "m62256_0/adr"
+        ]
+      },
+      "splitter2_0_d_out": {
+        "ports": [
+          "splitter2_0/d_out",
+          "T74LS373_0/le"
+        ]
+      },
+      "oe_0_1": {
+        "ports": [
+          "oe_0",
+          "T74LS373_0/oe"
+        ]
+      },
+      "PIC16F873_0_porta": {
+        "ports": [
+          "PIC16F873_0/porta",
+          "splitter2_0/d_in",
+          "splitter3_0/d_in"
+        ]
+      },
+      "splitter3_0_d_out": {
+        "ports": [
+          "splitter3_0/d_out",
+          "m62256_1/we",
+          "m62256_0/we",
+          "select_0/oe"
+        ]
+      },
+      "T74LS04_0_outt": {
+        "ports": [
+          "T74LS04_0/outt",
+          "m62256_0/ce",
+          "m62256_0/oe"
+        ]
+      },
+      "splitter1_0_d_out": {
+        "ports": [
+          "splitter1_0/d_out",
+          "T74LS04_0/inn",
+          "m62256_1/ce",
+          "m62256_1/oe",
+          "select_0/not_in"
+        ]
+      }
+    }
+  }
+}

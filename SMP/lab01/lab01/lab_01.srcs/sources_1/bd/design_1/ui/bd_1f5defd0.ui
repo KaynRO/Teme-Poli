@@ -1,0 +1,30 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port clk_0 -pg 1 -lvl 0 -x -460 -y 30 -defaultsOSRD
+preplace inst graphic_controller_0 -pg 1 -lvl 2 -x 140 -y 40 -defaultsOSRD
+preplace inst core_logic_0 -pg 1 -lvl 1 -x -280 -y 40 -defaultsOSRD
+preplace netloc Net 1 1 2 -130 230 300
+preplace netloc Net1 1 0 2 -410 200 -110J
+preplace netloc core_logic_0_gnt 1 1 1 -130 -10n
+preplace netloc core_logic_0_st 1 1 1 -110 -30n
+preplace netloc graphic_controller_0_intb 1 0 3 -390 290 NJ 290 270
+preplace netloc graphic_controller_0_inta 1 0 3 -400 280 NJ 280 280
+preplace netloc Net3 1 1 2 -170J 240 250
+preplace netloc Net4 1 1 2 -160J 250 260
+preplace netloc Net5 1 1 2 -150J 260 290
+preplace netloc graphic_controller_0_req 1 0 3 -420 300 NJ 300 310
+preplace netloc graphic_controller_0_serr 1 0 3 -430 310 NJ 310 330
+preplace netloc graphic_controller_0_sb_stb 1 0 3 -430 -170 NJ -170 310
+preplace netloc Net6 1 1 2 -140J 270 320
+preplace netloc Net7 1 1 2 -140J -150 260
+preplace netloc graphic_controller_0_rbf 1 0 3 -440 -180 NJ -180 300
+preplace netloc graphic_controller_0_sba 1 0 3 -390 -160 NJ -160 250
+preplace netloc graphic_controller_0_pipe 1 0 3 -400 -190 NJ -190 270
+preplace netloc clk_0_1 1 0 2 -440 190 -120
+levelinfo -pg 1 -460 -280 140 350
+pagesize -pg 1 -db -bbox -sgen -550 -320 350 380
+"
+}
+0

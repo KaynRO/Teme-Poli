@@ -1,0 +1,43 @@
+%include "io.inc"
+
+section .data
+    mystring db "abcdefg", 0
+    string1 db "ana", 0
+    string2 db "are", 0
+    string3 db "mere", 0
+    len dd 10
+    string_array dq string1, string2, string3
+
+section .text
+global CMAIN
+
+rot13:
+    push ebp
+    mov ebp, esp
+    
+    mov eax, dword[ebp + 8]
+    jmp convert
+
+convert:
+    mov bl, byte[eax]
+    test bl, bl
+    je finish
+    
+    add byte[eax], 0xD
+    inc eax
+    jmp convert
+    
+finish:
+    leave
+    ret
+CMAIN:
+    push ebp
+    mov ebp, esp
+    
+    xor eax, eax
+        
+    push mystring
+    call rot13
+    add esp, 4
+    PRINT_STRING mystring
+    ret

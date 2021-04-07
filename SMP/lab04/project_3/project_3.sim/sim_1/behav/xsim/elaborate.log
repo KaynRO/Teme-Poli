@@ -1,0 +1,23 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 2f1568c9c6c64596b14853e67ba705fb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot simulare_behav xil_defaultlib.simulare xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/Kayn/Downloads/Downloads/DSPtoPCI/dsptopci.v" Line 2. Module arbiter doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Kayn/Downloads/Downloads/DSPtoPCI/dsptopci.v" Line 23. Module bus doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Kayn/Downloads/Downloads/DSPtoPCI/dsptopci.v" Line 44. Module dsp doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.arbiter
+Compiling module xil_defaultlib.design_1_arbiter_0_0
+Compiling module xil_defaultlib.bus
+Compiling module xil_defaultlib.design_1_bus_0_0
+Compiling module xil_defaultlib.dsp
+Compiling module xil_defaultlib.design_1_dsp_0_0
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.simulare
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot simulare_behav

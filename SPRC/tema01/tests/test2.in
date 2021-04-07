@@ -1,0 +1,11 @@
+login kayn
+load
+del 2
+del 5
+get_stat 1
+get_stat 2
+get_stat_all
+del 1
+del 3
+store
+logout

@@ -1,0 +1,39 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port clk_0 -pg 1 -y -220 -defaultsOSRD
+preplace port reset_n_0 -pg 1 -y -80 -defaultsOSRD
+preplace inst ram8kx8_0 -pg 1 -lvl 6 -y -310 -defaultsOSRD
+preplace inst mc68000_0 -pg 1 -lvl 1 -y -130 -defaultsOSRD
+preplace inst impartitor_a_0 -pg 1 -lvl 2 -y -60 -defaultsOSRD
+preplace inst gatenegare_0 -pg 1 -lvl 4 -y -200 -defaultsOSRD
+preplace inst decoder_0 -pg 1 -lvl 4 -y -70 -defaultsOSRD
+preplace inst ram8kx8_1 -pg 1 -lvl 6 -y 230 -defaultsOSRD
+preplace inst gateor_0 -pg 1 -lvl 5 -y -280 -defaultsOSRD
+preplace inst gateand_0 -pg 1 -lvl 3 -y -300 -defaultsOSRD
+preplace inst gateand_1 -pg 1 -lvl 5 -y 0 -defaultsOSRD
+preplace inst impartitor_d_0 -pg 1 -lvl 2 -y 410 -defaultsOSRD
+preplace inst gateand_2 -pg 1 -lvl 5 -y 130 -defaultsOSRD
+preplace netloc gateand_2_c 1 4 2 70 200 290
+preplace netloc gateand_1_c 1 4 2 70 -360 290
+preplace netloc gateor_0_c 1 0 6 -880 -290 NJ -290 -390J -230 -230J -270 60J -200 280
+preplace netloc decoder_0_o 1 4 1 30
+preplace netloc mc68000_0_lds_n 1 1 4 N -130 NJ -130 NJ -130 50J
+preplace netloc gatenegare_0_b 1 4 2 30J -190 330
+preplace netloc impartitor_d_0_d1 1 2 4 -380 -150 -220 -260 30 -210 300
+preplace netloc clk_0_1 1 0 1 -890
+preplace netloc mc68000_0_uds_n 1 1 4 -640 -140 NJ -140 NJ -140 60J
+preplace netloc impartitor_d_0_d2 1 2 4 N 420 N 420 50 270 N
+preplace netloc impartitor_a_0_a1 1 2 2 NJ -70 N
+preplace netloc impartitor_a_0_a2 1 2 4 -390J -10 NJ -10 40J -70 310
+preplace netloc mc68000_0_a 1 1 1 -630
+preplace netloc mc68000_0_as_n 1 1 2 -640 -310 NJ
+preplace netloc mc68000_0_d 1 1 1 -650
+preplace netloc gateand_0_c 1 3 3 NJ -300 60J -350 320
+preplace netloc mc68000_0_rw_n 1 1 3 N -170 -380J -200 N
+preplace netloc reset_n_0_1 1 0 1 -890
+levelinfo -pg 1 -910 -760 -500 -300 -70 210 690 790 -top -410 -bot 480
+"
+}
+0

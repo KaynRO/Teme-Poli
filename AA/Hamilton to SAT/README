@@ -1,0 +1,29 @@
+
+HCP to SAT polinomial transformation - Grigoras Andrei, 323CB
+
+
+In this README we will cover the 3 steps in order to create a HCP to SAT program in a polinomial time.
+
+PART I
+
+Let G be a graph. The first condition we are going to check is the existence of a Hamiltonian cycle. Due to the fact that this cycle includes all nodes once, it means that the number of edges of each node is at least 2 or otherwise when we would reach that node by using it's only edge we couldn't go further. So, G contains a Hamiltonian cycle if degree(x) >= 2, where x is a node from our graph G. Now we have to write a boolean expression for this statement. Assuming ax1, ax2 are incident to node x, then Qx12 = ax1 & ax2 & (!ax3) & (!ax4) ... = 1. Therefore, in order for a node x to have its degree greater than 2 we need at least 2 edges to be incident in that node. So we need a disjunction between each Qxij : Qx = Qx12 | Qx13 | Qx14 | ... Qx(k-1)k, where xi and xj are 2 edges incident in node x. Now, to generalize for all nodes we need to have this property so we do a conjuction on each Qi : Q1 & Q2 & ... & Qn, where n is the number of nodes of G. Also, at the end, we check whether from node 1 we can reach any node of the graph(is conex) by making sure that the distance from 1 to node is 1/2/3.../(N/2+1).(&(a1-node | a2-node ... | ak-node)).
+
+PART II
+
+We go further with the definition of the Hamiltonian cycle again. So far, we know the graph might include a cycle but in order to be Hamiltonian, each node has to appear exactly one time(except the starting one) in the cycle's path. Thus, we can only use edges and distances in our boolean expression so, we also observe that, if all edges appears at maximum one time then nodes correspondent to them appear exactly one time. For example if we have :
+	1->2, 2->3, 3->2, 2->1
+it is observable that node 2 appears 2 times which means that 1,2,3,2,1 is not a hamiltonian cycle.Therefore, in order to specify that each edges has to be used maximum 1 time we have to do a disjunction and then a conjuction with the expression negate between edge x->y and y->x. This is resulted due to the fact that, being undirected graph, edge x->y = y->x and we want that, if any of these is present, the other one shouldn't. In non-technicall words, for each edge x->y we want that x->y to be part of the path or y->x not, and also x->y not on the path or y->x do. This also covers the case when a edge is not part of the hamiltonian cycle.
+
+
+PART III
+
+The last part covers the case when the graph contains, for example, 2 unconnected cycles, as we don't have any expression that verify if all nodes appear on the path but, if we do make sure the graph is connected(conex) then, combining with the previous constraints we would be sure of the unicity. What we actually need is to be sure that we can reach any node starting from 1. In other words, for any possible distance, we need to check wheter we can reach x starting from 1 with these distance. To do so, we need to look at all his neighbours and see if at least one is at distance (x - 1) from 1 because if x->y is of length k and y has edge to z, then x->z if of length k + 1. So we will do a disjunction between this condition applied to all neighbours of a node, and then a conjunction with this property for all nodes. Therefore, in order to have node x accessible from node 1 the above condition or ak-x must be true(which we already know how to make an expression for 'at least one is true').
+
+
+Complexity 
+
+Looking at the generated code, the most time consuming of those parts is the first one as for each node, we can do combination of any 2 neighbours with the rest in O(n^4), n(for picking a node), n^2(for picking any 2 neighbours), n(picking all the other neighbours except the other 2). The other parts take less than n^4 time so our transformation is O(n^4) wich is a polinomial complexity.
+
+
+
+

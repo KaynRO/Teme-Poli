@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Nov 11 13:16:37 2020
+# Process ID: 14900
+# Current directory: C:/Users/Kayn/Documents/Facultate/SMP/lab02/project_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12848 C:\Users\Kayn\Documents\Facultate\SMP\lab02\project_2\project_2.xpr
+# Log file: C:/Users/Kayn/Documents/Facultate/SMP/lab02/project_2/vivado.log
+# Journal file: C:/Users/Kayn/Documents/Facultate/SMP/lab02/project_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Kayn/Documents/Facultate/SMP/lab02/project_2/project_2.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/Kayn/Documents/Facultate/SMP/lab02/project_2/project_2/simulare_behav.wcfg
+source simulare.tcl
+restart
+run all
+current_wave_config {simulare_behav.wcfg}
+add_wave {{/simulare/lab2/design_1_i}} 
+relaunch_sim
+current_wave_config {simulare_behav.wcfg}
+add_wave {{/simulare/lab2/design_1_i}} 
+relaunch_sim
+current_wave_config {simulare_behav.wcfg}
+add_wave {{/simulare/lab2/design_1_i}} 
+relaunch_sim
+open_bd_design {C:/Users/Kayn/Documents/Facultate/SMP/lab02/project_2/project_2.srcs/sources_1/bd/design_1/design_1.bd}
+save_wave_config {C:/Users/Kayn/Documents/Facultate/SMP/lab02/project_2/project_2/simulare_behav.wcfg}
+close_sim

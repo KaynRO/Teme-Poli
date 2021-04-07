@@ -1,0 +1,41 @@
+## Tema 1 SPRC README - Andrei Grigoras 343 C2
+
+##### Implementarea clientului
+
+In primul rand, clientul nostru poate lucra cu doua tipuri de input. Prima varianta este folosirea stdin/stdout pentru citire si scriere de comenzi si raspuns de la server. Altfel, se vor citi si scriere in fisierele date ca parametru la pornirea clientului (primul si al doilea argument): **./client file_input file_output**
+
+Clientul foloseste la baza doar doua functie: process_line si send_command. Functia process_line, primeste ca argument o linie ce contine o comanda si o sparge in tokeni pentru a putea fi trimisi catre server. Comunicarea intre server si client a fost aleasa prin a se face astfel: client -> struct command -> server -> char** -> client. Astfel, prin mai multe operatii de strtok, despartim linia in cuvintele necesare popularii structurii **cmd**. De asemenea, tratam erorile in care linia nu contine destule informatii pentru o comanda valida.
+
+Functia send_command preia structura de date oferita de **process_line** si o trimite catre server. Ne intereseaza raspunsul doar in cazul in care am avut o operatie de login intrucat trebuie sa salvam **session_key** curent ce este resetata in cazul operatiei de logout.
+
+
+##### Implmementarea Serverului
+
+###### Structuri folosite
+-> **data_stat**: o structura cu 3 campuri ce corespund formatului unei statistici
+-> **user_data**: este un map ce are ca si cheie numele utilizatorului si ca valoare un tuplu de forma (session_key, sensor_data[])
+-> **user_error**: tot un map cu cheia numele utilizatorului si cu valoarea un short int(0/1) ce contorizeaza daca operatia precedenta a fost un login pentru a putea trata cazul de eroare pentru load
+
+###### Logica programului (PROCESS_COMMAND)
+Folosing structura de data **cmd** primita de serverul RPC, separam tipul de comanda pe care o avem printr-o succesiune de if-uri. Pentru ca structurile folosite au ca si cheie username-ul, facem transformarea session_key -> username care, in cazul in care da fail, semnifica trebuie autentificat clientul.
+
+Folosing rezultatele intoarce de apelarea fiecarei functii corespunzatoare tipului de comanda, prin variabila text (care va fi intoarsa catre client), contorizam daca a avut loc o eroare sau nu. In cazul in care operatia a intors o structura de forma sensor_data sau data_stat, copiem informatiile in variabila text pentru a fi trimise (in loc de un mesaj de succes).
+
+###### Functii importante
+-> **get_user_data**: functia apelata de load pentru a deschide baza de date a unui user (sau creare) si citirea tuturor datelor ce vor fi returnate ca un vector de sensor_data
+-> **user_has_data**: functie prin care se verifica anumite erori ca in cazul `read X` unde utilizatorul nu are nicio informatie cu ID-ul X
+-> **update**: daca utilizatorul are informatia cu ID-ul specifica atunci doar modifica intrarile, altfel, apeleaza functia `add`
+-> **get_stat**: se face o iteratie prin datele utilizatorului pana se gaseste cea cu ID-ul dorit; se apeleaza functiile din C++ min_element si max_element pentru a afla min/max dintr-un vector; pentru aflarea medianei, s-a sortat vectorul si s-a vazut valoarea de mijloc (cazul par -> se face media)
+-> **get_stat_all**: apeleaza `get_stat` pentru fiecare set de date ale utilizatorului
+
+
+##### Detalii de utilizare
+Desi fisierele cu bazele de date sunt create automat (daca nu exista), este nevoie de un folder cu numele `db` in directorul programului pentru buna functionare a acestuia.
+
+De asemenea, pentru testare, am creat un director tests, cu 4 teste ce trateaza diferite logici/erori:
+    -> testul 1 populeaza baze de date cu mai multe intrari printr-o succesiune de update/add
+    -> testul 2 sterge majoritatea datelor si afiseaza niste statistici
+    -> testul 3 foloseste 2 utilizatori pe care ii schimba concomitent prin login/logout si verifica integritatea datelor
+    -> testul 4 insiruieste mai multe logici de comenzi ce ar putea cauza probleme (au rezultat determinist).
+    
+**PS: Pentru testare, se recomanda insiruirea mai multor teste mai putin 2 intrucat acesta sterge intrarile create de testul 1**

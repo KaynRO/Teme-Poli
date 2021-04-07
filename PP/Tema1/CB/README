@@ -1,0 +1,30 @@
+Grigoras Andrei 323 CB - Tema 1 PP
+
+
+Task A
+Pentru acest task, este vital mai intai sa ne alegem un mod de modelare al "containerelor". Pentru a optimiza implementarea am ales ca ClassState-ul sa fie o mapa in care avem 2 chei, respectiv "Var", "Func".
+Pentru prima functie trebuie doar sa creeam o mapa goala. Pentru cea de-a doua, primind Func/Var vrem sa inseram valorile in mapa, concatenand pentru cheia curenta valoarea cu cele precedente(utilizare insertWith).
+Folosind aceasta abordare, ultima functie este foarte usor de scris, intoarcem toate valorile pentru cheia specificata ca argument(Func/Var) iar daca nu gasim returnam lista vida.
+Obs:Pentru a nu inrola InstrType in clasa Ord am facut din ea un string cu show.
+
+Task B
+Ne vom defini programul ca o lista de 3-tuple, (nume_clasa, nume_parinte, mapa_clasa), iar o instructiune ca o lista de stringuri(parametri) Astfel toate functiile ajutatoare(getClassFunc, getVars) se implementeaza relativ repede printr-o succesiune de prelucrari asupra programului, in principiu folosing map si filter. Ce a trebui sa mai definim obligatoriu a fost prelucrarea unui 3-tuplu, extragerea din el a diferitor date(first, second, third).
+Parsarea am facut-o in felul urmator:
+	- inlocuim toate caracterele care nu sunt litere, cifre cu ' ' pentru a diferentia continutul unei expresii de prezentarea acesteia(newvar a = b -> newvar a b)
+	- apelam functia words pe stringul obtinut pentru a obtine un vector de stringuri ce sunt parti ale expresiei(newvar a b -> ["newvar", "a", "b"])
+	- pentru fiecare linie din fisier se executa pasii de mai sus
+
+Pentru functia interpret se efectueaza urmatorii pasi:
+	- daca vectorul aferent liniei respective incepe cu "class", extragem detaliile, vedem daca clasa exista deja in program si daca avem prezent "extends" verificam si ca parintele sa exista, dupa care in functie de
+	  rezultate introducem(sau nu) in program noua clasa(dam apend la un nou 3-tuplu)
+	- in cazul in care avem "newvar" verificam sa existe clasa, dupa care trebuie sa updatam in programul nostru, clasa "Global"
+	  am creat o functie aditionala care ia un 3-tuplu si o clasa si inlocuieste 3-tuplul aferent clasei cu cel dat ca parametru
+	  daca totul este in regula cu variabila returnam noul program(updatat)
+	- daca avem o functie verificam(printr-o functie auxiliara) ca toate functiile din declaratia ei sa fie valide
+	  daca totul este ok extragem numele functiei si clasa ei, parintele clasei, si folosind functie de update, modificam clasa respectiva adaugan noua functie
+
+Task C
+Varianta implementata merge doar pentru cazul in care nu avem FCall inaintrul unui FCall. Astfel, pasii sunt clari pentru acest caz, parsam expresia, extragem lista de argumente(tot ce nu este "Va") si acum:
+	- extragem toate functiile cu numele respectiv
+	- alcatuim o lista cu toti parametri acestor functii
+	- verificam daca este vreo lista de parametri care sa coincida cu cea dorita caz in care returnam primul element al ei, ce va fi return_type-ul functiei

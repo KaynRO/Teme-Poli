@@ -1,0 +1,18 @@
+Tema1 - Postfix
+
+In order to acomplish our goals which in our case would be to calculate the expression result, we have to follow some steps:
+	- firstly, from the given string we have to split it into pieces
+	- which every piece, we have to convert it to a number that the processor can understand and can perform operations with it
+	- we push every number into stack
+	- when we encounter an operand, we pop the first 2 values from the stack and apply the specific operation
+	- push the new result into stack
+
+Obviously, the final result will be the last element into the stack. Going deeper into how he practically coded these steps we proceeded as following:
+A) We choose the delimiter, in our case being " "(simple space)
+B) We scan our string until the first delimiter is found
+C) We have our first part, now he just count how many character it has and update the string as the second part
+	Example : string = "i am good" ---> string = "am good" and the "i" if kept for processing
+D) If there is a number, have to convert, so we simply scan every character of the current part and substract 0x30 from it in order to convert from char to decimal. We push the number into stack. To remember, if the current part starts with a "-", we keep that in mind(variable) and make it negative after conversion ends.
+E) If we have operand it means that we have to apply this operation the the previous 2 values which in our case are stored in the stack. So we pop them
+and then push the result back. To notice that, for dividing, if the number is negative, we use cdq in order the split the number between edx:eax
+F) Finally, the result is the last element from stack, considering we did everything ok :)

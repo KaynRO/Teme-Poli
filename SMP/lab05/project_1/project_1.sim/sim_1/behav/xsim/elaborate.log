@@ -1,0 +1,36 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 057480d46dd949bcb732105b0c000619 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/lab4.V" Line 38. Module PIC16F873 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/lab4.V" Line 30. Module T74LS04 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/lab4.V" Line 16. Module T74LS373 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/lab4.V" Line 1. Module m62256 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Kayn/Documents/Facultate/SMP/lab5-final/lab5-final/lab4.V" Line 1. Module m62256 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PIC16F873
+Compiling module xil_defaultlib.PICtoSRAM_PIC16F873_0_0
+Compiling module xil_defaultlib.T74LS04
+Compiling module xil_defaultlib.PICtoSRAM_T74LS04_0_0
+Compiling module xil_defaultlib.T74LS373
+Compiling module xil_defaultlib.PICtoSRAM_T74LS373_0_0
+Compiling module xil_defaultlib.m62256
+Compiling module xil_defaultlib.PICtoSRAM_m62256_0_0
+Compiling module xil_defaultlib.PICtoSRAM_m62256_1_0
+Compiling module xil_defaultlib.select
+Compiling module xil_defaultlib.PICtoSRAM_select_0_0
+Compiling module xil_defaultlib.splitter1
+Compiling module xil_defaultlib.PICtoSRAM_splitter1_0_0
+Compiling module xil_defaultlib.splitter2
+Compiling module xil_defaultlib.PICtoSRAM_splitter2_0_0
+Compiling module xil_defaultlib.splitter3
+Compiling module xil_defaultlib.PICtoSRAM_splitter3_0_0
+Compiling module xil_defaultlib.PICtoSRAM
+Compiling module xil_defaultlib.PICtoSRAM_wrapper
+Compiling module xil_defaultlib.test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_behav

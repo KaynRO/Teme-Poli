@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec  2 13:53:11 2020" VIVADOVERSION="2018.3">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a100ti" NAME="powerPCItoSDRAM" PACKAGE="csg324" SPEEDGRADE="-1L"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK_0" SIGIS="clk" SIGNAME="External_Ports_CLK_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="powerpcfsm_0" PORT="CLK"/>
+        <CONNECTION INSTANCE="mpc106fsm_0" PORT="CLK"/>
+        <CONNECTION INSTANCE="mx9_sdramfsm_0" PORT="CLK"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/chip_select_splitter_0" HWVERSION="1.0" INSTANCE="chip_select_splitter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="chip_select_splitter" VLNV="xilinx.com:module_ref:chip_select_splitter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="powerPCItoSDRAM_chip_select_splitter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="a" RIGHT="7" SIGIS="undef" SIGNAME="mpc106fsm_0_CS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mpc106fsm_0" PORT="CS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="b" SIGIS="undef" SIGNAME="chip_select_splitter_0_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mx9_sdramfsm_0" PORT="CS"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/data_splitter_0" HWVERSION="1.0" INSTANCE="data_splitter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="data_splitter" VLNV="xilinx.com:module_ref:data_splitter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="powerPCItoSDRAM_data_splitter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="d_in" RIGHT="31" SIGIS="undef" SIGNAME="powerpcfsm_0_DH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="powerpcfsm_0" PORT="DH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="d_out" RIGHT="7" SIGIS="undef" SIGNAME="data_splitter_0_d_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mx9_sdramfsm_0" PORT="DQ"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/mpc106fsm_0" HWVERSION="1.0" INSTANCE="mpc106fsm_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="mpc106fsm" VLNV="xilinx.com:module_ref:mpc106fsm:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="powerPCItoSDRAM_mpc106fsm_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="AACK" SIGIS="undef" SIGNAME="mpc106fsm_0_AACK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="powerpcfsm_0" PORT="AACK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ARTRY" SIGIS="undef" SIGNAME="mpc106fsm_0_ARTRY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="powerpcfsm_0" PORT="ARTRY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="A" RIGHT="31" SIGIS="undef" SIGNAME="powerpcfsm_0_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="powerpcfsm_0" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="BG0" SIGIS="undef" SIGNAME="mpc106fsm_0_BG0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="powerpcfsm_0" PORT="BG"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="BR0" SIGIS="undef" SIGNAME="powerpcfsm_0_BR">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="powerpcfsm_0" PORT="BR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="External_Ports_CLK_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="CS" RIGHT="7" SIGIS="undef" SIGNAME="mpc106fsm_0_CS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="chip_select_splitter_0" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="DBG0" SIGIS="undef" SIGNAME="mpc106fsm_0_DBG0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="powerpcfsm_0" PORT="DBG"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="DH" RIGHT="31" SIGIS="undef" SIGNAME="powerpcfsm_0_DH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="powerpcfsm_0" PORT="DH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="DL" RIGHT="31" SIGIS="undef" SIGNAME="powerpcfsm_0_DL">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="powerpcfsm_0" PORT="DL"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="SDCAS" SIGIS="undef" SIGNAME="mpc106fsm_0_SDCAS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mx9_sdramfsm_0" PORT="CAS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="SDMA" RIGHT="11" SIGIS="undef" SIGNAME="mpc106fsm_0_SDMA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mx9_sdramfsm_0" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="SDRAS" SIGIS="undef" SIGNAME="mpc106fsm_0_SDRAS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mx9_sdramfsm_0" PORT="RAS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="TA" SIGIS="undef" SIGNAME="mpc106fsm_0_TA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="powerpcfsm_0" PORT="TA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="TBST" SIGIS="undef" SIGNAME="powerpcfsm_0_TBST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="powerpcfsm_0" PORT="TBST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="TS" SIGIS="undef" SIGNAME="powerpcfsm_0_TS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="powerpcfsm_0" PORT="TS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="TSIZ" RIGHT="2" SIGIS="undef" SIGNAME="powerpcfsm_0_TSIZ">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="powerpcfsm_0" PORT="TSIZ"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="IO" LEFT="0" NAME="TT" RIGHT="4" SIGIS="undef"/>
+        <PORT DIR="O" NAME="WE" SIGIS="undef" SIGNAME="mpc106fsm_0_WE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mx9_sdramfsm_0" PORT="WE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="WT" SIGIS="undef" SIGNAME="powerpcfsm_0_WT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="powerpcfsm_0" PORT="WT"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/mx9_sdramfsm_0" HWVERSION="1.0" INSTANCE="mx9_sdramfsm_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="mx9_sdramfsm" VLNV="xilinx.com:module_ref:mx9_sdramfsm:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="powerPCItoSDRAM_mx9_sdramfsm_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="A" RIGHT="11" SIGIS="undef" SIGNAME="mpc106fsm_0_SDMA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mpc106fsm_0" PORT="SDMA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CAS" SIGIS="undef" SIGNAME="mpc106fsm_0_SDCAS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mpc106fsm_0" PORT="SDCAS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="External_Ports_CLK_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CS" SIGIS="undef" SIGNAME="chip_select_splitter_0_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="chip_select_splitter_0" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="DQ" RIGHT="7" SIGIS="undef" SIGNAME="data_splitter_0_d_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_splitter_0" PORT="d_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RAS" SIGIS="undef" SIGNAME="mpc106fsm_0_SDRAS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mpc106fsm_0" PORT="SDRAS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="WE" SIGIS="undef" SIGNAME="mpc106fsm_0_WE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mpc106fsm_0" PORT="WE"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/powerpcfsm_0" HWVERSION="1.0" INSTANCE="powerpcfsm_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="powerpcfsm" VLNV="xilinx.com:module_ref:powerpcfsm:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="powerPCItoSDRAM_powerpcfsm_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="AACK" SIGIS="undef" SIGNAME="mpc106fsm_0_AACK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mpc106fsm_0" PORT="AACK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ARTRY" SIGIS="undef" SIGNAME="mpc106fsm_0_ARTRY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mpc106fsm_0" PORT="ARTRY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="A" RIGHT="31" SIGIS="undef" SIGNAME="powerpcfsm_0_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mpc106fsm_0" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="BG" SIGIS="undef" SIGNAME="mpc106fsm_0_BG0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mpc106fsm_0" PORT="BG0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="BR" SIGIS="undef" SIGNAME="powerpcfsm_0_BR">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mpc106fsm_0" PORT="BR0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="External_Ports_CLK_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="DBG" SIGIS="undef" SIGNAME="mpc106fsm_0_DBG0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mpc106fsm_0" PORT="DBG0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="DH" RIGHT="31" SIGIS="undef" SIGNAME="powerpcfsm_0_DH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mpc106fsm_0" PORT="DH"/>
+            <CONNECTION INSTANCE="data_splitter_0" PORT="d_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="DL" RIGHT="31" SIGIS="undef" SIGNAME="powerpcfsm_0_DL">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mpc106fsm_0" PORT="DL"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="TA" SIGIS="undef" SIGNAME="mpc106fsm_0_TA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mpc106fsm_0" PORT="TA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="TBST" SIGIS="undef" SIGNAME="powerpcfsm_0_TBST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mpc106fsm_0" PORT="TBST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="TS" SIGIS="undef" SIGNAME="powerpcfsm_0_TS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mpc106fsm_0" PORT="TS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="TSIZ" RIGHT="2" SIGIS="undef" SIGNAME="powerpcfsm_0_TSIZ">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mpc106fsm_0" PORT="TSIZ"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="IO" LEFT="0" NAME="TT" RIGHT="4" SIGIS="undef"/>
+        <PORT DIR="O" NAME="WT" SIGIS="undef" SIGNAME="powerpcfsm_0_WT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mpc106fsm_0" PORT="WT"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

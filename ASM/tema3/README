@@ -1,0 +1,200 @@
+TASK I
+
+Legend:	I will note [] with the meaning of an adress. So [] = [some_adress]
+
+
+Mystery1 - Count how many characters we have in the string
+
+@param1 - Input string
+
+In this function, we are passed a string as a input and we first observe a loop when we reach "jmp 80486ab" due to the fact that it jumps back.
+Also, we can conclude that it looks something like "while(true)". Then, we store one byte from the input string and check if it is equal to 0. If so, we break the program, otherwise the increase our pointer in string and also increase eax which acts like a counter. At the end we return eax, which would have to meaning of how many characters we have in the string because a string is terminated by a 0 byte.
+
+Return: int -> string length
+
+Prototype: int strlen(char* s);
+
+
+
+Mystery2 - Count the position of a character in a given string
+
+@param1 - Input string
+@param2 - One character
+
+The first thing to notice is that the Mystery1 function is called and the result is stored in ecx. 
+Going further, we observe a loop which ends when the current character from the input string is equal to the one from the second parameter of the function. If they are not equal we increase eax and also our pointer in the string. So far we can conclude that we count how many characters are in a string before a given one which is actually the index of a specific character in a string. What should be noticed is that, before returning eax, we look to see if the result from ecx is 0 and if so, we return -1. To sum up, if the string is null we return -1, otherwise we return the index of the character represented by param2 in the param1 string
+
+Return: int -> character index
+
+Prototype: int strpos(char* s, char x);
+
+
+
+Mystery3 - Check if 2 strings have exactly K equal consecutive characters starting from index 0
+
+@param1 - String 1
+@param2 - String 2
+@param3 - Equal counter
+
+This function is independent from the previous 2. We have a loop which ends when the current character from @param1 is not equal to the one from @param2("mov al [], mov ah [], cmp al, ah, jne"). We observe the instruction "loop" which has as main register ecx that stores the @param3. So, if the loop ends normally it means that input strings have less than ecx characters equal consecutive and we return 1. Otherwise we return 0.
+
+Return: 0/1 -> Do strings have exactly K equal consecutive characters ?
+
+Prototype: bool has_equal(char* s1, char* s2, int count);
+
+
+
+Mystery4 : Copy first K characters of a string into another one
+
+@param1 - Destination string
+@param2 - Source string
+@param3 - Number of characters to counter
+
+This is a straightforward function. We loop K characters, copy one byte from source and move it to destination, then increase both pointers("mov dl, [] , mov [], dl)
+
+Prototype: void string_copy(char* destination, char* source, int counter);
+
+
+
+Mystery5: Check if current character is a digit
+
+@param1 : One character
+
+The function checks if the character >= 48 and <= 57 which in the ASCII table are represented by characters '0', '9'. So we simply check if the current character is a digit or not
+
+Return: 0/1 -> x >= '0' && <= '9' ?
+
+Prototype: bool is_digit(char x);
+
+
+
+Mystery6: Do the reverse of a string
+
+@param1 - Input string
+
+This functions looks a little bit more complicated than the rest. Let's look first at the declarations before the loop starts. We store in ecx the string length(Mystery1). We also create some some on the stack of ecx(=eax) length. Then we loop ecx times, at each step mov one byte from the end of the input string into our created space from the stack. This is resulted from the fact that ecx is used as index in the string, then decreased. So the first character to copy is the last of the string(index=length). So, with this loop we copy on stack the reverse of the input string. In the last part, we return the result of Mystery4 of the initial string, it's reverse from stack, and the string length that was previosly saved. What we actually do, considering the Mystery4 purpose, is to copy back in the initial string adress it's reverse. In a nutshell, this function replace the initial string with it's reverse.
+
+Prototype: void reverse(char* s);
+
+
+
+Mystery7: Convert a string to int(only if all characters are digits)
+
+@param1 - Input string
+
+We will proceed as in the previous function. Looking at the declarations we see that we store in ecx the string length and also we reverse the string(Mystery6 call). Then we have a loop the breaks only when some conditions from within in are not satisfied. Going in, we first take one byte, check if it's a digit(Mystery5) and then extract 48 from it which will convert it from char to int. The next few instructions looks familiar with a common method met in 9th grade of composing a number from digits. We multiply with 10 the current formed number and then add the current digit("mov ebx,0xa, mult ebx, add eax, ebx"). So what our function will return is the equivalent number from it's character representation. If we encounter any non-digit character we return 1.
+
+Return: eax - Number equivalence
+
+Prototype int atoi(char* s);
+
+
+
+Mystery8: Check if prefix from @param2 exists in @param1
+
+@param1 : First number(address)
+@param2 : Second number(address)
+@param3 : Counter
+
+We start with the most important observation. Even if the first 2 parameters are integer, they actually represent adresses. This is vital information in order to understand the function's purpose. We step in and recognize a loop that, if ends normally it return 0, otherwise 1 when the condition var1 = @param3. We also see a equality compare between the element at address @param1 + var2 and @param2 + var1. If this is met, var1 is increased by 1 otherwise var1 = 0. In all cases, var2 is incremented during each loop. So, what the functions checks is if, the first @param3 elements from @param2 address are found in @param1(consecutive equals) BUT they are not equal to 0 or 10 which from ASCII table we see they are the NULL or NEW_LINE. Therefore, we check unless reach the end of strings.
+
+Return: 1/0 - Is prefix found ?
+
+Prototype: bool has_prefix(int a, int b, unsigned int c)
+
+
+Mystery9: Check if the string is present in the a interval of indexes from the string at address @param1
+
+@param1 : First number(address)
+@param2 : Second number(index)
+@param3 : Third number(index)
+@param4 : A string
+
+Again, in order to fully understand the function we observe that @param1 is an address to a string. We call Mystery1 and store the length of @param4. Now, we have a loop, which starts at @param2 and breaks only if loop_index >= @param3. So, we can conclude so far, we are doing some check in the interval [@param2, @param3] from the string at adress @param1. If we find *(@param1 + loop_index) = NEW_LINE(ASCII code 10) then we check if @param4 is found in the interval above by calling Mystery8 with the length of @param4 which will check whether all @param4's characters are found in that interval. If everything is good untill now, we will call print_line which will do some output for the line. Suming up, we can say that the adress @param1 contains a large text, with multiple lines and what we do is to check on which line, on a given interval, the string @param4 is found.
+
+Return: index where loops break(index = @param3)
+
+Prototype: unsigned int strstr(int a1, int b1, unsigned int c1, char* s);
+
+
+
+From now on, we will focus on program functionality. First we start by looking at the other functions. The most simple one is parse_opt which checks if the parameter of the programs are parsed correctly by checking if we have present any of the following: i, f, s, e. Combining this with the check from parse_args where we check if at some address we find 45 which in ASCII table is represented by character '-'. So, we our program has 4 possible parameters: -i, -f, -s, -e. Going further in parse_args we will analize each argument and how it's meaning. We will also take into consideration how the arguments are abreviated.
+
+-s(start) --> parse_opt returns 2
+We call atoi(Mystery7) on the input string after the -s option and keep the result.
+
+-e(end) --> parse_opt returnsn 4
+Same as previous
+
+-f(string) --> parse_opt returns 8
+We find the length of the input. This argument will be followed by a string due to the fact that if the length of the input exceeds 31 we exit. If not, we store the string using Mystery4
+
+-i(file) --> parse_opt returns 1
+Same as above but the argument is in fact a filename because at the begining of do_run we check if -i is present and if so we call read_from_file or do_read(read input direct from keyboard if -i not present).
+
+Going into do_run function we see it is checked whether -s, -e parameters are present, otherwise set default values 0, length of file. If -f argument is present we go and call Mystery9 which will print all lines from file that contains the string.
+So to recap, the program is checking, from indexes given as input by parameters -s, -e in the content of the file presented by -i OR introduced when prompted(is parameter missing) the string given by parameter -f.
+
+For example by running:
+	./tema3 -f 'the' -i test.txt
+
+Where text.txt contains:
+	Furthermore
+	only
+	xxxx
+	the
+	theonlyone
+
+The program will print:
+	Furthermore
+	the
+	theonlyone
+
+As these lines contains the string 'the'.
+
+
+
+TASK 3 & TASK 2(some parts)
+
+For this task we will explain for each mysteryX the changes we brought for optimizing space which is equivalent to optimizing the number of instructions used and their length
+
+Mystery1:
+	The change we bring to the one from TASK 2 is not having to use edx register and moving a large value into ecx. We have to negate ecx and when reaching the end negate again. Therefore we will change the sign 2 times and have positive at the end.
+
+Mystery2:
+	We will first call Mystery1 and get string length. Then, we will replace our manual loop with scasb now that we have the length also. Therefore we will get less lines
+
+Mystery3:
+	We will use the same idea as the previous ones. We will completly replace loop labels with a 'repe cmpsb' that automatically increment pointers and compare until first pair that is not equal is met. If we had K characters so far we return 0 otherwise 1
+
+Mystery4:
+	For moving a string into another we will use movsb with repne which will move bytes from source to destination for K times
+
+Mystery5:
+	We actually dont need this function. In Mystery7 we will manually check if >= '0' and <= '9', in this way avoiding extra memory usage, stack frames, labels.
+
+Mystery6:
+	We also dont need this as the only this it is used is on Mystery7 which makes no sense of reversing a string in order to convert it to int.
+
+Mystery7:
+	We will optimize speed and size at the same time by removing the call to reverse the string and also the one checking if it's a digit(Mystery5). We don't need that. All we need is to loop the string, check if it's a digit, convert it to int and then create a number = number * 10 + digit. And we will return this number. The optimization comes from less memory used on stack, less stack frames(no additional function call), less instructions and time(less push, pop,add)
+
+Mystery8:
+	Not any significant optimization. We got rid of 1-2 jumps and some instructions by understanding what the function does(find prefix of string2 in string1) and changing the code flow.
+	What is thought to consider is the amount of mov that have been removed. In the original code there are 20 or more moves. We reduced those by looping through strings using as iterators 2 register and so not having to move from stack the saved registers and use them, and finally put them back.
+
+Mystery9:
+	Again, not major changes. Maybe some slight changes due to code flow. We start from start_index, go until NEW_LINE found and using Mystery8 check wheter string is present in interval.
+
+
+
+TASK 2
+
+We will reuse the whole code from TASK 3 and bring some optimizations regarding speed that may increase the size
+
+Mystery1:
+	Instead of looping manually we will use scasb. We move the string into edi and scan until we reach 0x0(string end). Then we simply do some differences to know how many characters have been looped(set initial max string length and then sub what's left from that)
+
+Mystery2:
+	The faster way, without having to call mystery1 is to loop manually. In order to cut the call to Mystery1 we observe that length 0 means that the first byte of the string has to be 0. So we check that manually.
+

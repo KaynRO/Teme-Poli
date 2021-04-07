@@ -1,0 +1,95 @@
+{
+  "main": {
+    "id": "1ae97c64010d24c6",
+    "type": "split",
+    "children": [
+      {
+        "id": "821bea1d2eea581e",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "writeup/Writeup.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b3767446fc35732f",
+    "type": "split",
+    "children": [
+      {
+        "id": "0ceb30f729d429ae",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "18cce640fc92e785",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "81cdfebf568f1f04",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 320
+  },
+  "right": {
+    "id": "1879e3415e2fe8b6",
+    "type": "split",
+    "children": [
+      {
+        "id": "95858e530452b679",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d7a6cdd4cafa0f83",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "writeup/Writeup.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "writeup/Writeup.md",
+    "writeup/task3.md",
+    "writeup/Untitled.md",
+    "writeup/task2.md",
+    "writeup/task1.md"
+  ]
+}

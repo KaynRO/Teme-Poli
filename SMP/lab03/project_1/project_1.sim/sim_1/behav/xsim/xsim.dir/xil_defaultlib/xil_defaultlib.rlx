@@ -1,0 +1,18 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+C:/Users/Kayn/Documents/Facultate/SMP/lab03/project_1/project_1.ip_user_files/bd/powerPCItoSDRAM/ip/powerPCItoSDRAM_chip_select_splitter_0_0/sim/powerPCItoSDRAM_chip_select_splitter_0_0.v,1606909692,verilog,,C:/Users/Kayn/Documents/Facultate/SMP/lab03/project_1/project_1.ip_user_files/bd/powerPCItoSDRAM/ip/powerPCItoSDRAM_data_splitter_0_0/sim/powerPCItoSDRAM_data_splitter_0_0.v,,powerPCItoSDRAM_chip_select_splitter_0_0,,,,,,,,
+C:/Users/Kayn/Documents/Facultate/SMP/lab03/project_1/project_1.ip_user_files/bd/powerPCItoSDRAM/ip/powerPCItoSDRAM_data_splitter_0_0/sim/powerPCItoSDRAM_data_splitter_0_0.v,1606909692,verilog,,C:/Users/Kayn/Documents/Facultate/SMP/lab03/project_1/project_1.ip_user_files/bd/powerPCItoSDRAM/ip/powerPCItoSDRAM_mx9_sdramfsm_0_0/sim/powerPCItoSDRAM_mx9_sdramfsm_0_0.v,,powerPCItoSDRAM_data_splitter_0_0,,,,,,,,
+C:/Users/Kayn/Documents/Facultate/SMP/lab03/project_1/project_1.ip_user_files/bd/powerPCItoSDRAM/ip/powerPCItoSDRAM_mpc106fsm_0_0/sim/powerPCItoSDRAM_mpc106fsm_0_0.v,1606909692,verilog,,C:/Users/Kayn/Documents/Facultate/SMP/lab03/project_1/project_1.ip_user_files/bd/powerPCItoSDRAM/ip/powerPCItoSDRAM_chip_select_splitter_0_0/sim/powerPCItoSDRAM_chip_select_splitter_0_0.v,,powerPCItoSDRAM_mpc106fsm_0_0,,,,,,,,
+C:/Users/Kayn/Documents/Facultate/SMP/lab03/project_1/project_1.ip_user_files/bd/powerPCItoSDRAM/ip/powerPCItoSDRAM_mx9_sdramfsm_0_0/sim/powerPCItoSDRAM_mx9_sdramfsm_0_0.v,1606909692,verilog,,C:/Users/Kayn/Documents/Facultate/SMP/lab03/project_1/project_1.ip_user_files/bd/powerPCItoSDRAM/sim/powerPCItoSDRAM.v,,powerPCItoSDRAM_mx9_sdramfsm_0_0,,,,,,,,
+C:/Users/Kayn/Documents/Facultate/SMP/lab03/project_1/project_1.ip_user_files/bd/powerPCItoSDRAM/ip/powerPCItoSDRAM_powerpcfsm_0_0/sim/powerPCItoSDRAM_powerpcfsm_0_0.v,1606909692,verilog,,C:/Users/Kayn/Documents/Facultate/SMP/lab03/project_1/project_1.ip_user_files/bd/powerPCItoSDRAM/ip/powerPCItoSDRAM_mpc106fsm_0_0/sim/powerPCItoSDRAM_mpc106fsm_0_0.v,,powerPCItoSDRAM_powerpcfsm_0_0,,,,,,,,
+C:/Users/Kayn/Documents/Facultate/SMP/lab03/project_1/project_1.ip_user_files/bd/powerPCItoSDRAM/sim/powerPCItoSDRAM.v,1606909768,verilog,,C:/Users/Kayn/Documents/Facultate/SMP/lab03/project_1/project_1.srcs/sources_1/bd/powerPCItoSDRAM/hdl/powerPCItoSDRAM_wrapper.v,,powerPCItoSDRAM,,,,,,,,
+C:/Users/Kayn/Documents/Facultate/SMP/lab03/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1606909690,verilog,,,,glbl,,,,,,,,
+C:/Users/Kayn/Documents/Facultate/SMP/lab03/project_1/project_1.srcs/sources_1/bd/powerPCItoSDRAM/hdl/powerPCItoSDRAM_wrapper.v,1606909983,verilog,,C:/Users/Kayn/Downloads/lab3/test.v,,powerPCItoSDRAM_wrapper,,,,,,,,
+C:/Users/Kayn/Downloads/lab3/2mx9_sdramfsm.v,1606909687,verilog,,C:/Users/Kayn/Documents/Facultate/SMP/lab03/project_1/project_1.ip_user_files/bd/powerPCItoSDRAM/ip/powerPCItoSDRAM_powerpcfsm_0_0/sim/powerPCItoSDRAM_powerpcfsm_0_0.v,,mx9_sdramfsm,,,,,,,,
+C:/Users/Kayn/Downloads/lab3/chip_select_splitter.v,1606909687,verilog,,C:/Users/Kayn/Downloads/lab3/data_splitter.v,,chip_select_splitter,,,,,,,,
+C:/Users/Kayn/Downloads/lab3/data_splitter.v,1606909687,verilog,,C:/Users/Kayn/Downloads/lab3/2mx9_sdramfsm.v,,data_splitter,,,,,,,,
+C:/Users/Kayn/Downloads/lab3/mpc106fsm.v,1606909692,verilog,,C:/Users/Kayn/Downloads/lab3/chip_select_splitter.v,,mpc106fsm,,,,,,,,
+C:/Users/Kayn/Downloads/lab3/powerpcfsm.v,1606909692,verilog,,C:/Users/Kayn/Downloads/lab3/mpc106fsm.v,,powerpcfsm,,,,,,,,
+C:/Users/Kayn/Downloads/lab3/test.v,1606909693,verilog,,,,test,,,,,,,,

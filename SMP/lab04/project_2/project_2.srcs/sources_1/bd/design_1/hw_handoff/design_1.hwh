@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec  9 16:34:54 2020" VIVADOVERSION="2018.3">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a100ti" NAME="design_1" PACKAGE="csg324" SPEEDGRADE="-1L"/>
+
+  <EXTERNALPORTS/>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/arbiter_0" HWVERSION="1.0" INSTANCE="arbiter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="arbiter" VLNV="xilinx.com:module_ref:arbiter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_arbiter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="br" SIGIS="undef" SIGNAME="dsp_0_br">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dsp_0" PORT="br"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ba" SIGIS="undef" SIGNAME="dsp_0_ba">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dsp_0" PORT="ba"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="bl" SIGIS="undef" SIGNAME="dsp_0_bl">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dsp_0" PORT="bl"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="bb" SIGIS="undef" SIGNAME="arbiter_0_bb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dsp_0" PORT="bb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="bg" SIGIS="undef" SIGNAME="arbiter_0_bg">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dsp_0" PORT="bg"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="req" SIGIS="undef" SIGNAME="arbiter_0_req">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bus_0" PORT="req"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="gnt" SIGIS="undef" SIGNAME="bus_0_gnt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bus_0" PORT="gnt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="lock" SIGIS="undef" SIGNAME="arbiter_0_lock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bus_0" PORT="lock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clkpci" SIGIS="undef" SIGNAME="bus_0_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bus_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk" SIGIS="clk" SIGNAME="arbiter_0_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dsp_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/bus_0" HWVERSION="1.0" INSTANCE="bus_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="bus" VLNV="xilinx.com:module_ref:bus:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_bus_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="req" SIGIS="undef" SIGNAME="arbiter_0_req">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="arbiter_0" PORT="req"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="gnt" SIGIS="undef" SIGNAME="bus_0_gnt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="arbiter_0" PORT="gnt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="lock" SIGIS="undef" SIGNAME="arbiter_0_lock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="arbiter_0" PORT="lock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk" SIGIS="clk" SIGNAME="bus_0_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="arbiter_0" PORT="clkpci"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/dsp_0" HWVERSION="1.0" INSTANCE="dsp_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dsp" VLNV="xilinx.com:module_ref:dsp:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_dsp_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="br" SIGIS="undef" SIGNAME="dsp_0_br">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="arbiter_0" PORT="br"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ba" SIGIS="undef" SIGNAME="dsp_0_ba">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="arbiter_0" PORT="ba"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="bl" SIGIS="undef" SIGNAME="dsp_0_bl">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="arbiter_0" PORT="bl"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="bb" SIGIS="undef" SIGNAME="arbiter_0_bb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="arbiter_0" PORT="bb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="bg" SIGIS="undef" SIGNAME="arbiter_0_bg">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="arbiter_0" PORT="bg"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="arbiter_0_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="arbiter_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

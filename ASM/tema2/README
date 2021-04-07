@@ -1,0 +1,41 @@
+Grigoras Andrei - Tema 2 IOCLA
+
+	TASK 1
+This task doesn't require any advanced technique. We start with the observation that is X is the encrypted text and Y is the key then
+to get the decrypted text we have to XOR every byte of X with every byte of Y due to the fact that (a xor b) xor b = a. ( to decrypt
+xor again with the same key). Firstly, we scan the input string until we hit "0x00" with is the delimiter between encrypted text and
+key. Now we have both parts so we only have to iterate through each byte of text and key and xor them.(override result in the initial
+text).
+
+	TASK 2
+This task is quite similar to the previous one with a few exceptions. We have the encrypted string already in the good format. Looking
+at the definition of the rolling xor presented in the task we see that, to obtain the encrypted byte m(k) = c(k) xor m(k - 1), where
+m(k) is the k-byte from the initial string. Therefore, if we want to decode, we xor with m(k - 1) and obtain c(k) = m(k) xor m(k - 1)
+cuz a xor a = 0(neutral element). We conclude that, for obtaining the k-byte of the decrypted text we need to xor k-1 and k bytes from
+our initial(encrypted text). So we iterate each byte of the input text, and update the k-byte by being value(k-byte) xor value(k-1-byte)
+
+	TASK 3
+We finally got at a more complicated task. In order to decrypt hex-given text we first have to convert it to binary data so we can xor
+each byte of the text with the key(like in task 1). To accomplish that, we followed some steps:
+	A) Read character by character
+	B) Convert character to it's decimal value such that
+		a --> 10
+		b --> 11
+		  ...
+		0 --> 0
+		1 --> 1
+		  ...
+	   In order to do that, we look at the ASCII table, see that 'a' = 97 so we have to subtract from every letter character 87
+	   (97 - 10). For digits, '0' = 48 so we subtract 48 from every digit character.
+	C) Now we have to transform a decimal number into bytes so that 10 = 'a' = 1 0 1 0. For that, we rotate over left and see if
+	   CF = 1 which means the last byte was 1. To add this byte to our bit-sequence variable by shifting to left one time and then
+	   add the new byte(doing OR). !!! The cmp bl, 5 is used for having only 4 bytes as a hex number is maximum 15(f) = 1 1 1 1
+	D) Push every bit-sequence in the stack. At the beginning of the function, allocate space(800 bytes) and then move data in that
+	   space.
+Ok, now we should have on the stack all data in binary format. Important to observe is that we have it as follow
+	04 05 0f 02 ...
+A character is obtained by combining 2 of those groups 04 05 --> 45
+What we did so far was to transform, for example 12ed into the byte 0x12, 0xed even though we have it for now (0x1 0x2 0xe 0xd)
+For the last part, we first look where we have first delimiter, position 70 which means from there on we have the key. As in TASK 1,
+we iterate on this stack, from position 0 -> 70 and 71 -> 141(text length) with step 2. We combine 2 consecutive bytes into one(0x1 0x2 --> 0x12)
+and then xor the element from index 0 -> 70 with the apropriate from 71 -> 141. Finally we print the value

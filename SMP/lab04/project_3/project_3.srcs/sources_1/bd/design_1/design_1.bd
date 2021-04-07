@@ -1,0 +1,198 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7a100ticsg324-1L",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "bus_0": "",
+      "arbiter_0": "",
+      "dsp_0": ""
+    },
+    "components": {
+      "bus_0": {
+        "vlnv": "xilinx.com:module_ref:bus:1.0",
+        "xci_name": "design_1_bus_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "bus",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "req": {
+            "direction": "I"
+          },
+          "gnt": {
+            "direction": "O"
+          },
+          "lock": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "O"
+          }
+        }
+      },
+      "arbiter_0": {
+        "vlnv": "xilinx.com:module_ref:arbiter:1.0",
+        "xci_name": "design_1_arbiter_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "arbiter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "br": {
+            "direction": "I"
+          },
+          "ba": {
+            "direction": "I"
+          },
+          "bl": {
+            "direction": "I"
+          },
+          "bb": {
+            "direction": "O"
+          },
+          "bg": {
+            "direction": "O"
+          },
+          "req": {
+            "direction": "O"
+          },
+          "gnt": {
+            "direction": "I"
+          },
+          "lock": {
+            "direction": "O"
+          },
+          "clkpci": {
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_bus_0_0_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "O"
+          }
+        }
+      },
+      "dsp_0": {
+        "vlnv": "xilinx.com:module_ref:dsp:1.0",
+        "xci_name": "design_1_dsp_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "dsp",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "br": {
+            "direction": "O"
+          },
+          "ba": {
+            "direction": "O"
+          },
+          "bl": {
+            "direction": "O"
+          },
+          "bb": {
+            "direction": "I"
+          },
+          "bg": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_arbiter_0_0_clk",
+                "value_src": "default_prop"
+              }
+            }
+          }
+        }
+      }
+    },
+    "nets": {
+      "dsp_0_br": {
+        "ports": [
+          "dsp_0/br",
+          "arbiter_0/br"
+        ]
+      },
+      "dsp_0_ba": {
+        "ports": [
+          "dsp_0/ba",
+          "arbiter_0/ba"
+        ]
+      },
+      "dsp_0_bl": {
+        "ports": [
+          "dsp_0/bl",
+          "arbiter_0/bl"
+        ]
+      },
+      "bus_0_gnt": {
+        "ports": [
+          "bus_0/gnt",
+          "arbiter_0/gnt"
+        ]
+      },
+      "bus_0_clk": {
+        "ports": [
+          "bus_0/clk",
+          "arbiter_0/clkpci"
+        ]
+      },
+      "arbiter_0_req": {
+        "ports": [
+          "arbiter_0/req",
+          "bus_0/req"
+        ]
+      },
+      "arbiter_0_lock": {
+        "ports": [
+          "arbiter_0/lock",
+          "bus_0/lock"
+        ]
+      },
+      "arbiter_0_bb": {
+        "ports": [
+          "arbiter_0/bb",
+          "dsp_0/bb"
+        ]
+      },
+      "arbiter_0_bg": {
+        "ports": [
+          "arbiter_0/bg",
+          "dsp_0/bg"
+        ]
+      },
+      "arbiter_0_clk": {
+        "ports": [
+          "arbiter_0/clk",
+          "dsp_0/clk"
+        ]
+      }
+    }
+  }
+}

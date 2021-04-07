@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 13 14:50:03 2021" VIVADOVERSION="2018.3">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a100ti" NAME="PICtoSRAM" PACKAGE="csg324" SPEEDGRADE="-1L"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="oe_0" SIGIS="undef" SIGNAME="External_Ports_oe_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="T74LS373_0" PORT="oe"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/PIC16F873_0" HWVERSION="1.0" INSTANCE="PIC16F873_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PIC16F873" VLNV="xilinx.com:module_ref:PIC16F873:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="PICtoSRAM_PIC16F873_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="5" NAME="porta" RIGHT="0" SIGIS="undef" SIGNAME="PIC16F873_0_porta">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="splitter2_0" PORT="d_in"/>
+            <CONNECTION INSTANCE="splitter3_0" PORT="d_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="portb" RIGHT="0" SIGIS="undef" SIGNAME="PIC16F873_0_portb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="m62256_0" PORT="datw"/>
+            <CONNECTION INSTANCE="m62256_1" PORT="datw"/>
+            <CONNECTION INSTANCE="T74LS373_0" PORT="dat"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="portbw" RIGHT="0" SIGIS="undef" SIGNAME="select_0_d_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="select_0" PORT="d_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="portc" RIGHT="0" SIGIS="undef" SIGNAME="PIC16F873_0_portc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="splitter1_0" PORT="d_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/T74LS04_0" HWVERSION="1.0" INSTANCE="T74LS04_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="T74LS04" VLNV="xilinx.com:module_ref:T74LS04:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="PICtoSRAM_T74LS04_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="outt" SIGIS="undef" SIGNAME="T74LS04_0_outt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="m62256_0" PORT="ce"/>
+            <CONNECTION INSTANCE="m62256_0" PORT="oe"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="inn" SIGIS="undef" SIGNAME="splitter1_0_d_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="splitter1_0" PORT="d_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/T74LS373_0" HWVERSION="1.0" INSTANCE="T74LS373_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="T74LS373" VLNV="xilinx.com:module_ref:T74LS373:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="PICtoSRAM_T74LS373_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="7" NAME="outh" RIGHT="0" SIGIS="undef" SIGNAME="T74LS373_0_outh">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="splitter1_0" PORT="out_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="dat" RIGHT="0" SIGIS="undef" SIGNAME="PIC16F873_0_portb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PIC16F873_0" PORT="portb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="oe" SIGIS="undef" SIGNAME="External_Ports_oe_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="oe_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="le" SIGIS="undef" SIGNAME="splitter2_0_d_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="splitter2_0" PORT="d_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/m62256_0" HWVERSION="1.0" INSTANCE="m62256_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="m62256" VLNV="xilinx.com:module_ref:m62256:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="PICtoSRAM_m62256_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="7" NAME="dat" RIGHT="0" SIGIS="undef" SIGNAME="m62256_0_dat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="select_0" PORT="d_in1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="datw" RIGHT="0" SIGIS="undef" SIGNAME="PIC16F873_0_portb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PIC16F873_0" PORT="portb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="14" NAME="adr" RIGHT="0" SIGIS="undef" SIGNAME="splitter1_0_d_out2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="splitter1_0" PORT="d_out2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ce" SIGIS="undef" SIGNAME="T74LS04_0_outt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="T74LS04_0" PORT="outt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="oe" SIGIS="undef" SIGNAME="T74LS04_0_outt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="T74LS04_0" PORT="outt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="we" SIGIS="undef" SIGNAME="splitter3_0_d_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="splitter3_0" PORT="d_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/m62256_1" HWVERSION="1.0" INSTANCE="m62256_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="m62256" VLNV="xilinx.com:module_ref:m62256:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="PICtoSRAM_m62256_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="7" NAME="dat" RIGHT="0" SIGIS="undef" SIGNAME="m62256_1_dat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="select_0" PORT="d_in2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="datw" RIGHT="0" SIGIS="undef" SIGNAME="PIC16F873_0_portb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PIC16F873_0" PORT="portb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="14" NAME="adr" RIGHT="0" SIGIS="undef" SIGNAME="splitter1_0_d_out2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="splitter1_0" PORT="d_out2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ce" SIGIS="undef" SIGNAME="splitter1_0_d_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="splitter1_0" PORT="d_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="oe" SIGIS="undef" SIGNAME="splitter1_0_d_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="splitter1_0" PORT="d_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="we" SIGIS="undef" SIGNAME="splitter3_0_d_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="splitter3_0" PORT="d_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/select_0" HWVERSION="1.0" INSTANCE="select_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="select" VLNV="xilinx.com:module_ref:select:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="PICtoSRAM_select_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="d_in1" RIGHT="0" SIGIS="undef" SIGNAME="m62256_0_dat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="m62256_0" PORT="dat"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="d_in2" RIGHT="0" SIGIS="undef" SIGNAME="m62256_1_dat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="m62256_1" PORT="dat"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="not_in" SIGIS="undef" SIGNAME="splitter1_0_d_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="splitter1_0" PORT="d_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="oe" SIGIS="undef" SIGNAME="splitter3_0_d_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="splitter3_0" PORT="d_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="d_out" RIGHT="0" SIGIS="undef" SIGNAME="select_0_d_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PIC16F873_0" PORT="portbw"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/splitter1_0" HWVERSION="1.0" INSTANCE="splitter1_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="splitter1" VLNV="xilinx.com:module_ref:splitter1:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="PICtoSRAM_splitter1_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="d_in" RIGHT="0" SIGIS="undef" SIGNAME="PIC16F873_0_portc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PIC16F873_0" PORT="portc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="out_in" RIGHT="0" SIGIS="undef" SIGNAME="T74LS373_0_outh">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="T74LS373_0" PORT="outh"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="d_out" SIGIS="undef" SIGNAME="splitter1_0_d_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="T74LS04_0" PORT="inn"/>
+            <CONNECTION INSTANCE="m62256_1" PORT="ce"/>
+            <CONNECTION INSTANCE="m62256_1" PORT="oe"/>
+            <CONNECTION INSTANCE="select_0" PORT="not_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="14" NAME="d_out2" RIGHT="0" SIGIS="undef" SIGNAME="splitter1_0_d_out2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="m62256_1" PORT="adr"/>
+            <CONNECTION INSTANCE="m62256_0" PORT="adr"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/splitter2_0" HWVERSION="1.0" INSTANCE="splitter2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="splitter2" VLNV="xilinx.com:module_ref:splitter2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="PICtoSRAM_splitter2_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="5" NAME="d_in" RIGHT="0" SIGIS="undef" SIGNAME="PIC16F873_0_porta">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PIC16F873_0" PORT="porta"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="d_out" SIGIS="undef" SIGNAME="splitter2_0_d_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="T74LS373_0" PORT="le"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/splitter3_0" HWVERSION="1.0" INSTANCE="splitter3_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="splitter3" VLNV="xilinx.com:module_ref:splitter3:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="PICtoSRAM_splitter3_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="5" NAME="d_in" RIGHT="0" SIGIS="undef" SIGNAME="PIC16F873_0_porta">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PIC16F873_0" PORT="porta"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="d_out" SIGIS="undef" SIGNAME="splitter3_0_d_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="m62256_1" PORT="we"/>
+            <CONNECTION INSTANCE="m62256_0" PORT="we"/>
+            <CONNECTION INSTANCE="select_0" PORT="oe"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

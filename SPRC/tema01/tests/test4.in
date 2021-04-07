@@ -1,0 +1,16 @@
+login kayn
+add 1 1 1
+del 1
+logout
+login andrei
+read 1
+read 2
+del 2
+load
+logout
+login kayn
+load
+read 1
+get_stat_all
+get_stat 1
+logout

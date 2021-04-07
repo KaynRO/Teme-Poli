@@ -1,0 +1,323 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xBB49FA3214F99D4E",
+      "device": "xc7a100tcsg324-1",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "graphic_controller_0": "",
+      "core_logic_0": ""
+    },
+    "ports": {
+      "clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "graphic_controller_0": {
+        "vlnv": "xilinx.com:module_ref:graphic_controller:1.0",
+        "xci_name": "design_1_graphic_controller_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "graphic_controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "IO"
+          },
+          "pipe": {
+            "direction": "O"
+          },
+          "sba": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "rbf": {
+            "direction": "O"
+          },
+          "st": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "gnt": {
+            "direction": "I"
+          },
+          "ad_stb0": {
+            "direction": "IO"
+          },
+          "ad_stb1": {
+            "direction": "IO"
+          },
+          "sb_stb": {
+            "direction": "O"
+          },
+          "irdy": {
+            "direction": "I"
+          },
+          "trdy": {
+            "direction": "IO"
+          },
+          "serr": {
+            "direction": "O"
+          },
+          "req": {
+            "direction": "O"
+          },
+          "ad": {
+            "direction": "IO",
+            "left": "31",
+            "right": "0"
+          },
+          "c_be": {
+            "direction": "IO",
+            "left": "3",
+            "right": "0"
+          },
+          "inta": {
+            "direction": "O"
+          },
+          "intb": {
+            "direction": "O"
+          }
+        }
+      },
+      "core_logic_0": {
+        "vlnv": "xilinx.com:module_ref:core_logic:1.0",
+        "xci_name": "design_1_core_logic_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "core_logic",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "IO"
+          },
+          "pipe": {
+            "direction": "I"
+          },
+          "sba": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "rbf": {
+            "direction": "I"
+          },
+          "st": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "gnt": {
+            "direction": "O"
+          },
+          "ad_stb0": {
+            "direction": "IO"
+          },
+          "ad_stb1": {
+            "direction": "IO"
+          },
+          "sb_stb": {
+            "direction": "I"
+          },
+          "irdy": {
+            "direction": "I"
+          },
+          "trdy": {
+            "direction": "IO"
+          },
+          "serr": {
+            "direction": "I"
+          },
+          "req": {
+            "direction": "I"
+          },
+          "ad": {
+            "direction": "IO",
+            "left": "31",
+            "right": "0"
+          },
+          "c_be": {
+            "direction": "IO",
+            "left": "3",
+            "right": "0"
+          },
+          "inta": {
+            "direction": "I"
+          },
+          "intb": {
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Net": {
+        "ports": [
+          "graphic_controller_0/trdy",
+          "core_logic_0/trdy"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "graphic_controller_0/irdy",
+          "core_logic_0/irdy"
+        ]
+      },
+      "core_logic_0_gnt": {
+        "ports": [
+          "core_logic_0/gnt",
+          "graphic_controller_0/gnt"
+        ]
+      },
+      "core_logic_0_st": {
+        "ports": [
+          "core_logic_0/st",
+          "graphic_controller_0/st"
+        ]
+      },
+      "graphic_controller_0_intb": {
+        "ports": [
+          "graphic_controller_0/intb",
+          "core_logic_0/intb"
+        ]
+      },
+      "graphic_controller_0_inta": {
+        "ports": [
+          "graphic_controller_0/inta",
+          "core_logic_0/inta"
+        ]
+      },
+      "Net3": {
+        "ports": [
+          "graphic_controller_0/c_be",
+          "core_logic_0/c_be"
+        ]
+      },
+      "Net4": {
+        "ports": [
+          "graphic_controller_0/ad",
+          "core_logic_0/ad"
+        ]
+      },
+      "Net5": {
+        "ports": [
+          "graphic_controller_0/rst",
+          "core_logic_0/rst"
+        ]
+      },
+      "graphic_controller_0_req": {
+        "ports": [
+          "graphic_controller_0/req",
+          "core_logic_0/req"
+        ]
+      },
+      "graphic_controller_0_serr": {
+        "ports": [
+          "graphic_controller_0/serr",
+          "core_logic_0/serr"
+        ]
+      },
+      "graphic_controller_0_sb_stb": {
+        "ports": [
+          "graphic_controller_0/sb_stb",
+          "core_logic_0/sb_stb"
+        ]
+      },
+      "Net6": {
+        "ports": [
+          "graphic_controller_0/ad_stb1",
+          "core_logic_0/ad_stb1"
+        ]
+      },
+      "Net7": {
+        "ports": [
+          "graphic_controller_0/ad_stb0",
+          "core_logic_0/ad_stb0"
+        ]
+      },
+      "graphic_controller_0_rbf": {
+        "ports": [
+          "graphic_controller_0/rbf",
+          "core_logic_0/rbf"
+        ]
+      },
+      "graphic_controller_0_sba": {
+        "ports": [
+          "graphic_controller_0/sba",
+          "core_logic_0/sba"
+        ]
+      },
+      "graphic_controller_0_pipe": {
+        "ports": [
+          "graphic_controller_0/pipe",
+          "core_logic_0/pipe"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk_0",
+          "core_logic_0/clk",
+          "graphic_controller_0/clk"
+        ]
+      }
+    }
+  }
+}

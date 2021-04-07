@@ -1,0 +1,13 @@
+login kayn
+load
+add 1 1 1
+add 2 2 1.2 2.2
+add 1 2 4.5 5.5
+read 1
+read 2
+read 3
+update 1 3 3.3 4.4 5.5
+update 3 2 9.9 8.8
+read 3
+store
+logout

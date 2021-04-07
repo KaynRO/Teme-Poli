@@ -1,0 +1,42 @@
+Tema 1 PA
+
+Task I
+
+Pentru inceput observam ca, jucand optim, fiecare jucator va lua numarul maxim posibil pentru a-si maximiza punctajul.
+Astfel, putem folosi o abordare Greedy. Sortam vectorul descrescator, si adunam valorile de pe pozitiile impare(numerele alese de
+Tuzgu) si scadem totalul din cele pare(cele ale Ritzei, care alege mereu dupa Tuzgu). Abordarea este corecta intrucat, la fiecare pas, nu ne intereseaza alegerile precedente, ci doar cea mai buna solutie la momentul respectiv.
+
+
+Task II
+
+Putem observa ca o abordare Greedy nu functioneaza intrucat nu e destul ca la fiecare pas sa stergem numarul cel mai mare/mic,
+ci raspunsul este rezultat din toate deciziile anterioare. De aici si ideea implementarii unei dinamici(abia dupa ce sortam vectorul descrescator din nou).Consideram:
+	DP[i][j] - diferenta maxima ce poate fi obtinuta folosing primele i numere din sir, dintre care am eliminat j
+
+Evident DP[1][0] = primul element din sir
+		DP[1][1] = 0
+
+Cat despre recurenta, evident DP[i][j] = DP[i - 1][j - 1], ceea ce inseamna ca, daca al i-lea element(dintr-o secventa de lungime i) este eliminat atunci diferenta maxima nu se schimba(cand) fata de cazul in care aveam i-1 elemente
+Daca nu eliminam noul element, atunci acesta trebuie adunat fie la suma lui Tuzgu fie a Ritzei in functie de paritatea pozitie
+acelui element.
+
+Concluzand acestea, trebuie sa alegem maximul intre cazurile in care decidem sa eliminam sau nu noul elemenet, deci:
+	DP[i][j] = max(DP[i - 1][j - 1], DP[i - 1][j] +/- V[i - 1])
+
+Rezultatul va fi desigur DP[N][k]
+
+
+Task III
+
+Se observa din nou implementarea unei dinamici intrucat chiar daca alegem la un pas solutia optima, se poate ca in 10 pasi, aceasta sa ne conduca la o diferenta mai mica. O diferenta de taskurile anterioare este ca nu mai avem nevoie de sortarea
+vectorului in prelabil caci la fiecare pas putem alege doar primul sau ultimul element. Ne trebuie o dinamica pe subsiruri,
+astfel incat sa pornim de la subprobleme mai mici din care sa aflam raspunsul nostru. De aici pornim cu urmatoarea notatie:
+	DP[i][j] - diferenta maxima a subsirului ce incepe de la pozitia j de lungime i
+
+In cazul de baza, DP[1][k] = +/- V[k] intrucat, daca ne gandim ca am avea un numar par de numere atunci elementul K ar fi
+ales de Ritza(-) altfel de Tuzgu(+). Pentru cazul general pornim de la observatia ca pentru un element nou, acesta poate fi atat
+capat din stanga cat si din dreapta, noi dorind sa maximizam alegerea. Astfel, de aici vine si recurenta:
+	DP[i][j] = max(DP[i - 1][j + 1] + V[j], DP[i - 1][j] - V[j + i - 1]) daca este randul lui Tuzgu(se aduna)
+	DP[i][j] = min(DP[i - 1][j + 1] - V[j], DP[i - 1][j] - V[j + i - 1]) daca este Ritza; din moment ce se scade din solutia curenta, dorim sa stim minimul
+
+Rezultatul va fi desigur DP[N][0] ;

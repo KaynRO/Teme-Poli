@@ -1,0 +1,25 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../lab5-final/lab5-final/lab4.V" \
+"../../../../../../lab5-final/lab5-final/splitter1.v" \
+"../../../../../../lab5-final/lab5-final/splitter2.v" \
+"../../../../../../lab5-final/lab5-final/splitter3.v" \
+"../../../../../../lab5-final/lab5-final/select.v" \
+"../../../../project_1.ip_user_files/bd/PICtoSRAM/sim/PICtoSRAM.v" \
+"../../../../project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_PIC16F873_0_0/sim/PICtoSRAM_PIC16F873_0_0.v" \
+"../../../../project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_T74LS04_0_0/sim/PICtoSRAM_T74LS04_0_0.v" \
+"../../../../project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_T74LS373_0_0/sim/PICtoSRAM_T74LS373_0_0.v" \
+"../../../../project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_m62256_0_0/sim/PICtoSRAM_m62256_0_0.v" \
+"../../../../project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_splitter1_0_0/sim/PICtoSRAM_splitter1_0_0.v" \
+"../../../../project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_splitter2_0_0/sim/PICtoSRAM_splitter2_0_0.v" \
+"../../../../project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_splitter3_0_0/sim/PICtoSRAM_splitter3_0_0.v" \
+"../../../../project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_m62256_1_0/sim/PICtoSRAM_m62256_1_0.v" \
+"../../../../project_1.ip_user_files/bd/PICtoSRAM/ip/PICtoSRAM_select_0_0/sim/PICtoSRAM_select_0_0.v" \
+"../../../../project_1.srcs/sources_1/bd/PICtoSRAM/hdl/PICtoSRAM_wrapper.v" \
+"../../../../../../lab5-final/lab5-final/test.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,242 @@
+module core_logic(pipe, sba, rbf, st, gnt, ad_stb0, ad_stb1, sb_stb,
+                  clk, irdy, trdy, serr, req, rst, ad, c_be, inta, intb);
+
+  // AGP bus
+  input         pipe;      
+  input  [ 7:0] sba; 
+  input         rbf;
+  output [ 2:0] st;
+  output        gnt;
+  inout         ad_stb0;
+  inout         ad_stb1;
+  input         sb_stb;
+  input         clk;
+  input         irdy;
+  output        trdy;
+  input         serr;
+  input         req;
+  inout         rst;
+  inout  [31:0] ad;
+  inout  [ 3:0] c_be;
+  input         inta;
+  input         intb;
+
+  reg        _gnt;
+  assign gnt = _gnt;
+
+  reg [ 2:0] _st;
+  assign st = _st;
+
+  tri [31:0] ad;
+  reg [31:0] _ad;
+  assign ad = _ad;
+
+  tri trdy;
+  reg _trdy;
+  assign trdy = _trdy;
+
+  // internal registers & wires
+  reg [63:0] readDataReturnQueue[6:0];
+  reg [ 6:0] pFirstRDQ;
+  reg [ 6:0] pLastRDQ;
+
+  reg [29:0] requestQueue[6:0]; // msb = req. type (r=0/w=1) , 28:0 address.
+  reg [ 6:0] pFirstRQ;
+  reg [ 6:0] pLastRQ;
+
+  reg [63:0] writeDataQueue[6:0];
+  reg [ 6:0] pFirstWDQ;
+  reg [ 6:0] pLastWDQ;
+
+  reg [63:0] memory [7:0];
+  reg [28:0] addr;
+
+  reg [29:0] trdata;
+  reg [63:0] lgdata;
+  reg [31:0] data;
+  reg status;
+  reg type;
+
+  reg [6:0] wrq;
+
+  parameter iidle = 3'b110;
+
+  initial begin
+    // read data return queue is empty
+    pFirstRDQ = 0;
+    pLastRDQ = 0;
+    // write request queue is empty
+    pFirstRQ = 0;
+    pLastRQ = 0;
+    // write data queue is empty
+    pFirstWDQ = 0;
+    pLastWDQ = 0;
+  end
+
+  task incPointer;
+    inout [ 6:0] _ptr;
+    _ptr = ( _ptr + 1 ) % 64;
+  endtask
+
+  task decPointer;
+    inout [ 6:0] _ptr;
+    _ptr = ( _ptr - 1 ) % 64;
+  endtask
+
+  task dequeueRequest;
+    output [28:0] _addr;
+    output _type;
+    output _requestQueueEmpty;
+    if( pFirstRQ!=pLastRQ )
+      begin
+        { _type,_addr } = requestQueue[ pFirstRQ ];
+        incPointer( pFirstRQ );
+        _requestQueueEmpty = 0;
+      end
+    else _requestQueueEmpty = 1;
+  endtask
+
+  task dequeueWriteData;
+    output [63:0] _data;
+    output _writeQueueEmpty;
+    if( pFirstWDQ!=pLastWDQ )
+      begin
+        _data = writeDataQueue[ pFirstWDQ ];
+        incPointer( pFirstWDQ );
+        _writeQueueEmpty = 0;
+      end
+    else _writeQueueEmpty = 1;
+  endtask
+
+  task enqueueReadData;
+    input [63:0] _data;
+    output _readQueueFull;
+    if( (pLastRDQ+1)%64 != pLastRDQ )
+      begin
+        readDataReturnQueue[ pLastRDQ ] = _data;
+        incPointer( pLastRDQ );
+        _readQueueFull = 0;
+      end
+    else _readQueueFull = 1;
+  endtask
+
+
+  always @(posedge clk)
+    begin
+      if( _st == iidle && req == 0 && pipe==1 ) begin
+        _gnt = 0;  // assuming req. buffer not full
+        _st = 3'b111; // start
+        @(posedge clk);
+        while( pipe!=0 ) @(posedge clk);
+        @(negedge clk);
+        _gnt = 1;
+      end
+    end
+
+  always @(posedge clk) begin
+    case( _st )
+    3'b111: // getting requests
+      begin
+      if( pipe == 0 )
+        begin
+          // ignoring length field in AD
+          case (c_be)
+          4'b0000:
+            begin
+            requestQueue[ pLastRQ ] = { 1, ad[31:3] };
+            incPointer( wrq );
+            end
+          4'b0100:                        
+            requestQueue[ pLastRQ ] = { 0, ad[31:3] };
+          endcase
+          incPointer( pLastRQ ); // ignoring that req. queue may overflow
+        end
+      else if( _gnt == 1 ) _st = iidle; // req. stopped, back to idle
+      end
+     3'b010: // getting write data
+      begin
+        if( _gnt == 0 ) begin
+            @(negedge clk);
+            _gnt = 1;
+          end
+        else begin
+            while( irdy==1 ) @(posedge clk); //wait for irdy
+            data = ad;
+            @(posedge clk);
+            writeDataQueue[ pLastWDQ ] = { ad, data };
+            incPointer( pLastWDQ );
+            decPointer( wrq );
+            _st = iidle;
+          end
+      end
+     endcase
+  end
+
+  always @(negedge clk) begin
+    case( st )
+    iidle:
+      begin
+        if( pFirstRDQ!=pLastRDQ ) begin // send read data
+          _st = 3'b000;
+          lgdata = readDataReturnQueue[ pFirstRDQ ];
+          incPointer( pFirstRDQ );
+          _gnt = 0;
+          @(negedge clk);
+          _gnt = 1;
+          _trdy = 0;
+          _ad = lgdata[31:0];
+        end
+        else if( wrq!= 0 )
+          begin
+            _st = 3'b010;
+            _gnt = 0;
+          end
+      end
+    3'b000:
+      begin
+        _ad = lgdata[63:32];
+        _st = iidle;
+        @(negedge clk);
+        _ad = 29'bzzzzzzzzzzzzzzzzzzzzzzzzzzzzz;
+      end
+    endcase
+  end
+
+  always @(negedge clk)
+    begin
+      if( pFirstRQ!=pLastRQ )
+        begin
+          // processing request
+          dequeueRequest(addr,type,status);
+          case( type )
+          0: // read req.
+             enqueueReadData( memory[addr], status );
+          1: // write req.
+            begin
+             dequeueWriteData( lgdata, status );
+             if( status==0 ) begin
+               memory[addr] = lgdata;
+               decPointer( wrq );
+             end
+            end
+          endcase
+        end
+    end
+
+
+  // setup
+  initial begin
+    _gnt = 1;
+    _st = iidle;
+    _trdy = 1;
+    _ad = 29'bzzzzzzzzzzzzzzzzzzzzzzzzzzzzz;
+    wrq = 0;
+    memory[0] = 0;
+    memory[1] = 1;
+    memory[2] = 2;
+    memory[3] = 3;
+    memory[4] = 4;
+  end
+  // end setup
+
+endmodule

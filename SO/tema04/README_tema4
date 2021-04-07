@@ -1,0 +1,49 @@
+						Tema 4
+						 SO
+Scopul temei a fost de a implementa un planificator
+de threaduri dupa algoritmul ROUND-ROBIN.Acestea pot
+face operatii de signal(io), wait(io), fork si exec
+(exceptand init si end).
+In abordarea temei am folosit 3 cozi ce tin elemente
+de tipul T_info(queue_ready, queue_blocked si threads)
+
+In Priority.c am implementat operatiile de add si pop
+dupa modelul de max-heap, adaugand si functiile
+add_threads care doar adauga la sfarsit
+facand resize la arr ori de cate ori este nevoie,
+respectiv delete_threads care sterge din array un element
+dat ca parametru.
+
+Practic,din cele 3 cozi doar queue_ready va utiliza 
+functiile de add si pop specifice heapului, celelalte 2
+se vor comporta ca un array simplu ce poate face un insert 
+la sfarsitul sau si sterge un element dat 
+
+Am avut nevoie si de threads pentru a face join la toate threadurile
+create pe parcursul executiei in so_end, intrucat celelalte cozi 
+nu pastreaza toate threadurile care au fost la un moment dat acolo.
+
+Sincronizarea intre threaduri am facut o cu semafoare(fiecare
+avand un semafor intern propriu la care faceam post ori de cate
+ori vrem sa il trezim, cu mentiunea ca trebuie facut wait la cel
+vechi pentru a asigura existenta unui sg thread la un moment dat).
+
+In momentul in care se face so_fork se paseaza ca argumente catre
+function(functia de creare a threadurilor) un semafor_shared si un
+semafor propriu al viitorului thread.Semaforul shared este folosit
+pentru a sincroniza alegerea ulterioara a urmatorului thread dupa
+ce noul thread a fost introdus (si nu inainte).Practic cand in function
+s-a adaugat deja la coada queue_ready noul thread se va semnala acest
+shared semafor pentru a permite celui care a facut fork sa ia o decizie
+cu privire la noul thread care are voie sa ruleze dupa acel moment.
+(de mentionat ca folosim o variabila pe post de bool numita start
+pentru a trata cazul primului thread creat).La sfarsit in fork
+este distrus semafor shared, iar in function semaforul propriu al acestuia
+urmand ca in aceasta functie sa se aleaga (daca este posibil) un
+nou thread din queue_ready
+
+
+In check_Round_Robin actualizez cuanta threadului curent si
+verific daca trebuie schimbat dupa regulile specifice algoritmului
+ROUND ROBIN explicat in enuntul temei.
+

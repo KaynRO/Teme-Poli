@@ -1,0 +1,65 @@
+<!DOCTYPE SimulationProject SYSTEM "hdl-prj.dtd">
+<SimulationProject Logfile="verilog.log" Keyfile="verilog.key" Language="Verilog" DelayType="typical" AddTopLevelSignals="0" FileNamesShown="1" HideEmptyLists="1" ShowWatch="1" DumpWatch="0" InteractiveMode="1" ParametersAreWatchable="0" ClearLogBeforeCompile="1" AutoParseProject="0">
+  <UserSourceFileList>
+    <File IsIndirectlyAdded="0" IsIndirectlyAddedDuringTBMake="0">sim.v</File>
+    <File IsIndirectlyAdded="0" IsIndirectlyAddedDuringTBMake="0">graphic_controller.v</File>
+    <File IsIndirectlyAdded="0" IsIndirectlyAddedDuringTBMake="0">core_logic.v</File>
+    <File IsIndirectlyAdded="1" IsIndirectlyAddedDuringTBMake="0">SimulatedDiagramResultTim.v</File>
+  </UserSourceFileList>
+  <StimulusAndResultsFile>SimulatedDiagramResult.btim</StimulusAndResultsFile>
+  <LogFileList>
+    <File IsIndirectlyAdded="1" IsIndirectlyAddedDuringTBMake="0">verilog.log</File>
+  </LogFileList>
+  <DirList>
+    <Directory>..\..\..\PROGRAM FILES\SYNAPTICAD</Directory>
+    <Directory>..\..\..\PROGRAM FILES\SYNAPTICAD</Directory>
+  </DirList>
+  <LibDirList>
+    <Directory>..\..\..\PROGRAM FILES\SYNAPTICAD\lib\verilog</Directory>
+    <Directory>..\..\..\PROGRAM FILES\SYNAPTICAD\lib\verilog</Directory>
+  </LibDirList>
+  <LibExtensionList>
+    <Extension>.v</Extension>
+    <Extension>.vo</Extension>
+  </LibExtensionList>
+  <WatchDlg>
+    <WatchTab WatchedTime="0">Watch 1</WatchTab>
+    <WatchTab WatchedTime="0">Watch 2</WatchTab>
+    <WatchTab WatchedTime="0">Watch 3</WatchTab>
+    <WatchTab WatchedTime="0">Watch 4</WatchTab>
+    <WatchTab WatchedTime="0">Watch 5</WatchTab>
+    <WatchTab WatchedTime="0">Watch 6</WatchTab>
+    <WatchTab WatchedTime="0">Watch 7</WatchTab>
+  </WatchDlg>
+  <TBenchProperties>
+    <TBenchProp Value="False">VerboseSamples</TBenchProp>
+    <TBenchProp Value="False">VerboseSequenceVerification</TBenchProp>
+    <TBenchProp Value="False">VerboseDelays</TBenchProp>
+    <TBenchProp Value="False">VerboseFileInput</TBenchProp>
+    <TBenchProp Value="Sample state matches">SampleIf</TBenchProp>
+    <TBenchProp Value="Do Nothing">SampleThen</TBenchProp>
+    <TBenchProp Value="Display Message">SampleElse</TBenchProp>
+    <TBenchProp Value="output">SignalDirection</TBenchProp>
+    <TBenchProp Value="True">GenerateSampleHdlCode</TBenchProp>
+    <TBenchProp Value="True">GenerateMarkerHdlCode</TBenchProp>
+    <TBenchProp Value="True">GenerateDelayHdlCode</TBenchProp>
+    <TBenchProp Value="ViaApplyCall">ExecuteMethod</TBenchProp>
+    <TBenchProp Value="Unclocked">CycleClock</TBenchProp>
+    <TBenchProp Value="neg">CycleClockEdge</TBenchProp>
+    <TBenchProp Value="0">VerilogTimeOutLength</TBenchProp>
+    <TBenchProp Value="0">VhdlTimeOutLength</TBenchProp>
+    <TBenchProp Value="0">SystemCTimeOutLength</TBenchProp>
+    <TBenchProp Value="0">VeraTimeOutLength</TBenchProp>
+    <TBenchProp Value="True">VerilogIncludeDelayTime</TBenchProp>
+    <TBenchProp Value="True">VhdlIncludeDelayTime</TBenchProp>
+    <TBenchProp Value="False">SystemCIncludeDelayTime</TBenchProp>
+    <TBenchProp Value="False">VeraIncludeDelayTime</TBenchProp>
+    <TBenchProp Value="reg">VerilogSignalType</TBenchProp>
+    <TBenchProp Value="std_logic">VhdlSignalType</TBenchProp>
+    <TBenchProp Value="sc_bit">SystemCSignalType</TBenchProp>
+    <TBenchProp Value="uint">ESignalType</TBenchProp>
+    <TBenchProp Value="int">TestBuilderSignalType</TBenchProp>
+    <TBenchProp Value="True">VhdlGenerateAbortCode</TBenchProp>
+    <TBenchProp Value="True">SystemCGenerateAbortCode</TBenchProp>
+  </TBenchProperties>
+</SimulationProject>

@@ -1,0 +1,21 @@
+<!DOCTYPE Desktop SYSTEM "hdl-prj.dtd">
+<Desktop>
+  <ProjectWindow X="-4" Y="-3" W="283" H="237">
+    <Column>240</Column>
+    <Column>60</Column>
+    <Column>50</Column>
+    <Column>50</Column>
+  </ProjectWindow>
+  <WatchDlg WindowTop="0" WindowLeft="0" WindowHeight="0" WindowWidth="0" CaptureLBClick="T" CaptureMouseMove="F" SelectedTabNum="0">
+    <WatchTab Column0Width="0"></WatchTab>
+    <WatchTab Column0Width="0"></WatchTab>
+    <WatchTab Column0Width="0"></WatchTab>
+    <WatchTab Column0Width="0"></WatchTab>
+    <WatchTab Column0Width="0"></WatchTab>
+    <WatchTab Column0Width="0"></WatchTab>
+    <WatchTab Column0Width="0"></WatchTab>
+  </WatchDlg>
+  <SourceWindow X="52" Y="12" W="661" H="420" File="graphic_controller.v" Line="71"></SourceWindow>
+  <SourceWindow X="123" Y="0" W="636" H="403" File="core_logic.v" Line="200"></SourceWindow>
+  <SourceWindow X="108" Y="93" W="648" H="310" File="sim.v" Line="30"></SourceWindow>
+</Desktop>

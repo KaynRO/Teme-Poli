@@ -1,0 +1,435 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xE2F73CE81A08FF00",
+      "device": "xc7a100ticsg324-1L",
+      "name": "powerPCItoSDRAM",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "powerpcfsm_0": "",
+      "mpc106fsm_0": "",
+      "chip_select_splitter_0": "",
+      "data_splitter_0": "",
+      "mx9_sdramfsm_0": ""
+    },
+    "ports": {
+      "CLK_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "powerPCItoSDRAM_CLK_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "powerpcfsm_0": {
+        "vlnv": "xilinx.com:module_ref:powerpcfsm:1.0",
+        "xci_name": "powerPCItoSDRAM_powerpcfsm_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "powerpcfsm",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "AACK": {
+            "direction": "I"
+          },
+          "ARTRY": {
+            "direction": "I"
+          },
+          "A": {
+            "direction": "O",
+            "left": "0",
+            "right": "31"
+          },
+          "BG": {
+            "direction": "I"
+          },
+          "BR": {
+            "direction": "O"
+          },
+          "CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "powerPCItoSDRAM_CLK_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "DBG": {
+            "direction": "I"
+          },
+          "DH": {
+            "direction": "O",
+            "left": "0",
+            "right": "31"
+          },
+          "DL": {
+            "direction": "O",
+            "left": "0",
+            "right": "31"
+          },
+          "TA": {
+            "direction": "I"
+          },
+          "TBST": {
+            "direction": "O"
+          },
+          "TS": {
+            "direction": "O"
+          },
+          "TSIZ": {
+            "direction": "O",
+            "left": "0",
+            "right": "2"
+          },
+          "TT": {
+            "direction": "IO",
+            "left": "0",
+            "right": "4"
+          },
+          "WT": {
+            "direction": "O"
+          }
+        }
+      },
+      "mpc106fsm_0": {
+        "vlnv": "xilinx.com:module_ref:mpc106fsm:1.0",
+        "xci_name": "powerPCItoSDRAM_mpc106fsm_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "mpc106fsm",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "AACK": {
+            "direction": "O"
+          },
+          "ARTRY": {
+            "direction": "O"
+          },
+          "A": {
+            "direction": "I",
+            "left": "0",
+            "right": "31"
+          },
+          "BG0": {
+            "direction": "O"
+          },
+          "BR0": {
+            "direction": "I"
+          },
+          "CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "powerPCItoSDRAM_CLK_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "CS": {
+            "direction": "O",
+            "left": "0",
+            "right": "7"
+          },
+          "DBG0": {
+            "direction": "O"
+          },
+          "DH": {
+            "direction": "I",
+            "left": "0",
+            "right": "31"
+          },
+          "DL": {
+            "direction": "I",
+            "left": "0",
+            "right": "31"
+          },
+          "SDCAS": {
+            "direction": "O"
+          },
+          "SDMA": {
+            "direction": "O",
+            "left": "0",
+            "right": "11"
+          },
+          "SDRAS": {
+            "direction": "O"
+          },
+          "TA": {
+            "direction": "O"
+          },
+          "TBST": {
+            "direction": "I"
+          },
+          "TS": {
+            "direction": "I"
+          },
+          "TSIZ": {
+            "direction": "I",
+            "left": "0",
+            "right": "2"
+          },
+          "TT": {
+            "direction": "IO",
+            "left": "0",
+            "right": "4"
+          },
+          "WE": {
+            "direction": "O"
+          },
+          "WT": {
+            "direction": "I"
+          }
+        }
+      },
+      "chip_select_splitter_0": {
+        "vlnv": "xilinx.com:module_ref:chip_select_splitter:1.0",
+        "xci_name": "powerPCItoSDRAM_chip_select_splitter_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "chip_select_splitter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "a": {
+            "direction": "I",
+            "left": "0",
+            "right": "7"
+          },
+          "b": {
+            "direction": "O"
+          }
+        }
+      },
+      "data_splitter_0": {
+        "vlnv": "xilinx.com:module_ref:data_splitter:1.0",
+        "xci_name": "powerPCItoSDRAM_data_splitter_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "data_splitter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "d_in": {
+            "direction": "I",
+            "left": "0",
+            "right": "31"
+          },
+          "d_out": {
+            "direction": "O",
+            "left": "0",
+            "right": "7"
+          }
+        }
+      },
+      "mx9_sdramfsm_0": {
+        "vlnv": "xilinx.com:module_ref:mx9_sdramfsm:1.0",
+        "xci_name": "powerPCItoSDRAM_mx9_sdramfsm_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "mx9_sdramfsm",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I",
+            "left": "0",
+            "right": "11"
+          },
+          "CAS": {
+            "direction": "I"
+          },
+          "CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "powerPCItoSDRAM_CLK_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "CS": {
+            "direction": "I"
+          },
+          "DQ": {
+            "direction": "I",
+            "left": "0",
+            "right": "7"
+          },
+          "RAS": {
+            "direction": "I"
+          },
+          "WE": {
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "nets": {
+      "mpc106fsm_0_AACK": {
+        "ports": [
+          "mpc106fsm_0/AACK",
+          "powerpcfsm_0/AACK"
+        ]
+      },
+      "powerpcfsm_0_A": {
+        "ports": [
+          "powerpcfsm_0/A",
+          "mpc106fsm_0/A"
+        ]
+      },
+      "powerpcfsm_0_BR": {
+        "ports": [
+          "powerpcfsm_0/BR",
+          "mpc106fsm_0/BR0"
+        ]
+      },
+      "powerpcfsm_0_DL": {
+        "ports": [
+          "powerpcfsm_0/DL",
+          "mpc106fsm_0/DL"
+        ]
+      },
+      "powerpcfsm_0_TBST": {
+        "ports": [
+          "powerpcfsm_0/TBST",
+          "mpc106fsm_0/TBST"
+        ]
+      },
+      "powerpcfsm_0_TS": {
+        "ports": [
+          "powerpcfsm_0/TS",
+          "mpc106fsm_0/TS"
+        ]
+      },
+      "powerpcfsm_0_TSIZ": {
+        "ports": [
+          "powerpcfsm_0/TSIZ",
+          "mpc106fsm_0/TSIZ"
+        ]
+      },
+      "powerpcfsm_0_WT": {
+        "ports": [
+          "powerpcfsm_0/WT",
+          "mpc106fsm_0/WT"
+        ]
+      },
+      "mpc106fsm_0_CS": {
+        "ports": [
+          "mpc106fsm_0/CS",
+          "chip_select_splitter_0/a"
+        ]
+      },
+      "powerpcfsm_0_DH": {
+        "ports": [
+          "powerpcfsm_0/DH",
+          "mpc106fsm_0/DH",
+          "data_splitter_0/d_in"
+        ]
+      },
+      "data_splitter_0_d_out": {
+        "ports": [
+          "data_splitter_0/d_out",
+          "mx9_sdramfsm_0/DQ"
+        ]
+      },
+      "mpc106fsm_0_SDMA": {
+        "ports": [
+          "mpc106fsm_0/SDMA",
+          "mx9_sdramfsm_0/A"
+        ]
+      },
+      "mpc106fsm_0_SDRAS": {
+        "ports": [
+          "mpc106fsm_0/SDRAS",
+          "mx9_sdramfsm_0/RAS"
+        ]
+      },
+      "mpc106fsm_0_WE": {
+        "ports": [
+          "mpc106fsm_0/WE",
+          "mx9_sdramfsm_0/WE"
+        ]
+      },
+      "chip_select_splitter_0_b": {
+        "ports": [
+          "chip_select_splitter_0/b",
+          "mx9_sdramfsm_0/CS"
+        ]
+      },
+      "mpc106fsm_0_SDCAS": {
+        "ports": [
+          "mpc106fsm_0/SDCAS",
+          "mx9_sdramfsm_0/CAS"
+        ]
+      },
+      "mpc106fsm_0_BG0": {
+        "ports": [
+          "mpc106fsm_0/BG0",
+          "powerpcfsm_0/BG"
+        ]
+      },
+      "mpc106fsm_0_DBG0": {
+        "ports": [
+          "mpc106fsm_0/DBG0",
+          "powerpcfsm_0/DBG"
+        ]
+      },
+      "mpc106fsm_0_TA": {
+        "ports": [
+          "mpc106fsm_0/TA",
+          "powerpcfsm_0/TA"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "powerpcfsm_0/TT",
+          "mpc106fsm_0/TT"
+        ]
+      },
+      "mpc106fsm_0_ARTRY": {
+        "ports": [
+          "mpc106fsm_0/ARTRY",
+          "powerpcfsm_0/ARTRY"
+        ]
+      },
+      "CLK_0_1": {
+        "ports": [
+          "CLK_0",
+          "powerpcfsm_0/CLK",
+          "mpc106fsm_0/CLK",
+          "mx9_sdramfsm_0/CLK"
+        ]
+      }
+    }
+  }
+}

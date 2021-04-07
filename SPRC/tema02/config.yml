@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    depends_on:
+      - db
+    environment:
+      SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://sprc:sprc@db/sprc
+    networks:
+      - default
+    ports:
+      - 5000:5000
+    volumes:
+      - ./app:/usr/src/app/app
+    restart: always
+
+  db:
+    environment:
+      POSTGRES_USER: sprc
+      POSTGRES_PASSWORD: sprc
+      POSTGRES_DB: sprc
+    image: postgres:latest
+    networks:
+      - default
+    ports:
+      - 5432:5432
+    restart: always
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+      - ./docker-entrypoint-initdb.d/db_init.sql:/docker-entrypoint-initdb.d/db_init.sql
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

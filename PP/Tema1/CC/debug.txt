@@ -1,0 +1,12 @@
+lvl = emptyLevel (2,2) (1,1)
+(lvl1) = addTile ('W') (2,2) (lvl)
+(lvl2) = addTile ('H') (0,1) (lvl1)
+(lvl3) = addTile ('H') (0,2) (lvl2)
+(lvl4) = addTile ('H') (1,0) (lvl3)
+(lvl5) = addTile ('H') (1,2) (lvl4)
+(lvl6) = addTile ('H') (2,0) (lvl5)
+(lvl7) = addSwitch (0,0) [(2,1)] (lvl6)
+(lvl8) = activate (Build ([switch], [switch], [(2,1)]) (lvl7)
+(lvl9) = move (North) lvl8
+(lvl10) = move (West) lvl9
+

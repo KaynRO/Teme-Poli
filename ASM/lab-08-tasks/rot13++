@@ -1,0 +1,46 @@
+%include "io.inc"
+
+section .data
+    len dd 10
+    string_array db "
+
+section .text
+global CMAIN
+
+rot13:
+    push ebp
+    mov ebp, esp
+    
+    mov eax, dword[ebp + 8]
+    mov ecx, len
+    jmp convert
+
+convert:
+    mov bl, byte[eax]
+    test bl, bl
+    je finish
+    
+    add byte[eax], 0xD
+    inc eax
+    jmp convert
+    
+finish:
+    leave
+    ret
+CMAIN:
+    push ebp
+    mov ebp, esp
+    
+    xor eax, eax
+    mov dword[string_array], 'ana'
+    mov dword[string_array + 4], 'are'
+    mov dword[string_array + 8], 'mere'
+        
+    push dword[string_array + 8]
+    push dword[string_array + 4]
+    push dword[string_array]
+    call rot13
+    add esp, 12
+    PRINT_STRING [string_array + 4]
+    NEWLINE
+    ret

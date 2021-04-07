@@ -1,0 +1,59 @@
+version: '3'
+
+networks:
+  broker_adapter:
+    external: True
+  grafana_influx:
+    external: True
+  adapter_influx:
+    external: True
+
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto
+    ports:
+      - 1883:1883
+    networks:
+      - broker_adapter
+
+  influxdb:
+    image: influxdb
+    ports:
+      - 8086:8086
+    volumes:
+      - ${SPRC_DVP}/influxdb:/var/lib/influxdb
+    environment:
+      - INFLUXDB_DB=sprc
+    networks:
+      - grafana_influx
+      - adapter_influx
+
+  grafana:
+    image: grafana/grafana
+    user: "0"
+    depends_on:
+      - influxdb
+    ports:
+      - 80:3000
+    volumes:
+      - ${SPRC_DVP}/grafana:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=asistent
+      - GF_SECURITY_ADMIN_PASSWORD=grafanaSPRC2020
+    networks:
+      - grafana_influx
+
+  mqttadapter:
+    image: mqttadapter
+    depends_on:
+      - mosquitto
+      - influxdb
+    ports:
+      - 9001:9001
+    volumes:
+      - ${SPRC_DVP}/mqttadapter:/usr/src/mqttadapter/
+    networks:
+      - broker_adapter
+      - adapter_influx
+

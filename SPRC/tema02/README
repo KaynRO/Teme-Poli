@@ -1,0 +1,32 @@
+Tema 2 SPRC - Andrei Grigoras 343C2
+
+
+I. Tehnologii folosite
+    Pentru implementarea API-ului, am folosit limbajul python cu framework-ul Flask si SQLAlchemy. Ca si baza de date am ales PostgreSQL iar ca utilitar de gestiune, adminer.
+
+II. Implementare API
+    Asa cum am mentionat, folosing python Flask si SQLAlchemy, am creat in prima faza clasele ce refleta structura bazei de date pentru a face mai usor executarea interogarilor in limbaj generic.
+    De asemenea, am definit relatiile de ForeignKey, Unique, Key si implementat o functie de reprezentare a acestora sub forma unui json.
+
+    Principalele functii despre care vor vorbi sunt:
+        - check_json: verifica daca, pentru tipul specificat(Oras, Tara, Temperatura), datele continute in request-ul post au formatul cerut si intoarcem tipul aferent(string,date,float,int)
+        - delete_entry: din nou, pe baza tipului specificat, vom elimina intrarile din baza de date aferente unui ID;deorece am avut dificultati in implementarea de stergere cascade la nivelul bazei de date
+                        cat si orm, am decis sa creez functia aceasta pentru a implementa manual "cascade"; practic, daca se sterge un oras se sterg si toate temperaturile aferente lui, iar daca este o tara, se
+                        sterg toate orasele deci si toate temperaturile lor
+        - add_entry: adauga in baza de date o noua instanta specificata de tipul dat ca parametru si intoarce ID-ul corespunzator
+        - get_temperatures: se realizeaza in mai multi pasi; citim toate temperaturile, le filtram dupa data de inceput, restul le re-filtram dupa data de final iar la final verificam daca orasul ci id-ul
+                            temperaturii curente are aceeasi latitudine/longitudine
+        - fetch_temperatures_country: procedam in mod asemanator cu functia de dinainte insa, la final verificam daca, orasele ale caror id_tara este cel dat ca parametru, au temperatura curenta.
+
+    Restul functiilor sunt de baza, se repeta procedeul. Au fost testate toate functionalitatile folosind Postman si cate 5 entri-uri pentru fiecare oras/tara/temperatura.
+
+III. Implementare baza de date
+     Aici, pentru initilizarea schemei bazei de date, am folosit un script de SQL care se va executa la inceputul instantei de docker. De mentionat este ca timestampul a fost utilizat sub forma de datetime
+     si extras la nivelul de api doar ca date
+
+
+IV. Implementare docker-compose
+    In primul rand, am definit Dockerfile aferent api-ului. Am salvat toate dependintele de python intr-un fisier ce este executat la initializare. De asemena, a trebuit instalat si postgres library pentru a putea
+    functiona SQLAclhemy si psycopg2.
+
+    Fisierul yaml este unul default, la care am adaugat copierea scriptului de initializare al bazei de date, setarea variabilelor de mediu si a volumelor de persistenta a datelor
