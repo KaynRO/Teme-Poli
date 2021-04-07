@@ -1,0 +1,38 @@
+Tema3 - PowerBash - Grigoras Andrei 323CB
+
+The implementations we are going to discuss here are regarding the Factory implementations, the structure of the filesystem and how I implemented the 7 possible operations.
+
+	CommandFactory & (Singleton & Factory) pattern
+
+We first have to consider this will also implement the Singleton pattern. So we will need a private constructor along with a private static instance of this class that will be null when declared. As the constructor is private, we need a method that we can access from outside and will return a instance of the factory(by calling constructor internally). For implementing Singleton, we will check whether our instance variable is null or not and return it or a new instance.
+Now that we have our instance, we need one more method that will return a instance of our command(LS/MV/...) based on the given input. So we simply do a switch statement and return the appropiate instance considering the parameters given.
+
+	CommandManager & Command pattern
+
+This class will handle the execution of a generic command and will also write output&error to outputfile. In order to implement the Command pattern we create one class for each possible command. Also we declare an abstract class, that each command will extend, that will describe the generic behaviour of a command. In this way, there should pe a global variable being the filesystem(declared static) that each command can have access to it. Also, every command should implement it's own execute function such that, when CommandManager executes a command, it will look for the function implemented in the specific class. This is part of the Command pattern which makes it easier to handle the behaviour of different classes that follow a specific pattern.
+
+	Node & Composite pattern
+
+For this design pattern, we will declare and abstract class that will represent a node in our filesystem tree. This node can be either a folder or a file(so we will create these class to extend the note). The difference between these 2 is the fact that the folder will have a list of nodes. So, for this pattern we will keep the filesystem as a hierarchical structure(tree) and with each new command executed we will update it(add/remove/move/...). To notice that, each node has a parent node(part of his subtree).
+
+	Filesystem
+
+Let's take a step and look at how it's implemented. Each operation we are given will consists of nodes. It is assumed that when reaching a method from the filesystem, the arguments are all nodes(we have already processed the input and transform it conveniently).We will talk really quick on the implementation of each method:
+	LS -> Will definetly be a recursive function(will go recursive if the parameter says so). The order of printing is : current_node_name -> all_node_content_name -> ls(node_content_name). In order to print the absolute path for each node we will abuse the PWD implementation
+	MKDIR -> We simply create a new Folder node that will be part of a given subtree and the filesystem also
+	TOUCH -> Same as the previous, with the remark that this time will be a File instead of Folder
+	CD -> Just change current directory to be the given argument
+	PWD -> We will traverse the path to the root node by goind from each node to it's parent and concatenating it's name into the result.
+	CP -> This is the tricky part as besides creating a new Folder/File node(will be a copy of the source) and adding it to the new destination subtree, we also have to update all it's content that is pointing to the original source. So we have to iterate recursively and create a new instance of each node that will replace the old one in the destination subtree
+	MV -> It's same as above ignoring the update part(we move it not copy)
+	RM -> Just remove then node from the parrent subtree and from the filesystem list of nodes
+
+
+	Commands
+
+The most trivial method that each command will use is the converter from a string representing the path to the actual node that we are currently working with. In order to accomplish that we first look at the beginning of the string in order to understand the starting point(root node / current working directory). Now we have somewhere to start from so we simply split the string by '/' then look if we are given a name(change current node to the one with that name from the current one's tree), a '..' (change with it's parrent), or '.'(do nothing). If we encounter any name that is not a valid node name we return an error(null).
+Now, each specific command class will look almost the same. We look at the arguments, transform them into nodes, look for any kind of error that may occur and then let the filesystem execute the specific command with these nodes. The slight difference occurs at LS, where we have to look for the -R argument and specify if present to filesystem's method to go recursive
+
+	ResultCollector
+
+Just a basic implementation of a class that collects the result given by the execution of each class. CommandManager will cooperate with this one in order to write results.

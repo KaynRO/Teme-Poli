@@ -1,0 +1,15 @@
+LRU
+3
+12
+ADD car 2 3
+ADD table 2 2
+ADD me 1 2
+ADD he 4
+ADD you 3
+GET me
+GET table
+GET car
+GET me
+GET you
+GET me
+GET he

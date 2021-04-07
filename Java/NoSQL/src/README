@@ -1,0 +1,27 @@
+Tema2 - NOSQL
+
+Let's first descripe the classes we need to implement a NOSQL database which we can apply queries to.
+A) We obviously need a class which describes a entity behaviour. The first question is how we implement the attribute name/type/value process. Due to the fact that there is a difference betweeen entity and instance of it, we will store in the name/value as a hash map in the actual instance of entity.
+Next, we need to define the actual entity template in which we store a entity name, RF, and all attribute names and types. To understand better why we do this, when we "CREATE" an entity we use the entity template, it's something general, and when we insert we create an actual instance with specific information. So prior to inserting, we will consult the "table" with all entity template, see if we can insert and convert data types.
+B) We also need to define a node by being a list of entities. Here all we need is to be able to remove an entity given a name and a primary key to identify it. Also, we define the update function which will have the new attribute names/values as parameters so we simply look in the hash map, find the names, and update the value. To remove by timestamp we simply compare the entity timestamp which is assigned on creation. Important is to define
+the compareTo function in order to constantly sort a node by how many entities it has(so we just make our node class implements comparable)
+C) The most important part is the database. This will do all the work when a command is read. We will create a table with general information about entities and also a list of the database's nodes. Generally, in order to do any operation, we will search the specific node/ instance and use the methods from it's class.
+
+Implementation
+A) CREATE
+As we previously explained, for this operation we will insert in the database table all the information given as input.
+B) INSERT
+Prior to inserting, we look in the table, see if the entity exists, then create an instance of it with specific values for the attributes and insert it. For this we have to check if there is enough space in the database. We know we have to replicate this instance in RF nodes of the database. So we count how many available nodes we have and insert there, then add more nodes in order to fit the rest. After one insertion, we sort the nodes as we just increased some node's number of entities.
+C) GET
+We only have to look in the node list, search by entity name and primary key and print it's information
+D) DELETE
+Same as previous, look for the entity and remove it from the node list
+E) UPDATE
+As we can update just some of the attribute values we extract the ones from the input, search the specific entity and then look in the hash map where
+the attribute names equals the one from the input. If so, we update the current value
+F) SNAPSHOTDB
+For every node in the database and for all it's entities, we do like "GET"(just print entity information)
+G) CLEANUP
+Look for all entities in all nodes and removes ones with timestamp lower than the one given.
+
+One more thing to discuss is the conversion part. If we have to insert, we simply extract from table the entity attribute type list and look where he have "Float" and convert the value corresponding to it. If we update we do almost the same with the exception that we look for the types of the attribute names that we have only in the input file.

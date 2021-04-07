@@ -1,0 +1,7 @@
+CREATEDB KAYN 4 6
+CREATE Apa 2 3 Pret Integer Firma String Procent Float
+CREATE Elev 3 2 Nume String Nota Float
+INSERT Apa 10 Aqua 82.5
+INSERT Apa 5 Borsec 70
+UPDATE Apa 5 Procent 43.525 Firma EU
+SNAPSHOTDB

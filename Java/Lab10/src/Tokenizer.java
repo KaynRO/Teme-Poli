@@ -1,0 +1,3 @@
+interface Tokenizer {
+    Object getNext() ;
+}
