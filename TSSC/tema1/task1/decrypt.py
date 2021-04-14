@@ -6,8 +6,8 @@ import itertools
 import string
 from cryptolocker import keystream, encrypt
 
-TEXTFILE_1 = 'plmb.txt.bin'
-TEXTFILE_2 = 'flrns.txt.bin'
+TEXTFILE_1 = 'nparaschiv/task1/plmb.txt.bin'
+TEXTFILE_2 = 'nparaschiv/task1/flrns.txt.bin'
 
 key_len = 7
 
@@ -25,14 +25,16 @@ def find_key():
 
 	chk = [i for i in chunks(data, key_len)]
 	chk_even = [chk[i * 2] for i in range(len(chk) // 2)]
-	last_chk = chk_even[-1:][0]
+	chk_odd = [chk[i * 2 + 1] for i in range(len(chk) // 2)]
+	last_chk = chk_even[-2:][0]
 
-	key = xor(xor(last_chk, b'nceput '), bytes([67]))
+	key = xor(xor(last_chk, b'plumb.\x0a'), bytes([67]))
 	return key
 
 
 def main():
 	key = find_key()
+	print(key)
 	data1 = open(TEXTFILE_1, 'rb').read()
 	data2 = open(TEXTFILE_2, 'rb').read()
 
