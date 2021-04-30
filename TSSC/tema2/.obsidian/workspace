@@ -1,0 +1,107 @@
+{
+  "main": {
+    "id": "0b593d0b528323ec",
+    "type": "split",
+    "children": [
+      {
+        "id": "28f92fa36737e63f",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Writeup.md",
+            "mode": "source"
+          }
+        }
+      },
+      {
+        "id": "7054ebc409fbe308",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "task2.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "973d0cb3065f66d0",
+    "type": "split",
+    "children": [
+      {
+        "id": "e9f300fe3853ce4a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a95105a39077fbd5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "4932fc5819e2f4aa",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8697b2d50eb0b5cf",
+    "type": "split",
+    "children": [
+      {
+        "id": "d8712c97086a904e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "34477d43fa7300fc",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Writeup.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "28f92fa36737e63f",
+  "lastOpenFiles": [
+    "Writeup.md",
+    "task2.md",
+    "Untitled.md",
+    "task1.md"
+  ]
+}
