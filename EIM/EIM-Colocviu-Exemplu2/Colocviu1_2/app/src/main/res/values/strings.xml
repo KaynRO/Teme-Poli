@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Colocviu1_2</string>
+    <string name="button_add">ADD</string>
+    <string name="button_compute">COMPUTE</string>
+</resources>
