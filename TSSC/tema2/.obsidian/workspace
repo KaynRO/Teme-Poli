@@ -79,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Writeup.md",
+                "file": "task2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,11 +97,11 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "28f92fa36737e63f",
+  "active": "7054ebc409fbe308",
   "lastOpenFiles": [
-    "Writeup.md",
     "task2.md",
-    "Untitled.md",
-    "task1.md"
+    "Writeup.md",
+    "task1.md",
+    "Untitled.md"
   ]
 }
