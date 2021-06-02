@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/client_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/server_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="@string/server"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/port_server"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/server_textview"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentEnd="false"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:autofillHints=""
+            android:ems="8"
+            android:freezesText="false"
+            android:hint="@string/port"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/connect_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/server_textview"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/connect"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/client_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/port_server"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="60dp"
+            android:text="@string/client"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/address_client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/client_textview"
+            android:layout_alignStart="@id/port_server"
+            android:layout_marginTop="30dp"
+            android:ems="8"
+            android:hint="@string/address"
+            android:inputType="textPersonName"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/city_client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/address_client"
+            android:layout_alignStart="@id/address_client"
+            android:layout_marginTop="30dp"
+            android:ems="8"
+            android:hint="@string/city"
+            android:inputType="textPersonName"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/port_client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/client_textview"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:ems="8"
+            android:hint="@string/port"
+            android:inputType="number"
+            android:autofillHints="" />
+
+        <Button
+            android:id="@+id/get_weather_forcatst_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/port_client"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/get_weather_forecast" />
+
+        <Spinner
+            android:id="@+id/information_type_client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/city_client"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:entries="@array/information_types" />
+
+        <TextView
+            android:id="@+id/weather_forecast"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/information_type_client"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
