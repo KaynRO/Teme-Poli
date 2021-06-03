@@ -107,8 +107,6 @@ public class CommunicationThread extends Thread {
                 pokedex = new Pokedex(
                         pokemonType, pokemonAbilities, new JSONObject(pokemonImage).getString(Constants.DEFAULT)
                 );
-
-                System.out.println(pokedex);
             }
             if (pokedex == null) {
                 Log.e(Constants.TAG, "[COMMUNICATION THREAD] Weather Forecast Information is null!");
@@ -118,6 +116,8 @@ public class CommunicationThread extends Thread {
             printWriter.println(pokedex.getPokemonType());
             printWriter.flush();
             printWriter.println(pokedex.getPokemonAbilities());
+            printWriter.flush();
+            printWriter.println(pokedex.getPokemonImage());
             printWriter.flush();
         } catch (IOException ioException) {
             Log.e(Constants.TAG, "[COMMUNICATION THREAD] An exception has occurred: " + ioException.getMessage());

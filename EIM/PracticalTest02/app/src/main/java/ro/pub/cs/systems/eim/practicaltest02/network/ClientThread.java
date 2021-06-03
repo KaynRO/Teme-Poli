@@ -1,11 +1,17 @@
 package ro.pub.cs.systems.eim.practicaltest02.network;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
 
@@ -32,6 +38,19 @@ public class ClientThread extends Thread {
         this.pokemonName = pokemonName;
         this.pokemonImage = pokemonImage;
     }
+
+    public static Bitmap loadBitmap(String url) {
+        Bitmap mIcon11 = null;
+        try {
+            InputStream in = new java.net.URL(url).openStream();
+            mIcon11 = BitmapFactory.decodeStream(in);
+        } catch (Exception e) {
+            Log.e("Error", e.getMessage());
+            e.printStackTrace();
+        }
+        return mIcon11;
+    }
+
 
     @Override
     public void run() {
@@ -69,15 +88,16 @@ public class ClientThread extends Thread {
                     }
                 });
 
-            /*String pokeImage = bufferedReader.readLine();
-            if(pokeType != null)
+            String pokeImage = bufferedReader.readLine();
+            System.out.println(pokeImage);
+            Bitmap bitmap = loadBitmap(pokeImage);
+            if(pokeImage != null)
                 pokemonImage.post(new Runnable(){
                     @Override
                     public void run(){
-                        pokemonImage.setImageBitmap(pokeType);
+                        pokemonImage.setImageBitmap(bitmap);
                     }
                 });
-             */
 
         } catch (IOException ioException) {
             Log.e(Constants.TAG, "[CLIENT THREAD] An exception has occurred: " + ioException.getMessage());
