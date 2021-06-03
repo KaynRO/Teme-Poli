@@ -1,6 +1,7 @@
 package ro.pub.cs.systems.eim.practicaltest02.network;
 
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
@@ -16,18 +17,20 @@ public class ClientThread extends Thread {
     private final String address;
     public final String pokemonName;
     private final int port;
-    private final TextView pokemonType;
-    private final TextView pokemonAbilities;
+    public TextView pokemonType;
+    public TextView pokemonAbilities;
+    public ImageView pokemonImage;
 
 
     private Socket socket;
 
-    public ClientThread(String address, int port, String pokemonName, TextView pokemonType, TextView pokemonAbilities) {
+    public ClientThread(String address, int port, String pokemonName, TextView pokemonType, TextView pokemonAbilities, ImageView pokemonImage) {
         this.address = address;
         this.port = port;
         this.pokemonType = pokemonType;
         this.pokemonAbilities = pokemonAbilities;
         this.pokemonName = pokemonName;
+        this.pokemonImage = pokemonImage;
     }
 
     @Override
@@ -47,13 +50,34 @@ public class ClientThread extends Thread {
             printWriter.println(pokemonName);
             printWriter.flush();
 
-            String pokedex = bufferedReader.readLine();
-            if(pokedex != null)
-                pokemonType.setText(pokedex);
-            pokedex = bufferedReader.readLine();
-            if(pokedex != null)
-                pokemonAbilities.setText(pokedex);
-            pokedex = bufferedReader.readLine();
+            String pokeType = bufferedReader.readLine();
+            if(pokeType != null)
+                pokemonType.post(new Runnable(){
+                    @Override
+                    public void run(){
+                        pokemonType.setText(pokeType);
+                    }
+                });
+
+            String pokeAbilities = bufferedReader.readLine();
+
+            if(pokeAbilities != null)
+                pokemonAbilities.post(new Runnable(){
+                    @Override
+                    public void run(){
+                        pokemonAbilities.setText(pokeAbilities);
+                    }
+                });
+
+            /*String pokeImage = bufferedReader.readLine();
+            if(pokeType != null)
+                pokemonImage.post(new Runnable(){
+                    @Override
+                    public void run(){
+                        pokemonImage.setImageBitmap(pokeType);
+                    }
+                });
+             */
 
         } catch (IOException ioException) {
             Log.e(Constants.TAG, "[CLIENT THREAD] An exception has occurred: " + ioException.getMessage());

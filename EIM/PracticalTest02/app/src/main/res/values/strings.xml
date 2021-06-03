@@ -7,5 +7,7 @@
     <string name="pokemon_name">Pokemon Name</string>
     <string name="get_pokemon">GET POKEMON</string>
     <string name="pokemon_image">POKEMON IMAGE</string>
+    <string name="pokemon_type">Pokemon Type</string>
+    <string name="pokemon_abilities">Pokemon Abilities</string>
 
 </resources>

@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:text="@string/server"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -32,7 +32,7 @@
             android:layout_alignParentStart="false"
             android:layout_alignParentEnd="false"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:autofillHints=""
             android:ems="8"
             android:freezesText="false"
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/server_textview"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="30dp"
             android:text="@string/connect"
             android:textStyle="bold" />
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/port_server"
             android:layout_centerInParent="true"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:text="@string/client"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/client_textview"
             android:layout_alignStart="@id/port_server"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:autofillHints=""
             android:ems="8"
             android:hint="@string/pokemon_name"
@@ -79,12 +79,12 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/client_textview"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="30dp"
+            android:autofillHints=""
             android:ems="8"
             android:hint="@string/port"
-            android:inputType="number"
-            android:autofillHints="" />
+            android:inputType="number" />
 
         <Button
             android:id="@+id/get_pokemon"
@@ -93,8 +93,7 @@
             android:layout_below="@id/pokemon_name_client"
             android:layout_alignParentEnd="false"
             android:layout_centerInParent="true"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:text="@string/get_pokemon" />
 
         <ImageView
@@ -103,7 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/get_pokemon"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:contentDescription="@string/pokemon_image"
             app:srcCompat="@drawable/ic_launcher_foreground" />
 
@@ -113,7 +112,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/pokemon_type"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp" />
+            android:layout_marginTop="30dp"
+            android:hint="@string/pokemon_abilities" />
 
         <TextView
             android:id="@+id/pokemon_type"
@@ -122,7 +122,8 @@
             android:layout_below="@id/pokemon_image"
             android:layout_alignParentEnd="false"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp" />
+            android:layout_marginTop="30dp"
+            android:hint="@string/pokemon_type" />
 
     </RelativeLayout>
 

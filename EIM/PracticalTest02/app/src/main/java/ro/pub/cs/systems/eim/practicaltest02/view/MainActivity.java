@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText clientPort = null;
     private TextView pokemonType = null;
     private TextView pokemonAbilities = null;
+    private ImageView pokemonImage = null;
 
     private ServerThread serverThread = null;
 
@@ -42,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
             serverThread.start();
+            Toast.makeText(getApplicationContext(), "[MAIN ACTIVITY] Server started", Toast.LENGTH_SHORT).show();
         }
-
     }
 
     private final GetPokedexButtonListener getPokedexButtonListener = new GetPokedexButtonListener();
@@ -72,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             pokemonAbilities.setText(Constants.EMPTY_STRING);
 
             ClientThread clientThread = new ClientThread(
-                    clientAddress, Integer.parseInt(port), pokeName, pokemonType, pokemonAbilities
+                    clientAddress, Integer.parseInt(port), pokeName, pokemonType, pokemonAbilities, pokemonImage
             );
             clientThread.start();
         }
@@ -95,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
         getPokedex.setOnClickListener(getPokedexButtonListener);
         pokemonType = (TextView)findViewById(R.id.pokemon_type);
         pokemonAbilities = (TextView)findViewById(R.id.pokemon_abilities);
+        pokemonImage = (ImageView)findViewById(R.id.pokemon_image);
     }
 
     @Override
