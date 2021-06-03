@@ -2,7 +2,8 @@ package ro.pub.cs.systems.eim.practicaltest02.general;
 
 public interface Constants {
 
-    final public static String TAG = "[PracticalTest02]";
+    final public static String TAG = "[Colocviu2]";
+    final public static String ADDRESS = "127.0.0.1";
 
     final public static boolean DEBUG = true;
 
@@ -29,7 +30,6 @@ public interface Constants {
 
     final public static String TEMP = "temp";
     final public static String SPEED = "speed";
-
 
     final public static String DESCRIPTION = "description";
 

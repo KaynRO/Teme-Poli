@@ -14,19 +14,20 @@ import ro.pub.cs.systems.eim.practicaltest02.general.Utilities;
 public class ClientThread extends Thread {
 
     private final String address;
+    public final String pokemonName;
     private final int port;
-    private final String city;
-    private final String informationType;
-    private final TextView weatherForecastTextView;
+    private final TextView pokemonType;
+    private final TextView pokemonAbilities;
+
 
     private Socket socket;
 
-    public ClientThread(String address, int port, String city, String informationType, TextView weatherForecastTextView) {
+    public ClientThread(String address, int port, String pokemonName, TextView pokemonType, TextView pokemonAbilities) {
         this.address = address;
         this.port = port;
-        this.city = city;
-        this.informationType = informationType;
-        this.weatherForecastTextView = weatherForecastTextView;
+        this.pokemonType = pokemonType;
+        this.pokemonAbilities = pokemonAbilities;
+        this.pokemonName = pokemonName;
     }
 
     @Override
@@ -43,15 +44,17 @@ public class ClientThread extends Thread {
                 Log.e(Constants.TAG, "[CLIENT THREAD] Buffered Reader / Print Writer are null!");
                 return;
             }
-            printWriter.println(city);
+            printWriter.println(pokemonName);
             printWriter.flush();
-            printWriter.println(informationType);
-            printWriter.flush();
-            String weatherInformation;
-            while ((weatherInformation = bufferedReader.readLine()) != null) {
-                final String finalizedWeateherInformation = weatherInformation;
-                weatherForecastTextView.post(() -> weatherForecastTextView.setText(finalizedWeateherInformation));
-            }
+
+            String pokedex = bufferedReader.readLine();
+            if(pokedex != null)
+                pokemonType.setText(pokedex);
+            pokedex = bufferedReader.readLine();
+            if(pokedex != null)
+                pokemonAbilities.setText(pokedex);
+            pokedex = bufferedReader.readLine();
+
         } catch (IOException ioException) {
             Log.e(Constants.TAG, "[CLIENT THREAD] An exception has occurred: " + ioException.getMessage());
             if (Constants.DEBUG) {

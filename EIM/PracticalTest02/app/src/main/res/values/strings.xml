@@ -4,15 +4,8 @@
     <string name="connect">CONNECT</string>
     <string name="client">CLIENT</string>
     <string name="port">Port</string>
-    <string name="address">Address</string>
-    <string name="city">City</string>
-    <string name="get_weather_forecast">WEATHER FORECAST</string>
-    <string-array name="information_types">
-        <item>temperature</item>
-        <item>wind_speed</item>
-        <item>condition</item>
-        <item>pressure</item>
-        <item>humidity</item>
-        <item>all</item>
-    </string-array>
+    <string name="pokemon_name">Pokemon Name</string>
+    <string name="get_pokemon">GET POKEMON</string>
+    <string name="pokemon_image">POKEMON IMAGE</string>
+
 </resources>

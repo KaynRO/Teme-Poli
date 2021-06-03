@@ -18,29 +18,25 @@ import ro.pub.cs.systems.eim.practicaltest02.network.ServerThread;
 
 public class MainActivity extends AppCompatActivity {
 
-    // Server widgets
-    private EditText serverPortEditText = null;
+    private EditText serverPort = null;
 
-    // Client widgets
-    private EditText clientAddressEditText = null;
-    private EditText clientPortEditText = null;
-    private EditText cityEditText = null;
-    private Spinner informationTypeSpinner = null;
-    private TextView weatherForecastTextView = null;
+    private EditText pokemonName = null;
+    private EditText clientPort = null;
+    private TextView pokemonType = null;
+    private TextView pokemonAbilities = null;
 
     private ServerThread serverThread = null;
 
     private final ConnectButtonClickListener connectButtonClickListener = new ConnectButtonClickListener();
     private class ConnectButtonClickListener implements Button.OnClickListener {
-
         @Override
         public void onClick(View view) {
-            String serverPort = serverPortEditText.getText().toString();
-            if (serverPort == null || serverPort.isEmpty()) {
+            String port = serverPort.getText().toString();
+            if (port == null || port.isEmpty()) {
                 Toast.makeText(getApplicationContext(), "[MAIN ACTIVITY] Server port should be filled!", Toast.LENGTH_SHORT).show();
                 return;
             }
-            serverThread = new ServerThread(Integer.parseInt(serverPort));
+            serverThread = new ServerThread(Integer.parseInt(port));
             if (serverThread.getServerSocket() == null) {
                 Log.e(Constants.TAG, "[MAIN ACTIVITY] Could not create server thread!");
                 return;
@@ -50,15 +46,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private final GetWeatherForecastButtonClickListener getWeatherForecastButtonClickListener = new GetWeatherForecastButtonClickListener();
-    private class GetWeatherForecastButtonClickListener implements Button.OnClickListener {
+    private final GetPokedexButtonListener getPokedexButtonListener = new GetPokedexButtonListener();
+    private class GetPokedexButtonListener implements Button.OnClickListener {
 
         @Override
         public void onClick(View view) {
-            String clientAddress = clientAddressEditText.getText().toString();
-            String clientPort = clientPortEditText.getText().toString();
+            String clientAddress = Constants.ADDRESS;
+            String port = clientPort.getText().toString();
             if (clientAddress == null || clientAddress.isEmpty()
-                    || clientPort == null || clientPort.isEmpty()) {
+                    || port == null || port.isEmpty()) {
                 Toast.makeText(getApplicationContext(), "[MAIN ACTIVITY] Client connection parameters should be filled!", Toast.LENGTH_SHORT).show();
                 return;
             }
@@ -66,18 +62,17 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "[MAIN ACTIVITY] There is no server to connect to!", Toast.LENGTH_SHORT).show();
                 return;
             }
-            String city = cityEditText.getText().toString();
-            String informationType = informationTypeSpinner.getSelectedItem().toString();
-            if (city == null || city.isEmpty()
-                    || informationType == null || informationType.isEmpty()) {
-                Toast.makeText(getApplicationContext(), "[MAIN ACTIVITY] Parameters from client (city / information type) should be filled", Toast.LENGTH_SHORT).show();
+            String pokeName = pokemonName.getText().toString();
+            if (pokeName == null || pokeName.isEmpty()) {
+                Toast.makeText(getApplicationContext(), "[MAIN ACTIVITY] Pokemon name should be filled", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            weatherForecastTextView.setText(Constants.EMPTY_STRING);
+            pokemonType.setText(Constants.EMPTY_STRING);
+            pokemonAbilities.setText(Constants.EMPTY_STRING);
 
             ClientThread clientThread = new ClientThread(
-                    clientAddress, Integer.parseInt(clientPort), city, informationType, weatherForecastTextView
+                    clientAddress, Integer.parseInt(port), pokeName, pokemonType, pokemonAbilities
             );
             clientThread.start();
         }
@@ -90,17 +85,16 @@ public class MainActivity extends AppCompatActivity {
         Log.i(Constants.TAG, "[MAIN ACTIVITY] onCreate() callback method has been invoked");
         setContentView(R.layout.activity_main);
 
-        serverPortEditText = (EditText)findViewById(R.id.port_server);
+        serverPort = (EditText)findViewById(R.id.port_server);
         Button connectButton = (Button) findViewById(R.id.connect_button);
         connectButton.setOnClickListener(connectButtonClickListener);
 
-        clientAddressEditText = (EditText)findViewById(R.id.address_client);
-        clientPortEditText = (EditText)findViewById(R.id.port_client);
-        cityEditText = (EditText)findViewById(R.id.city_client);
-        informationTypeSpinner = (Spinner)findViewById(R.id.information_type_client);
-        Button getWeatherForecastButton = (Button) findViewById(R.id.get_weather_forcatst_button);
-        getWeatherForecastButton.setOnClickListener(getWeatherForecastButtonClickListener);
-        weatherForecastTextView = (TextView)findViewById(R.id.weather_forecast);
+        pokemonName = (EditText)findViewById(R.id.pokemon_name_client);
+        clientPort = (EditText)findViewById(R.id.port_client);
+        Button getPokedex = (Button) findViewById(R.id.get_pokemon);
+        getPokedex.setOnClickListener(getPokedexButtonListener);
+        pokemonType = (TextView)findViewById(R.id.pokemon_type);
+        pokemonAbilities = (TextView)findViewById(R.id.pokemon_abilities);
     }
 
     @Override

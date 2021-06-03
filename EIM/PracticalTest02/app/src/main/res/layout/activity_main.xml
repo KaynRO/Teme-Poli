@@ -56,34 +56,22 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/port_server"
             android:layout_centerInParent="true"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="30dp"
             android:text="@string/client"
             android:textSize="24sp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/address_client"
+            android:id="@+id/pokemon_name_client"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/client_textview"
             android:layout_alignStart="@id/port_server"
             android:layout_marginTop="30dp"
+            android:autofillHints=""
             android:ems="8"
-            android:hint="@string/address"
-            android:inputType="textPersonName"
-            android:autofillHints="" />
-
-        <EditText
-            android:id="@+id/city_client"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/address_client"
-            android:layout_alignStart="@id/address_client"
-            android:layout_marginTop="30dp"
-            android:ems="8"
-            android:hint="@string/city"
-            android:inputType="textPersonName"
-            android:autofillHints="" />
+            android:hint="@string/pokemon_name"
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/port_client"
@@ -99,33 +87,43 @@
             android:autofillHints="" />
 
         <Button
-            android:id="@+id/get_weather_forcatst_button"
+            android:id="@+id/get_pokemon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/port_client"
-            android:layout_alignParentEnd="true"
+            android:layout_below="@id/pokemon_name_client"
+            android:layout_alignParentEnd="false"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
             android:layout_marginTop="30dp"
-            android:layout_marginEnd="30dp"
-            android:text="@string/get_weather_forecast" />
+            android:text="@string/get_pokemon" />
 
-        <Spinner
-            android:id="@+id/information_type_client"
+        <ImageView
+            android:id="@+id/pokemon_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/city_client"
-            android:layout_marginStart="30dp"
+            android:layout_below="@id/get_pokemon"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
-            android:entries="@array/information_types" />
+            android:contentDescription="@string/pokemon_image"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
 
         <TextView
-            android:id="@+id/weather_forecast"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/information_type_client"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="30dp" />
+            android:id="@+id/pokemon_abilities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pokemon_type"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:id="@+id/pokemon_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pokemon_image"
+            android:layout_alignParentEnd="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp" />
+
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
