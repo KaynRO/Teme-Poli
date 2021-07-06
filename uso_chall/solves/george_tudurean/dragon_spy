@@ -1,0 +1,88 @@
+#!/bin/bash
+
+color=6 #culoarea afisajului (0=negru,1=rosu,2=verde,3=galben(nu recomand),4=albastru,5=magenta,6=cyan(default),7=alb)
+color=$(($color + 30))
+
+color_title=4 #culoare pt titlul ala cu NEW PROCESS (la fel ca la color, nu mai scriu iar, default e albastru)
+color_title=$(($color_title + 30))
+
+color_separator=5 #culoare separator
+color_separator=$(($color_separator + 30))
+
+bkgrnd=7 #culoarea backgroundului (la fel ca la inainte) 
+bckgrnd=$((bkgrnd + 40))
+
+separator='*' #separator intre procese, default e *
+
+color_dragon=1 #culoare scris dragon final (default e rosu)
+color_dragon=$(($color_dragon + 30))
+
+function det_var #determina variabilele de care am nevoie, adica user,pid,cmd,ppid si pcmd
+{
+	user=$(echo "$1" | sed -e 's/  \+/\t/g' | awk -F '\t' '{print $1}' | awk '{print $2}')
+	pid=$(echo "$1" | sed -e 's/  \+/\t/g' | awk -F '\t' '{print $2}')
+	cmd=$(echo "$1" | sed -e 's/  \+/\t/g' | awk -F '\t' '{print $3}')
+	ppid=$(echo "$1" | sed -e 's/  \+/\t/g' | awk -F '\t' '{print $4}')
+	pcmd=$(ps hq $ppid -o cmd) #nu reuseste mereu sa il determine, depinde de obicei daca moare intre timp procesul (se intampla de obicei la command-not-found)
+}
+
+function afis #afiseaza ce trebuie, idk, toate alea, te prinzi tu
+{
+	echo -e "\E["$color_title";"$bckgrnd"m\033[1m[+] NEW PROCESS:\033[0m"
+	echo -e "\E["$color"m\033[1mUser:\033[0m" "$user"
+	echo -e "\E["$color"m\033[1mPID:\033[0m" "$pid"
+	echo -e "\E["$color"m\033[1mCMD:\033[0m" "$cmd"
+	echo -e "\E["$color"m\033[1mPPID:\033[0m" "$ppid"
+	echo -e "\E["$color"m\033[1mPCMD:\033[0m" "$pcmd"
+	echo
+	for i in $(seq 1 $COLUMNS)
+	do
+		echo -en "\E["$color_separator"m\033[1m"$separator"\033[0m"
+	done
+	echo; echo
+	echo "$pid,$user,$cmd,$ppid,$pcmd" | grep $2 >> dragon_spy.log
+}
+
+rm dragon_spy.log #sterge log-ul vechi (sper sa nu ai vreun fisier important in calculator numit asa)
+
+clear #curata ecranul
+
+##################################################################################################### separator functii si chestii nelegate de "main", fata de "main-ul" in sine
+
+if [ -n "$1" ]; then #verifica daca ai dat timpul de rulare sau nu
+
+	QUITSEC=$(($(date +%s) + $1)) #secunda la care se opreste programul (secunda curenta + numarul de secunde dat ca parametru)
+
+	IFS=$'\n' #cat timp merge banda, merge si while-u
+
+	old_process=$(ps ax -o user:10,pid:10,cmd:10,ppid:10 | grep -v "ps ax -o user:10,pid:10,cmd:10,ppid:10" | grep -v $0)
+
+	while true && [ $(date +%s) -lt $QUITSEC ]; do
+		new_process=$(ps ax -o user:10,pid:10,cmd:10,ppid:10 | grep -v "ps ax -o user:10,pid:10,cmd:10,ppid:10" | grep -v $0)
+		diff <(echo "$old_process") <(echo "$new_process") | grep [\<\>] | \
+		while read line #vede daca sunt diferite cele 2 linii si dupa citeste linia aia chestie nu inteleg perfect dar merge
+  		do
+  			det_var $line	#determin din fiecare nou proces fiecare caracteristica (user,pid etc)
+			if [ -n "$2" ]; then #vede daca exista un al doilea argument
+				line="$(echo "$cmd" | grep "$2")" #ia in considerare doar procesele care au al doilea argument in $cmd
+				if [ -n "$line" ]; then
+					afis "$user" "$pid" "$cmd" "$ppid" "$pcmd" #afisare, self explanatory
+				fi
+			else
+				afis "$user" "$pid" "$cmd" "$ppid" "$pcmd" #afisare, self explanatory
+			fi
+		done
+	old_process=$new_process
+	done
+
+	echo -en "\033[1m\E["$color_dragon"m"
+	echo -e "In ultimele "$1" secunde au fost $(cat dragon_spy.log 2> /dev/null | wc -l) procese noi ce respecta parametrii!""\E["$color_dragon"m" | cowsay -f dragon -W 2000 2> /dev/null #chestie de final idk design chestie :D
+	
+	if [ $(cowsay "ceva" 2> /dev/null | wc -l) -eq 0 ]; then
+		echo -e "\E[33m""Instaleaza te rog cowsay astfel: sudo apt install cowsay (nu e neaparat dar arata mai dragut)" #mesaj daca nu ai instalat cowsay :(
+	fi
+
+else
+	echo -e "\E[31m""\033[1\Te rog sa dai timpul de rulare al scriptului! \033[0" #mesaj daca nu mentionezi timpul de rulare
+fi
+tput sgr0

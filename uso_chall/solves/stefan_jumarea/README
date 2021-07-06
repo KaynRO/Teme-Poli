@@ -1,0 +1,17 @@
+Scripul './Process_Monitor.sh' primeste ca prim argument numarul de secunde
+pentru monitorizarea sistemului, iar ca al doilea argument optional un regex
+dupa care procesele vor fi sortate, in functie de comanda cu care au fost pornite.
+
+Toate procesele noi create, de catre toti userii sistemului, inclusiv
+procesele daemon, sunt salvate intr-o varibila, pentru a putea fi apoi ordonate
+dupa regex. In cazul in care este primit al doilea argument, procesele vor fi
+ordonate dupa regex, iar apoi cronologic.
+
+Procesele care se identifica cu regex-ul primit sunt evidentiate, avand comanda
+afisata intr-o culoare diferita si subliniata.
+
+Afisarea proceselor se face doar dupa scrierea acestora in fisierul log.txt,
+de unde sunt extrase ordonate.
+
+In cazul unei erori de permisiuni asupra fisierului ./log.txt sau asupra
+argumentelor primite, programul va afisa problema si va returna valoarea 1.

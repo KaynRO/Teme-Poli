@@ -1,0 +1,45 @@
+11931,kayn,bash,4830,/usr/libexec/gnome-terminal-server
+12542,kayn,/usr/libexec/tracker-extract,2434,/lib/systemd/systemd --user
+13167,kayn,python script.py,11931,bash
+31266,root,[kworker/u256:1],2,[kthreadd]
+31830,kayn,/usr/libexec/tracker-store,2434,/lib/systemd/systemd --user
+31859,kayn,/usr/libexec/tracker-extract,2434,/lib/systemd/systemd --user
+54757,kayn,/usr/lib/firefox/firefox -contentproc -childID 17 -isForBrowser -prefsLen 10175 -prefMapSize 226661 -parentBuildID 20201027185343 -appdir /usr/lib/firefox/browser 3471 true tab,3471,/usr/lib/firefox/firefox -new-window
+55279,kayn,/usr/libexec/tracker-store,2434,/lib/systemd/systemd --user
+55306,kayn,/usr/libexec/tracker-extract,2434,/lib/systemd/systemd --user
+79069,root,/usr/lib/NetworkManager/nm-dispatcher,1,/sbin/init auto noprompt
+79074,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+79075,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+79076,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+79077,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+79079,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+79080,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+79081,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+79082,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+79083,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+79085,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+79086,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+79087,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+79788,kayn,/usr/libexec/tracker-store,2434,/lib/systemd/systemd --user
+79835,kayn,/usr/libexec/tracker-extract,2434,/lib/systemd/systemd --user
+83599,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+83600,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+83601,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+83602,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+83603,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+83604,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+83606,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+83607,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+83608,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+83609,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+83610,root,/lib/systemd/systemd-udevd,466,/lib/systemd/systemd-udevd
+83619,root,[kworker/4:2],2,[kthreadd]
+83626,root,[kworker/2:1-events],2,[kthreadd]
+103418,kayn,/usr/lib/firefox/firefox -contentproc -childID 18 -isForBrowser -prefsLen 10175 -prefMapSize 226661 -parentBuildID 20201027185343 -appdir /usr/lib/firefox/browser 3471 true tab,3471,/usr/lib/firefox/firefox -new-window
+103903,kayn,/usr/libexec/tracker-store,2434,/lib/systemd/systemd --user
+103927,kayn,/usr/libexec/tracker-extract,2434,/lib/systemd/systemd --user
+276968,root,[kworker/3:2-events],2,[kthreadd]
+276999,root,[kworker/3:3],2,[kthreadd]
+277441,kayn,/usr/libexec/tracker-store,2434,/lib/systemd/systemd --user
+277462,root,[kworker/u256:0-events_unbound],2,[kthreadd]
+277481,kayn,/usr/libexec/tracker-extract,2434,/lib/systemd/systemd --user

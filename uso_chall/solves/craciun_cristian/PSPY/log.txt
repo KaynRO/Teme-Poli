@@ -1,0 +1,40 @@
+241782,root,[kworker/6:2-mm_percpu_wq],2,[kthreadd]
+424976,root,[kworker/5:4-events],2,[kthreadd]
+461549,root,[kworker/2:3-mm_percpu_wq],2,[kthreadd]
+241782,root,[kworker/6:2-events],2,[kthreadd]
+441228,root,[kworker/u256:0-events_unbound],2,[kthreadd]
+461549,root,[kworker/2:3-events],2,[kthreadd]
+462060,kayn,/usr/libexec/tracker-extract,3226,/lib/systemd/systemd --user
+105140,root,[kworker/3:0-mm_percpu_wq],2,[kthreadd]
+420431,root,[kworker/0:1-mm_percpu_wq],2,[kthreadd]
+424976,root,[kworker/5:4-rcu_gp],2,[kthreadd]
+441444,root,[kworker/4:1-mm_percpu_wq],2,[kthreadd]
+461528,root,[kworker/u256:3-events_unbound],2,[kthreadd]
+461549,root,[kworker/2:3-mm_percpu_wq],2,[kthreadd]
+105140,root,[kworker/3:0-events],2,[kthreadd]
+420431,root,[kworker/0:1-events],2,[kthreadd]
+424976,root,[kworker/5:4-events],2,[kthreadd]
+441228,root,[kworker/u256:0-events_power_efficient],2,[kthreadd]
+441444,root,[kworker/4:1-events],2,[kthreadd]
+461549,root,[kworker/2:3-events],2,[kthreadd]
+105140,root,[kworker/3:0-mm_percpu_wq],2,[kthreadd]
+241782,root,[kworker/6:2-mm_percpu_wq],2,[kthreadd]
+424976,root,[kworker/5:4-rcu_gp],2,[kthreadd]
+105140,root,[kworker/3:0-events],2,[kthreadd]
+241782,root,[kworker/6:2-events],2,[kthreadd]
+424976,root,[kworker/5:4-events],2,[kthreadd]
+355,root,[kworker/4:1H-kblockd],2,[kthreadd]
+424976,root,[kworker/5:4-rcu_gp],2,[kthreadd]
+461528,root,[kworker/u256:3+events_unbound],2,[kthreadd]
+462942,kayn,python ../script.py,278755,bash
+462945,kayn,sh -c sleep 10,462942,python ../script.py
+462946,kayn,sleep 10,462945,sh -c sleep 10
+463407,kayn,python ../script.py,278755,bash
+464881,kayn,sleep 2,278755,bash
+465511,kayn,/usr/libexec/tracker-extract,3226,/lib/systemd/systemd --user
+466239,kayn,/usr/libexec/tracker-extract,3226,/lib/systemd/systemd --user
+466620,root,sudo su,278755,bash
+466701,root,su,466620,sudo su
+466702,root,bash,466701,su
+467087,root,sleep 5,466702,bash
+469455,kayn,python,278755,bash

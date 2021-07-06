@@ -1,0 +1,62 @@
+NEW SCRIPT RUN:
+
+NEW SCRIPT RUN:
+
+1. USER: kayn,  PID:  249215,  CMD: /usr/libexec/tracker-extract,  PPID:    3226,  PCMD: /lib/systemd/systemd --user
+2. USER: kayn,  PID:  251569,  CMD: sh -c cut -c3- ~/.tmux.conf | sh -s _username /dev/pts/2 false %1,  PPID:    3226,  PCMD: /lib/systemd/systemd --user
+3. USER: kayn,  PID:  249215,  CMD: /usr/libexec/tracker-extract,  PPID:    3226,  PCMD: /lib/systemd/systemd --user
+4. USER: kayn,  PID:  252334,  CMD: /usr/libexec/tracker-extract,  PPID:    3226,  PCMD: /lib/systemd/systemd --user
+5. USER: kayn,  PID:  249215,  CMD: /usr/libexec/tracker-extract,  PPID:    3226,  PCMD: /lib/systemd/systemd --user
+6. USER: kayn,  PID:  254612,  CMD: /usr/libexec/tracker-extract,  PPID:    3226,  PCMD: /lib/systemd/systemd --user
+7. USER: kayn,  PID:  249215,  CMD: /usr/libexec/tracker-extract,  PPID:    3226,  PCMD: /lib/systemd/systemd --user
+8. USER: kayn,  PID:  255678,  CMD: /usr/libexec/tracker-extract,  PPID:    3226,  PCMD: /lib/systemd/systemd --user
+9. USER: kayn,  PID:  249215,  CMD: /usr/libexec/tracker-extract,  PPID:    3226,  PCMD: /lib/systemd/systemd --user
+10. USER: kayn,  PID:  256960,  CMD: bash test.sh 20,  PPID:    7877,  PCMD: -bash
+11. USER: kayn,  PID:  249215,  CMD: /usr/libexec/tracker-extract,  PPID:    3226,  PCMD: /lib/systemd/systemd --user
+NEW SCRIPT RUN:
+
+1. USER: kayn,  PID:  259913,  CMD: sleep 1,  PPID:  259912,  PCMD: bash test.sh 1
+2. USER: kayn,  PID:  261277,  CMD: ,  PPID:    7531,  PCMD: tmux
+NEW SCRIPT RUN:
+
+1. USER: kayn,  PID:  264747,  CMD: sleep 2,  PPID:  264741,  PCMD: bash test.sh 2
+2. USER: root,  PID:  267901,  CMD: sleep 5,  PPID:  267900,  PCMD: bash test.sh 5
+NEW SCRIPT RUN:
+
+NEW SCRIPT RUN:
+
+1. USER: kayn,  PID:  276379,  CMD: sleep 5,  PPID:    7877,  PCMD: -bash
+2. USER: kayn,  PID:  276459,  CMD: sleep 5,  PPID:    7877,  PCMD: -bash
+3. USER: kayn,  PID:  276379,  CMD: sleep 5,  PPID:    7877,  PCMD: -bash
+4. USER: kayn,  PID:  277249,  CMD: sleep 5,  PPID:    7877,  PCMD: -bash
+5. USER: kayn,  PID:  276379,  CMD: sleep 5,  PPID:    7877,  PCMD: -bash
+NEW SCRIPT RUN:
+
+NEW SCRIPT RUN:
+
+1. USER: kayn,  PID:  280441,  CMD: sleep 5,  PPID:  278755,  PCMD: bash
+2. USER: kayn,  PID:  285404,  CMD: bash test.sh 5,  PPID:  278755,  PCMD: bash
+3. USER: kayn,  PID:  285470,  CMD: /usr/libexec/tracker-extract,  PPID:    3226,  PCMD: /lib/systemd/systemd --user
+4. USER: kayn,  PID:  292385,  CMD: bash test.sh 5,  PPID:  278755,  PCMD: bash
+5. USER: kayn,  PID:  292451,  CMD: /usr/libexec/tracker-extract,  PPID:    3226,  PCMD: /lib/systemd/systemd --user
+6. USER: kayn,  PID:  298476,  CMD: python ../script.py,  PPID:  278755,  PCMD: bash
+7. USER: kayn,  PID:  298471,  CMD: python ../script.py,  PPID:    3226,  PCMD: /lib/systemd/systemd --user
+8. USER: kayn,  PID:  298518,  CMD: /usr/libexec/tracker-extract,  PPID:    3226,  PCMD: /lib/systemd/systemd --user
+NEW SCRIPT RUN:
+
+1. USER: kayn,  PID:  303431,  CMD: sh -c sleep 10,  PPID:  303424,  PCMD: python ../script.py
+2. USER: kayn,  PID:  310244,  CMD: sh -c sleep 10,  PPID:  310237,  PCMD: python ../script.py
+3. USER: kayn,  PID:  310310,  CMD: /usr/libexec/tracker-extract,  PPID:    3226,  PCMD: /lib/systemd/systemd --user
+4. USER: kayn,  PID:  319075,  CMD: [kworker/5:1-events],  PPID:       2,  PCMD: [kthreadd]
+5. USER: kayn,  PID:  319123,  CMD: /usr/libexec/tracker-extract,  PPID:    3226,  PCMD: /lib/systemd/systemd --user
+NEW SCRIPT RUN:
+
+1. USER: kayn,  PID:  323529,  CMD: /usr/libexec/tracker-extract,  PPID:    3226,  PCMD: /lib/systemd/systemd --user
+2. USER: kayn,  PID:  324749,  CMD: sh -c sleep 10,  PPID:  324749,  PCMD: python ../script.py
+3. USER: kayn,  PID:  324756,  CMD: sh -c sleep 10,  PPID:  324749,  PCMD: python ../script.py
+4. USER: kayn,  PID:  323529,  CMD: /usr/libexec/tracker-extract,  PPID:    3226,  PCMD: /lib/systemd/systemd --user
+NEW SCRIPT RUN:
+
+NEW SCRIPT RUN:
+
+1. USER: kayn,  PID:  335324,  CMD: sh -c sleep 10,  PPID:  335318,  PCMD: python ../script.py

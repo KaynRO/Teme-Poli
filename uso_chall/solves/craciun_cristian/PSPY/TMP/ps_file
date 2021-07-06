@@ -1,0 +1,374 @@
+USER         PID    PPID CMD
+root           1       0 /sbin/init auto noprompt
+root           2       0 [kthreadd]
+root           3       2 [rcu_gp]
+root           4       2 [rcu_par_gp]
+root           6       2 [kworker/0:0H-kblockd]
+root           9       2 [mm_percpu_wq]
+root          10       2 [ksoftirqd/0]
+root          11       2 [rcu_sched]
+root          12       2 [migration/0]
+root          13       2 [idle_inject/0]
+root          14       2 [cpuhp/0]
+root          15       2 [cpuhp/1]
+root          16       2 [idle_inject/1]
+root          17       2 [migration/1]
+root          18       2 [ksoftirqd/1]
+root          20       2 [kworker/1:0H-kblockd]
+root          21       2 [cpuhp/2]
+root          22       2 [idle_inject/2]
+root          23       2 [migration/2]
+root          24       2 [ksoftirqd/2]
+root          26       2 [kworker/2:0H-kblockd]
+root          27       2 [cpuhp/3]
+root          28       2 [idle_inject/3]
+root          29       2 [migration/3]
+root          30       2 [ksoftirqd/3]
+root          32       2 [kworker/3:0H-kblockd]
+root          33       2 [cpuhp/4]
+root          34       2 [idle_inject/4]
+root          35       2 [migration/4]
+root          36       2 [ksoftirqd/4]
+root          38       2 [kworker/4:0H]
+root          39       2 [cpuhp/5]
+root          40       2 [idle_inject/5]
+root          41       2 [migration/5]
+root          42       2 [ksoftirqd/5]
+root          44       2 [kworker/5:0H-kblockd]
+root          45       2 [cpuhp/6]
+root          46       2 [idle_inject/6]
+root          47       2 [migration/6]
+root          48       2 [ksoftirqd/6]
+root          50       2 [kworker/6:0H-kblockd]
+root          51       2 [cpuhp/7]
+root          52       2 [idle_inject/7]
+root          53       2 [migration/7]
+root          54       2 [ksoftirqd/7]
+root          56       2 [kworker/7:0H-kblockd]
+root          57       2 [kdevtmpfs]
+root          58       2 [netns]
+root          59       2 [rcu_tasks_kthre]
+root          60       2 [kauditd]
+root          62       2 [khungtaskd]
+root          63       2 [oom_reaper]
+root          64       2 [writeback]
+root          65       2 [kcompactd0]
+root          66       2 [ksmd]
+root          67       2 [khugepaged]
+root         114       2 [kintegrityd]
+root         115       2 [kblockd]
+root         116       2 [blkcg_punt_bio]
+root         125       2 [tpm_dev_wq]
+root         126       2 [ata_sff]
+root         127       2 [md]
+root         128       2 [edac-poller]
+root         129       2 [devfreq_wq]
+root         130       2 [watchdogd]
+root         134       2 [kswapd0]
+root         135       2 [ecryptfs-kthrea]
+root         137       2 [kthrotld]
+root         138       2 [irq/24-pciehp]
+root         139       2 [irq/25-pciehp]
+root         140       2 [irq/26-pciehp]
+root         141       2 [irq/27-pciehp]
+root         142       2 [irq/28-pciehp]
+root         143       2 [irq/29-pciehp]
+root         144       2 [irq/30-pciehp]
+root         145       2 [irq/31-pciehp]
+root         146       2 [irq/32-pciehp]
+root         147       2 [irq/33-pciehp]
+root         148       2 [irq/34-pciehp]
+root         149       2 [irq/35-pciehp]
+root         150       2 [irq/36-pciehp]
+root         151       2 [irq/37-pciehp]
+root         152       2 [irq/38-pciehp]
+root         153       2 [irq/39-pciehp]
+root         154       2 [irq/40-pciehp]
+root         155       2 [irq/41-pciehp]
+root         156       2 [irq/42-pciehp]
+root         157       2 [irq/43-pciehp]
+root         158       2 [irq/44-pciehp]
+root         159       2 [irq/45-pciehp]
+root         160       2 [irq/46-pciehp]
+root         161       2 [irq/47-pciehp]
+root         162       2 [irq/48-pciehp]
+root         163       2 [irq/49-pciehp]
+root         164       2 [irq/50-pciehp]
+root         165       2 [irq/51-pciehp]
+root         166       2 [irq/52-pciehp]
+root         167       2 [irq/53-pciehp]
+root         168       2 [irq/54-pciehp]
+root         169       2 [irq/55-pciehp]
+root         170       2 [acpi_thermal_pm]
+root         171       2 [scsi_eh_0]
+root         172       2 [scsi_tmf_0]
+root         173       2 [scsi_eh_1]
+root         174       2 [scsi_tmf_1]
+root         176       2 [vfio-irqfd-clea]
+root         177       2 [ipv6_addrconf]
+root         187       2 [kstrp]
+root         190       2 [kworker/u257:0]
+root         203       2 [charger_manager]
+root         262       2 [mpt_poll_0]
+root         263       2 [mpt/0]
+root         264       2 [scsi_eh_2]
+root         265       2 [scsi_tmf_2]
+root         266       2 [scsi_eh_3]
+root         267       2 [scsi_tmf_3]
+root         268       2 [scsi_eh_4]
+root         269       2 [scsi_tmf_4]
+root         270       2 [scsi_eh_5]
+root         271       2 [scsi_tmf_5]
+root         272       2 [scsi_eh_6]
+root         273       2 [scsi_tmf_6]
+root         274       2 [scsi_eh_7]
+root         275       2 [scsi_tmf_7]
+root         276       2 [scsi_eh_8]
+root         277       2 [scsi_tmf_8]
+root         278       2 [scsi_eh_9]
+root         279       2 [scsi_tmf_9]
+root         280       2 [scsi_eh_10]
+root         281       2 [scsi_tmf_10]
+root         282       2 [scsi_eh_11]
+root         283       2 [scsi_tmf_11]
+root         284       2 [scsi_eh_12]
+root         285       2 [scsi_tmf_12]
+root         286       2 [scsi_eh_13]
+root         287       2 [scsi_tmf_13]
+root         288       2 [scsi_eh_14]
+root         289       2 [scsi_tmf_14]
+root         290       2 [scsi_eh_15]
+root         291       2 [scsi_tmf_15]
+root         292       2 [scsi_eh_16]
+root         293       2 [scsi_tmf_16]
+root         294       2 [scsi_eh_17]
+root         295       2 [scsi_tmf_17]
+root         296       2 [scsi_eh_18]
+root         297       2 [scsi_tmf_18]
+root         298       2 [scsi_eh_19]
+root         299       2 [scsi_tmf_19]
+root         300       2 [scsi_eh_20]
+root         301       2 [scsi_tmf_20]
+root         302       2 [scsi_eh_21]
+root         303       2 [scsi_tmf_21]
+root         304       2 [scsi_eh_22]
+root         305       2 [scsi_tmf_22]
+root         306       2 [scsi_eh_23]
+root         307       2 [scsi_tmf_23]
+root         308       2 [scsi_eh_24]
+root         309       2 [scsi_tmf_24]
+root         310       2 [scsi_eh_25]
+root         311       2 [scsi_tmf_25]
+root         312       2 [scsi_eh_26]
+root         313       2 [scsi_tmf_26]
+root         314       2 [scsi_eh_27]
+root         315       2 [scsi_tmf_27]
+root         316       2 [scsi_eh_28]
+root         317       2 [scsi_tmf_28]
+root         318       2 [scsi_eh_29]
+root         319       2 [scsi_tmf_29]
+root         320       2 [scsi_eh_30]
+root         321       2 [scsi_tmf_30]
+root         322       2 [scsi_eh_31]
+root         323       2 [scsi_tmf_31]
+root         350       2 [scsi_eh_32]
+root         351       2 [scsi_tmf_32]
+root         352       2 [kworker/1:1H-kblockd]
+root         355       2 [kworker/4:1H-kblockd]
+root         356       2 [kworker/6:1H-kblockd]
+root         357       2 [kworker/0:1H-kblockd]
+root         361       2 [kworker/5:1H-kblockd]
+root         379       2 [kworker/7:1H-kblockd]
+root         381       2 [kworker/3:1H-kblockd]
+root         382       2 [jbd2/sda5-8]
+root         383       2 [ext4-rsv-conver]
+root         396       2 [kworker/2:1H-kblockd]
+root         431       1 /lib/systemd/systemd-journald
+root         450       2 [irq/16-vmwgfx]
+root         451       2 [ttm_swap]
+root         456       2 [loop0]
+root         471       1 /lib/systemd/systemd-udevd
+root         472       2 [loop1]
+root         479       1 vmware-vmblock-fuse /run/vmblock-fuse -o rw,subtype=vmware-vmblock,default_permissions,allow_other,dev,suid
+root         483       2 [loop2]
+root         485       2 [loop3]
+root         486       2 [loop4]
+root         487       2 [loop5]
+root         521       2 [loop6]
+root         522       2 [loop7]
+root         526       2 [loop8]
+root         541       2 [loop9]
+root         552       2 [loop10]
+root         556       2 [loop11]
+root         565       2 [loop12]
+root         572       2 [loop13]
+root         585       2 [loop14]
+root         587       2 [loop15]
+root         595       2 [loop16]
+root         619       2 [cryptd]
+_rpc         821       1 /sbin/rpcbind -f -w
+systemd+     822       1 /lib/systemd/systemd-resolved
+systemd+     823       1 /lib/systemd/systemd-timesyncd
+root         826       1 /usr/bin/VGAuthService
+root         833       1 /usr/bin/vmtoolsd
+root         858       1 /usr/lib/accountsservice/accounts-daemon
+root         859       1 /usr/sbin/acpid
+avahi        862       1 avahi-daemon: running [ubuntu.local]
+root         863       1 /usr/sbin/cron -f
+root         865       1 /usr/sbin/cupsd -l
+message+     867       1 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         869       1 /usr/sbin/NetworkManager --no-daemon
+root         878       1 /usr/sbin/irqbalance --foreground
+root         882       1 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         886       1 /usr/lib/policykit-1/polkitd --no-debug
+syslog       889       1 /usr/sbin/rsyslogd -n -iNONE
+root         894       1 /usr/lib/snapd/snapd
+root         896       1 /usr/libexec/switcheroo-control
+root         897       1 /lib/systemd/systemd-logind
+root         899       1 /usr/lib/udisks2/udisksd
+root         902       1 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+avahi        904     862 avahi-daemon: chroot helper
+root         932       1 /usr/sbin/cups-browsed
+lp           934     865 /usr/lib/cups/notifier/dbus dbus://
+lp           935     865 /usr/lib/cups/notifier/dbus dbus://
+root         949       1 /usr/sbin/ModemManager --filter-policy=strict
+root         960       1 /usr/bin/containerd
+root         963       1 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         970       1 /usr/sbin/gdm3
+mosquit+    1057       1 /usr/sbin/mosquitto -c /etc/mosquitto/mosquitto.conf
+whoopsie    1061       1 /usr/bin/whoopsie -f
+kernoops    1066       1 /usr/sbin/kerneloops --test
+kernoops    1076       1 /usr/sbin/kerneloops
+rtkit       1148       1 /usr/libexec/rtkit-daemon
+root        1402       1 /usr/lib/upower/upowerd
+root        2370       1 /usr/lib/postfix/sbin/master -w
+root        2374       1 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+colord      2412       1 /usr/libexec/colord
+root        2463       2 bpfilter_umh
+postfix     2650    2370 qmgr -l -t unix -u
+root        2778    2374 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8081 -container-ip 172.19.0.2 -container-port 80
+root        2803       1 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 363e637686a2365f2139c29b7bd2ab404542c48b18c692cd199918561b1388b1 -address /run/containerd/containerd.sock
+root        2809       1 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 6e946b284c3c1ab4c4eddfee229ae10b82b8ba1e59568845baecd5491cd89174 -address /run/containerd/containerd.sock
+root        2848    2809 apache2 -DFOREGROUND
+systemd+    2849    2803 mysqld
+www-data    3142    2848 apache2 -DFOREGROUND
+www-data    3143    2848 apache2 -DFOREGROUND
+www-data    3144    2848 apache2 -DFOREGROUND
+www-data    3145    2848 apache2 -DFOREGROUND
+www-data    3146    2848 apache2 -DFOREGROUND
+root        3215     970 gdm-session-worker [pam/gdm-password]
+kayn        3226       1 /lib/systemd/systemd --user
+kayn        3228    3226 (sd-pam)
+kayn        3238    3226 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+kayn        3240    3226 /usr/libexec/tracker-miner-fs
+kayn        3243    3226 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+kayn        3247    3226 /usr/libexec/gvfsd
+kayn        3252       1 /usr/bin/gnome-keyring-daemon --daemonize --login
+kayn        3255    3226 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+kayn        3274    3226 /usr/libexec/gvfs-udisks2-volume-monitor
+kayn        3282    3226 /usr/libexec/gvfs-goa-volume-monitor
+kayn        3286    3226 /usr/libexec/goa-daemon
+kayn        3294    3226 /usr/libexec/goa-identity-service
+kayn        3301    3226 /usr/libexec/gvfs-mtp-volume-monitor
+kayn        3305    3226 /usr/libexec/gvfs-gphoto2-volume-monitor
+kayn        3309    3226 /usr/libexec/gvfs-afc-volume-monitor
+kayn        3317    3215 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --systemd --session=ubuntu
+kayn        3321    3317 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+kayn        3334    3226 /usr/bin/gnome-keyring-daemon --start --foreground --components=secrets
+kayn        3342    3317 /usr/libexec/gnome-session-binary --systemd --systemd --session=ubuntu
+kayn        3410    3342 /usr/bin/ssh-agent /usr/bin/im-launch env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --systemd --session=ubuntu
+kayn        3429    3226 /usr/libexec/at-spi-bus-launcher
+kayn        3434    3429 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+kayn        3438    3226 /usr/libexec/gnome-session-ctl --monitor
+kayn        3444    3226 /usr/libexec/gnome-session-binary --systemd-service --session=ubuntu
+kayn        3457    3226 /usr/bin/gnome-shell
+kayn        3482    3457 ibus-daemon --panel disable --xim
+kayn        3486    3482 /usr/libexec/ibus-dconf
+kayn        3487    3482 /usr/libexec/ibus-extension-gtk3
+kayn        3490    3226 /usr/libexec/ibus-x11 --kill-daemon
+kayn        3493    3226 /usr/libexec/ibus-portal
+kayn        3505    3226 /usr/libexec/at-spi2-registryd --use-gnome-session
+kayn        3508    3226 /usr/libexec/xdg-permission-store
+kayn        3510    3226 /usr/libexec/gnome-shell-calendar-server
+kayn        3522    3226 /usr/libexec/evolution-source-registry
+kayn        3528    3226 /usr/libexec/dconf-service
+kayn        3532    3226 /usr/libexec/gvfsd-metadata
+kayn        3544    3226 /usr/libexec/evolution-calendar-factory
+kayn        3558    3226 /usr/libexec/evolution-addressbook-factory
+kayn        3575    3226 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.Notifications
+kayn        3590    3247 /usr/libexec/gvfsd-trash --spawner :1.3 /org/gtk/gvfs/exec_spaw/0
+kayn        3608    3226 /usr/libexec/gsd-a11y-settings
+kayn        3609    3226 /usr/libexec/gsd-color
+kayn        3610    3226 /usr/libexec/gsd-datetime
+kayn        3613    3226 /usr/libexec/gsd-housekeeping
+kayn        3615    3226 /usr/libexec/gsd-keyboard
+kayn        3617    3226 /usr/libexec/gsd-media-keys
+kayn        3620    3226 /usr/libexec/gsd-power
+kayn        3623    3226 /usr/libexec/gsd-print-notifications
+kayn        3625    3226 /usr/libexec/gsd-rfkill
+kayn        3626    3226 /usr/libexec/gsd-screensaver-proxy
+kayn        3629    3226 /usr/libexec/gsd-sharing
+kayn        3636    3226 /usr/libexec/gsd-smartcard
+kayn        3638    3226 /usr/libexec/gsd-sound
+kayn        3640    3226 /usr/libexec/gsd-usb-protection
+kayn        3650    3482 /usr/libexec/ibus-engine-simple
+kayn        3656    3226 /usr/libexec/gsd-wacom
+kayn        3659    3226 /usr/libexec/gsd-wwan
+kayn        3664    3226 /usr/libexec/gsd-xsettings
+kayn        3673    3444 /usr/libexec/gsd-disk-utility-notify
+kayn        3681    3226 /usr/libexec/gsd-printer
+kayn        3683    3444 /usr/libexec/evolution-data-server/evolution-alarm-notify
+kayn        3685    3226 /usr/bin/vmtoolsd -n vmusr --blockFd 3
+kayn        3759    3226 /snap/snap-store/498/usr/bin/snap-store --gapplication-service
+kayn        3780    3226 /usr/libexec/xdg-document-portal
+kayn        3926    3226 /usr/lib/firefox/firefox -new-window
+kayn        4328    3926 /usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 1 -prefMapSize 228815 -parentBuildID 20201112153044 -appdir /usr/lib/firefox/browser 3926 true tab
+kayn        4493    3926 /usr/lib/firefox/firefox -contentproc -childID 3 -isForBrowser -prefsLen 6391 -prefMapSize 228815 -parentBuildID 20201112153044 -appdir /usr/lib/firefox/browser 3926 true tab
+kayn        4547    3926 /usr/lib/firefox/firefox -contentproc -childID 4 -isForBrowser -prefsLen 7189 -prefMapSize 228815 -parentBuildID 20201112153044 -appdir /usr/lib/firefox/browser 3926 true tab
+kayn        4665    3226 /usr/bin/nautilus --gapplication-service
+kayn        4743    3444 update-notifier
+kayn        4988    3247 /usr/libexec/gvfsd-network --spawner :1.3 /org/gtk/gvfs/exec_spaw/1
+kayn        5089    3226 /usr/libexec/gnome-terminal-server
+kayn        5114    3247 /usr/libexec/gvfsd-dnssd --spawner :1.3 /org/gtk/gvfs/exec_spaw/3
+kayn        5682    3226 /snap/sublime-text/97/opt/sublime_text/sublime_text
+kayn        5693    5682 /snap/sublime-text/97/opt/sublime_text/plugin_host 5682 --auto-shell-env
+kayn        7531    3226 tmux
+kayn        7734    7531 -bash
+kayn        7877    7531 -bash
+kayn       25967    7531 -bash
+root       26347   25967 sudo su
+root       26629   26347 su
+root       26630   26629 bash
+root       48390       2 [kworker/6:0-events]
+kayn       49885    7531 -bash
+root      105140       2 [kworker/3:0-mm_percpu_wq]
+root      241782       2 [kworker/6:2-events]
+root      242640       2 [kworker/0:3-events]
+kayn      247814    3226 /usr/libexec/tracker-store
+kayn      278670    5089 bash
+kayn      278755    5089 bash
+root      301224       2 [kworker/3:2]
+root      347150       2 [kworker/4:0-events]
+root      415909       2 [kworker/u256:1-events_unbound]
+root      420431       2 [kworker/0:1-events]
+root      424958       2 [kworker/5:2-cgroup_destroy]
+root      424976       2 [kworker/5:4-mm_percpu_wq]
+root      441216       2 [kworker/1:1-rcu_par_gp]
+root      441228       2 [kworker/u256:0-events_power_efficient]
+kayn      441234    3926 /usr/lib/firefox/firefox -contentproc -childID 11 -isForBrowser -prefsLen 10147 -prefMapSize 228815 -parentBuildID 20201112153044 -appdir /usr/lib/firefox/browser 3926 true tab
+root      441382       2 [kworker/7:1-events]
+postfix   441429    2370 pickup -l -t unix -u -c
+root      441444       2 [kworker/4:1-events]
+kayn      461437    3926 /usr/lib/firefox/firefox -contentproc -childID 12 -isForBrowser -prefsLen 10147 -prefMapSize 228815 -parentBuildID 20201112153044 -appdir /usr/lib/firefox/browser 3926 true tab
+root      461515       2 [kworker/1:2-events]
+root      461528       2 [kworker/u256:3-events_power_efficient]
+root      461533       2 [kworker/2:1-cgroup_destroy]
+root      461534       2 [kworker/7:2-mm_percpu_wq]
+root      461549       2 [kworker/2:3-mm_percpu_wq]
+root      466189       2 [kworker/6:1-events]
+root      466206       2 [kworker/6:3]
+root      467745       2 [kworker/u256:2-events_power_efficient]
+root      468375       2 [kworker/0:0]
+kayn      468376  278670 bash pspy.sh 30 python
+kayn      468391    3226 /usr/libexec/tracker-extract
+kayn      469455  278755 python

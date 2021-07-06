@@ -1,0 +1,362 @@
+461515, root, [kworker/1:2-events], 2, kthreadd
+461515, root, [kworker/1:2-mpt_poll_0], 2, kthreadd
+461534, root, [kworker/7:2-mm_percpu_wq], 2, kthreadd
+461534, root, [kworker/7:2-events], 2, kthreadd
+470000, root, [kworker/4:2-mm_percpu_wq], 2, kthreadd
+470000, root, [kworker/4:2-events], 2, kthreadd
+355, root, [kworker/4:1H-events_highpri], 2, kthreadd
+355, root, [kworker/4:1H-kblockd], 2, kthreadd
+431, root, /lib/systemd/systemd-journald, 1, systemd
+431, root, /lib/systemd/systemd-journald, 1, systemd
+3457, kayn, /usr/bin/gnome-shell, 3226, systemd
+3457, kayn, /usr/bin/gnome-shell, 3226, systemd
+3926, kayn, /usr/lib/firefox/firefox, 3226, systemd
+3926, kayn, /usr/lib/firefox/firefox, 3226, systemd
+4547, kayn, /usr/lib/firefox/firefox, 3926, firefox
+4665, kayn, /usr/bin/nautilus, 3226, systemd
+4547, kayn, /usr/lib/firefox/firefox, 3926, firefox
+4665, kayn, /usr/bin/nautilus, 3226, systemd
+461515, root, [kworker/1:2-mpt_poll_0], 2, kthreadd
+461515, root, [kworker/1:2-events], 2, kthreadd
+461534, root, [kworker/7:2-events], 2, kthreadd
+461534, root, [kworker/7:2-mm_percpu_wq], 2, kthreadd
+466189, root, [kworker/6:1-events], 2, kthreadd
+466189, root, [kworker/6:1-mm_percpu_wq], 2, kthreadd
+470000, root, [kworker/4:2-events], 2, kthreadd
+470000, root, [kworker/4:2-mm_percpu_wq], 2, kthreadd
+470087, root, [kworker/2:4-events], 2, kthreadd
+470087, root, [kworker/2:4-mm_percpu_wq], 2, kthreadd
+470156, kayn, /usr/libexec/tracker-extract, 3226, systemd
+356, root, [kworker/6:1H-events_highpri], 2, kthreadd
+356, root, [kworker/6:1H-kblockd], 2, kthreadd
+3240, kayn, /usr/libexec/tracker-miner-fs, 3226, systemd
+3240, kayn, /usr/libexec/tracker-miner-fs, 3226, systemd
+247814, kayn, /usr/libexec/tracker-store, 3226, systemd
+247814, kayn, /usr/libexec/tracker-store, 3226, systemd
+461534, root, [kworker/7:2-mm_percpu_wq], 2, kthreadd
+461534, root, [kworker/7:2-events], 2, kthreadd
+470087, root, [kworker/2:4-mm_percpu_wq], 2, kthreadd
+470156, kayn, /usr/libexec/tracker-extract, 3226, systemd
+470087, root, [kworker/2:4-events], 2, kthreadd
+470156, kayn, /usr/libexec/tracker-extract, 3226, systemd
+466189, root, [kworker/6:1-mm_percpu_wq], 2, kthreadd
+466189, root, [kworker/6:1-events], 2, kthreadd
+470000, root, [kworker/4:2-mm_percpu_wq], 2, kthreadd
+470001, root, [kworker/3:1-events], 2, kthreadd
+470000, root, [kworker/4:2-events], 2, kthreadd
+470001, root, [kworker/3:1-mm_percpu_wq], 2, kthreadd
+470087, root, [kworker/2:4-events], 2, kthreadd
+470156, kayn, /usr/libexec/tracker-extract, 3226, systemd
+470087, root, [kworker/2:4-mm_percpu_wq], 2, kthreadd
+470156, kayn, /usr/libexec/tracker-extract, 3226, systemd
+461515, root, [kworker/1:2-events], 2, kthreadd
+461515, root, [kworker/1:2-mpt_poll_0], 2, kthreadd
+461534, root, [kworker/7:2-events], 2, kthreadd
+461534, root, [kworker/7:2-mm_percpu_wq], 2, kthreadd
+470000, root, [kworker/4:2-events], 2, kthreadd
+470001, root, [kworker/3:1-mm_percpu_wq], 2, kthreadd
+470000, root, [kworker/4:2-mm_percpu_wq], 2, kthreadd
+470001, root, [kworker/3:1-events], 2, kthreadd
+470087, root, [kworker/2:4-mm_percpu_wq], 2, kthreadd
+470156, kayn, /usr/libexec/tracker-extract, 3226, systemd
+470087, root, [kworker/2:4-events], 2, kthreadd
+470156, kayn, /usr/libexec/tracker-extract, 3226, systemd
+3457, kayn, /usr/bin/gnome-shell, 3226, systemd
+3457, kayn, /usr/bin/gnome-shell, 3226, systemd
+461515, root, [kworker/1:2-mpt_poll_0], 2, kthreadd
+461515, root, [kworker/1:2-events], 2, kthreadd
+466189, root, [kworker/6:1-events], 2, kthreadd
+466189, root, [kworker/6:1-mm_percpu_wq], 2, kthreadd
+470156, kayn, /usr/libexec/tracker-extract, 3226, systemd
+470156, kayn, /usr/libexec/tracker-extract, 3226, systemd
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+4665, kayn, /usr/bin/nautilus, 3226, systemd
+4665, kayn, /usr/bin/nautilus, 3226, systemd
+461515, root, [kworker/1:2-events], 2, kthreadd
+461515, root, [kworker/1:2-mpt_poll_0], 2, kthreadd
+461534, root, [kworker/7:2-mm_percpu_wq], 2, kthreadd
+461534, root, [kworker/7:2-events], 2, kthreadd
+466189, root, [kworker/6:1-mm_percpu_wq], 2, kthreadd
+466189, root, [kworker/6:1-events], 2, kthreadd
+470000, root, [kworker/4:2-mm_percpu_wq], 2, kthreadd
+470000, root, [kworker/4:2-events], 2, kthreadd
+470156, kayn, /usr/libexec/tracker-extract, 3226, systemd
+470156, kayn, /usr/libexec/tracker-extract, 3226, systemd
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3457, kayn, /usr/bin/gnome-shell, 3226, systemd
+3457, kayn, /usr/bin/gnome-shell, 3226, systemd
+420431, root, [kworker/0:1-mm_percpu_wq], 2, kthreadd
+420431, root, [kworker/0:1-events], 2, kthreadd
+469979, root, [kworker/u256:2-events_power_efficient], 2, kthreadd
+470000, root, [kworker/4:2-mm_percpu_wq], 2, kthreadd
+469979, root, [kworker/u256:2-events_freezable_power_], 2, kthreadd
+470000, root, [kworker/4:2-events], 2, kthreadd
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3457, kayn, /usr/bin/gnome-shell, 3226, systemd
+3457, kayn, /usr/bin/gnome-shell, 3226, systemd
+461515, root, [kworker/1:2-mm_percpu_wq], 2, kthreadd
+461515, root, [kworker/1:2-mpt_poll_0], 2, kthreadd
+461534, root, [kworker/7:2-mm_percpu_wq], 2, kthreadd
+461534, root, [kworker/7:2-events], 2, kthreadd
+466189, root, [kworker/6:1-mm_percpu_wq], 2, kthreadd
+466189, root, [kworker/6:1-events], 2, kthreadd
+469979, root, [kworker/u256:2-events_freezable_power_], 2, kthreadd
+469979, root, [kworker/u256:2-events_unbound], 2, kthreadd
+470001, root, [kworker/3:1-mm_percpu_wq], 2, kthreadd
+470001, root, [kworker/3:1-events], 2, kthreadd
+470087, root, [kworker/2:4-mm_percpu_wq], 2, kthreadd
+470087, root, [kworker/2:4-events], 2, kthreadd
+471474, kayn, /usr/libexec/tracker-extract, 3226, systemd
+471474, kayn, /usr/libexec/tracker-extract, 3226, systemd
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+461515, root, [kworker/1:2-events], 2, kthreadd
+461515, root, [kworker/1:2-mpt_poll_0], 2, kthreadd
+461534, root, [kworker/7:2-events], 2, kthreadd
+461534, root, [kworker/7:2-mm_percpu_wq], 2, kthreadd
+469979, root, [kworker/u256:2-flush-8:0], 2, kthreadd
+469979, root, [kworker/u256:2-events_power_efficient], 2, kthreadd
+471474, kayn, /usr/libexec/tracker-extract, 3226, systemd
+471474, kayn, /usr/libexec/tracker-extract, 3226, systemd
+3240, kayn, /usr/libexec/tracker-miner-fs, 3226, systemd
+3240, kayn, /usr/libexec/tracker-miner-fs, 3226, systemd
+424976, root, [kworker/5:4-events], 2, kthreadd
+424976, root, [kworker/5:4-mm_percpu_wq], 2, kthreadd
+461515, root, [kworker/1:2-mpt_poll_0], 2, kthreadd
+461515, root, [kworker/1:2-events], 2, kthreadd
+461534, root, [kworker/7:2-mm_percpu_wq], 2, kthreadd
+461534, root, [kworker/7:2-events], 2, kthreadd
+466189, root, [kworker/6:1-mm_percpu_wq], 2, kthreadd
+466189, root, [kworker/6:1-events], 2, kthreadd
+469979, root, [kworker/u256:2-events_power_efficient], 2, kthreadd
+469979, root, [kworker/u256:2-events_unbound], 2, kthreadd
+247814, kayn, /usr/libexec/tracker-store, 3226, systemd
+247814, kayn, /usr/libexec/tracker-store, 3226, systemd
+
+
+
+
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+469455, kayn, python, , 
+474200, kayn, bash, 278755, bash
+474201, kayn, sleep, 474200, bash
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+3321, kayn, /usr/lib/xorg/Xorg, 3317, gdm-x-session
+278755, kayn, bash, 5089, gnome-terminal-
+278755, kayn, bash, 5089, gnome-terminal-
+278755, kayn, bash, 5089, gnome-terminal-
+278755, kayn, bash, 5089, gnome-terminal-
+278755, kayn, bash, 5089, gnome-terminal-
+278755, kayn, bash, 5089, gnome-terminal-
+278755, kayn, bash, 5089, gnome-terminal-
+278755, kayn, bash, 5089, gnome-terminal-
+278755, kayn, bash, 5089, gnome-terminal-
+278755, kayn, bash, 5089, gnome-terminal-
+278755, kayn, bash, 5089, gnome-terminal-
+474200, kayn, bash, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+474201, kayn, sleep, , 
+476010, kayn, sleep, 476009, bash
+476010, kayn, sleep, , 
+476231, kayn, sleep, 278755, bash
+476231, kayn, sleep, , 
+476472, kayn, python, 278755, bash
+476472, kayn, python, , 
